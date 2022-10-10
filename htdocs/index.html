@@ -8,9 +8,9 @@
     <title>Demo Layout</title>
 
     <!-- load stylesheets Schriftwart mit ICONS defnieren-->
-    <link rel="stylesheet" href="htdocs/css/reset.css">
-    <link rel="stylesheet" href="htdocs/css/typicons.css">
-    <link rel="stylesheet" href="htdocs/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/typicons.css">
+    <link rel="stylesheet" href="/css/style.css?ts=<?=time()?>"/>
 </head>
 <body>
     <!-- header -->
@@ -60,6 +60,14 @@
 
     <!-- content -->
     <main>
+        <section>
+            <h1>Ihre Kfz-Datenbank</h1>
+            <h2>Stöbern sie durch die verschiedensten Autos</h2>
+            <p>Klicken Sie hier um direkt zur Abfrage zu gelangen.</p>
+            <form action="/register.html" method="get" target="_blank">
+                <button class='button' type="submit">Zur Kfz-Datenbank</button>
+            </form>
+        </section>
         <section>
             <h1>this is a headline</h1>
             <h2>and this is a subline</h2>
