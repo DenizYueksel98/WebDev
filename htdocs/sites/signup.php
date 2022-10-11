@@ -18,3 +18,4 @@ $query = "INSERT INTO userdata (Benutzername, Passwort, Vorname, Nachname)
 
 $mysqli->query($query);
 $mysqli->close();
+echo 'Welcome ' . $field3 . ', dein Account wurde erfolgreich angelegt!';

@@ -26,7 +26,14 @@ if ($stmt = $con->prepare('SELECT ID, Passwort FROM userdata WHERE Benutzername 
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['usernameLogin'];
             $_SESSION['id'] = $id;
-            echo 'Welcome ' . $_SESSION['name'] . '!';
+                //check what page user first visited
+            if(isset($_SESSION['url'])) {
+                $url = $_SESSION['url'];
+            } else {
+                $url = "register.php";
+            }
+            //redirect user to page they initially visited
+            header("Location: $url");
         } else {
             echo 'Passwort falsch!';
         }
