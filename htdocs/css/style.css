@@ -212,10 +212,12 @@ section.cta h2 {
 
 /* buttons */
 .button {
-    display: block;
+    display: flex;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    padding: 0.5em 2em;
+    padding: 0.5em 2em ;
+    margin: 2em;
+    align-items: center;
     border-radius: var(--border-radius);
     text-transform: uppercase;
 }
@@ -288,8 +290,82 @@ section.table tr:last-child td:last-child {
 /* forms */
 form {
     border: none;
+    text-align: center;
 }
 
+/*Animation*/
+
+.container.sign-up-mode::before {
+    transform: translateX(0);
+}
+
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+    transform: translateX(200%);
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+    transform: translateX(0);
+}
+
+.container.sign-up-mode form.sign-in-form {
+    opacity: 0;
+}
+
+.container.sign-up-mode form.sign-up-form {
+    opacity: 1;
+}
+
+.container.sign-up-mode .right-panel {
+    pointer-events: none;
+}
+
+.container.sign-up-mode .left-panel {
+    pointer-events: all;
+}
+
+
+/*Responsive*/
+
+@media (max-width:779px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media (max-width:635px) {
+    .container::before {
+        display: none;
+    }
+    form {
+        width: 80%;
+    }
+    form.sign-up-form {
+        display: none;
+    }
+    .container.sign-up-mode2 form.sign-up-form {
+        display: flex;
+        opacity: 1;
+    }
+    .container.sign-up-mode2 form.sign-in-form {
+        display: none;
+    }
+    .panels-container {
+        display: none;
+    }
+    .account-text {
+        display: initial;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:320px) {
+    form {
+        width: 90%;
+    }
+}
 .input-container {
     background: var(--light-gray);
     border-radius: var(--border-radius);
