@@ -26,6 +26,7 @@ $car->p3        =$data->p3;
 $car->nid       =$car->id;
 $car->verbin    =$data->verbin;
 $car->verbau    =$data->verbau;
+$car->verbko    =$data->verbko;
 $car->co2kom    =$data->co2kom;
 $car->wid       =$car->id;
 $car->sehrs     =$data->sehrs;

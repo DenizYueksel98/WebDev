@@ -21,6 +21,7 @@ class Car
     public $nid;
     public $verbin;
     public $verbau;
+    public $verbko;
     public $co2kom;
     public $wid;
     public $sehrs;
@@ -52,6 +53,7 @@ class Car
         s.p3,
         n.verbin,
         n.verbau,
+        n.verbko,
         n.co2kom,
         w.sehrs,
         w.schnell,
@@ -88,6 +90,7 @@ class Car
         s.p3,
         n.verbin,
         n.verbau,
+        n.verbko,
         n.co2kom,
         w.sehrs,
         w.schnell,
@@ -112,18 +115,21 @@ class Car
             id,
             verbin,
             verbau,
+            verbko,
             co2kom)
-            VALUES(?, ?, ?, ?)";
+            VALUES(?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query); //prepare query
         $this->nid       = htmlspecialchars(strip_tags($this->nid)); //get rid of html special chars and set vars
         $this->verbin    = htmlspecialchars(strip_tags($this->verbin));
         $this->verbau    = htmlspecialchars(strip_tags($this->verbau));
+        $this->verbko    = htmlspecialchars(strip_tags($this->verbko));
         $this->co2kom    = htmlspecialchars(strip_tags($this->co2kom));
         $stmt->bind_param(
-            'iddd',
+            'idddd',
             $this->nid,
             $this->verbin,
             $this->verbau,
+            $this->verbko,
             $this->co2kom
         );
         if (!$stmt->execute()) { //exec
