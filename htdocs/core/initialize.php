@@ -6,3 +6,4 @@ defined('CORE_PATH') ? null : define('CORE_PATH', SITE_ROOT . DS . 'core');//def
 
 require_once(INC_PATH . DS . "config.php");//binde config ein- just once
 require_once(CORE_PATH.DS."user.php");//bind user.php
+require_once(CORE_PATH.DS."car.php");//bind car.php
