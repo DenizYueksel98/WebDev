@@ -1,6 +1,6 @@
 <?php
 //set vars for db connection
-$host = "localhost"; 
+$host = "mariadb"; 
 $username = "root";
 $password = "wwi2021a"; //insert wwi2021a for docker
 $database = "wwi2021a";
