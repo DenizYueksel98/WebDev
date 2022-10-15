@@ -1,9 +1,9 @@
 <?php
 $username = "root";
-$password = "wwi2021a";
+$password = "";
 $database = "wwi2021a";
 
-$mysqli = new mysqli("mariadb", $username, $password, $database);
+$mysqli = new mysqli("127.0.0.1", $username, $password, $database);
 
 // Don't forget to properly escape your values before you send them to DB
 // to prevent SQL injection attacks.

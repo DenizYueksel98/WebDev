@@ -1,25 +1,27 @@
-<!DOCTYPE html>   <!-- NEUE INDEX HTML -->
+<!DOCTYPE html> <!-- NEUE INDEX HTML -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Kfz-Datenbank</title>
 
     <!-- load stylesheets Schriftwart mit ICONS defnieren-->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">
-    <link rel="stylesheet" href="/css/style.css?ts=<?=time()?>"/>
-    <?php include "includes/login-check.php"; ?>
-    <?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?>
-    <?php ob_start(); ?>
+    <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
+    <!--?php include "includes/login-check.php"; ?-->
+    <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
+    <!--?php ob_start(); ?-->
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div id="logo">
-            <a href="index.php" >
+            <a href="index.php">
                 <img src="/img/logo.png" />
             </a>
         </div>
@@ -34,7 +36,7 @@
                 </li>
                 <li>
                     Nav Item 3
-                </li>                        
+                </li>
             </ul>
             <!-- breadcrumb end -->
             <!-- search -->
@@ -58,7 +60,7 @@
             </li>
             <li>
                 <a href="sites/kontakt.html">Kontakt</a>
-            </li>                      
+            </li>
         </ul>
     </nav>
     <!-- navigation end -->
@@ -86,37 +88,37 @@
             <table>
                 <tr>
                     <th>
-                        Kopf Zelle 1
+                        Dolor officia ea quis mollit nulla ipsum nostrud.
                     </th>
                     <th>
-                        Kopf Zelle 2
+                        Officia minim sit eu eiusmod ea minim eiusmod adipisicing.
                     </th>
                     <th>
-                        Kopf Zelle 3
-                    </th>                    
+                        Incididunt exercitation incididunt eu culpa fugiat esse.
+                    </th>
                 </tr>
                 <tr>
                     <td>
-                        Zelle 1 / 1
+                        In sit culpa quis deserunt id labore incididunt in.
                     </td>
                     <td>
-                        Zelle 1 / 2
+                        Ad dolore deserunt aute ipsum.
                     </td>
                     <td>
-                        Zelle 1 / 2
-                    </td>                                        
+                        Deserunt sit est duis occaecat laborum dolor.
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        Zelle 2 / 1
+                        In enim ullamco sunt commodo.
                     </td>
                     <td>
-                        Zelle 2 / 2
+                        Irure magna aute cillum consequat aliquip non.
                     </td>
                     <td>
-                        Zelle 2 / 2
-                    </td>                                        
-                </tr>                
+                        Minim cillum aute minim proident pariatur.
+                    </td>
+                </tr>
             </table>
         </section>
 
@@ -133,14 +135,14 @@
             <h2>Tell us a little about yourself</h2>
             <form action="#URL endpunkt wo die daten hingeschickt werden sollen">
                 <div class="input-container">
-                    <input type="password" name="firstname" placeholder=" " /> 
+                    <input type="password" name="firstname" placeholder=" " />
                     <label for="firstname" class="placeholder">First name</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" name="lastname" placeholder=" " /> 
+                    <input type="text" name="lastname" placeholder=" " />
                     <label for="lastname" class="placeholder">Last name</label>
-                </div>           
+                </div>
 
                 <button class="button" type="submit">
                     registrieren
@@ -153,7 +155,7 @@
     <!-- footer -->
     <footer>
         <div>
-            <img src="/img/logo.png" />
+            <img src="\img\logo.png" />
             <p>
                 &copy; 2022 WWI2021a
             </p>
@@ -169,7 +171,7 @@
                 </li>
                 <li>
                     <a href="#">FAQ</a>
-                </li>                                
+                </li>
             </ul>
         </div>
         <div>
@@ -178,12 +180,13 @@
             <a href="#"><span class="typcn typcn-social-instagram"></span></a>
             <a href="#"><span class="typcn typcn-social-twitter"></span></a>
             <a href="google.de" class="let me google this for you"></a>
-        </div>                
+        </div>
     </footer>
     <!-- footer end -->
 
     <!-- load javascript -->
-    <script src="/js/script.js"></script>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="\js\check-password.js"></script>
+    <!--script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script-->
 </body>
+
 </html>

@@ -1,8 +1,8 @@
 <?php
 session_start();
-$DATABASE_HOST = 'mariadb';
+$DATABASE_HOST = '127.0.0.1'; //für Docker 'localhost'
 $DATABASE_USER = 'root';
-$DATABASE_PASS = 'wwi2021a';
+$DATABASE_PASS = ''; //für Docker 'wwi2021a'
 $DATABASE_NAME = 'wwi2021a';
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {

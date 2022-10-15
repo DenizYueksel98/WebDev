@@ -5,15 +5,15 @@
     --light-gray: #EFF1F4;
 
     --primary-color: #0CF;
-    
-    --gradient-start: rgb(62,72,86);
-    --gradient-end: rgb(92,106,123);
-    
+
+    --gradient-start: rgb(62, 72, 86);
+    --gradient-end: rgb(92, 106, 123);
+
     --top-row-height: 70px;
-    --left-col-width: 300px;    
-    
+    --left-col-width: 300px;
+
     --border-radius: 8px;
-  }
+}
 
 /* layout */
 html {
@@ -26,21 +26,21 @@ html {
 body {
     display: grid;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
     background: var(--light-gray);
     grid-template-rows: var(--top-row-height) 1fr auto;
     grid-template-columns: var(--left-col-width) 1fr;
-    grid-template-areas: 
-      "header header"
-      "sidenav main"
-      "footer footer";
+    grid-template-areas:
+        "header header"
+        "sidenav main"
+        "footer footer";
 }
 
 header {
     grid-area: header;
     background: #FFF;
     display: flex;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 #logo {
@@ -48,7 +48,7 @@ header {
     background: var(--dark-gray);
     color: var(--primary-color);
     display: flex;
-    align-items: center;    
+    align-items: center;
     justify-content: center;
     font-weight: 800;
     font-size: 2em;
@@ -72,9 +72,8 @@ header {
     margin: 0 0.5rem
 }
 
-.breadcrumb li:last-child:after
-{
-  content: '';
+.breadcrumb li:last-child:after {
+    content: '';
 }
 
 .breadcrumb a:hover {
@@ -116,6 +115,7 @@ footer ul a {
     display: block;
     padding: 0.25rem 0;
 }
+
 footer ul a::before {
     content: ">";
     margin: 0 0.5em 0 0;
@@ -181,13 +181,13 @@ form.search button[type="submit"]:hover {
 }
 
 form.search input[type="search"]:focus {
-  outline: none;
+    outline: none;
 }
 
 /* sections */
 section {
     background: #FFF;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     padding: 1em;
     margin: 0 0 1rem 0;
     border-radius: var(--border-radius);
@@ -201,8 +201,8 @@ section.cta {
     background: var(--dark-gray);
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    justify-content: center;    
+    align-items: center;
+    justify-content: center;
 }
 
 section.cta h1,
@@ -215,7 +215,7 @@ section.cta h2 {
     display: flex;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    padding: 0.5em 2em ;
+    padding: 0.5em 2em;
     margin: 2em;
     align-items: center;
     border-radius: var(--border-radius);
@@ -227,6 +227,27 @@ section.cta h2 {
     color: #FFF;
 }
 
+.registerbutton {
+    position: absolute;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5em 2em 0.5em 2em;
+    margin: 2em;
+    width: 30%;
+    /*align-items: center;*/
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+}
+
+/*
+#circle {
+    position: absolute;
+  transform:translate(-50%,-50%);
+  height:35px;
+  width:35px;
+  border-radius:5px;
+  border:2px solid black;
+}*/
 /* typography */
 h1 {
     margin: 0 0 1.25rem 0;
@@ -243,7 +264,7 @@ h3 {
     font-size: 1.25rem;
 }
 
-h1 + h2 {
+h1+h2 {
     margin-top: -0.75rem;
 }
 
@@ -291,6 +312,7 @@ section.table tr:last-child td:last-child {
 form {
     border: none;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 /*Animation*/
@@ -339,22 +361,28 @@ form {
     .container::before {
         display: none;
     }
+
     form {
         width: 80%;
     }
+
     form.sign-up-form {
         display: none;
     }
+
     .container.sign-up-mode2 form.sign-up-form {
         display: flex;
         opacity: 1;
     }
+
     .container.sign-up-mode2 form.sign-in-form {
         display: none;
     }
+
     .panels-container {
         display: none;
     }
+
     .account-text {
         display: initial;
         margin-top: 30px;
@@ -366,6 +394,7 @@ form {
         width: 90%;
     }
 }
+
 .input-container {
     background: var(--light-gray);
     border-radius: var(--border-radius);
@@ -375,7 +404,7 @@ form {
     padding: 0 20px;
     margin: 0 0 1rem 0;
     height: 3rem;
-  }
+}
 
 input {
     border: 0;
@@ -384,7 +413,7 @@ input {
     outline: 0;
     width: 100%;
     height: 3rem;
-    
+
 }
 
 .placeholder {
@@ -396,17 +425,17 @@ input {
     transform-origin: 0 50%;
     transition: transform 200ms, color 200ms;
     top: 20px;
-  }
-
-input:focus ~ .placeholder,
-input:not(:placeholder-shown) ~ .placeholder {
-  transform: translateY(-35px) translateX(-10px) scale(0.75);
 }
 
-input:not(:placeholder-shown) ~ .placeholder {
+input:focus~.placeholder,
+input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-35px) translateX(-10px) scale(0.75);
+}
+
+input:not(:placeholder-shown)~.placeholder {
     color: var(--medium-gray);
 }
 
-input:focus ~ .placeholder {
+input:focus~.placeholder {
     color: var(--dark-gray);
 }
