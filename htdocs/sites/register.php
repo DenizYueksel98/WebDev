@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/style.css?ts=<?= time() ?>" />
 </head>
 
-<body onload='document.register.password.focus()'>
+<body>
     <input type="hidden" name="redirurl" value="<? echo $_SERVER['HTTP_REFERER']; ?>" />
     <!-- header -->
     <header>
@@ -23,13 +23,7 @@
             <!-- breadcrumb -->
             <ul class="breadcrumb - Pfad">
                 <li>
-                    <a href="#">Nav Item 1</a>
-                </li>
-                <li>
-                    <a href="#">Nav Item 2</a>
-                </li>
-                <li>
-                    Nav Item 3
+                    <a href="/register.php">Anmeldung</a>
                 </li>
             </ul>
             <!-- breadcrumb end -->

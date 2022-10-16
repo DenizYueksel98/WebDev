@@ -406,6 +406,20 @@ form {
     height: 3rem;
 }
 
+.input-radio [type=label] {
+    display: inline-block;
+}
+
+.input-radio[type=checkbox],
+.input-radio[type=radio] {
+    display: inline-block;
+    width: auto;
+}
+.inline{
+    display: inline-block;
+    width: auto;
+}
+
 input {
     border: 0;
     box-sizing: border-box;
