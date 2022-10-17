@@ -49,6 +49,7 @@ if($num>0){
                 'p3'=>$p3,
                 'verbin'=>$verbin,
                 'verbau'=>$verbau,
+                'verbko'=>$verbko,
                 'co2kom'=>$co2kom,
                 'sehrs'=>$sehrs,
                 'schnell'=>$schnell,
