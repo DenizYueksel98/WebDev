@@ -5,6 +5,8 @@ class Car
     private $table = 'schein'; //define table schein
     private $wltp = 'wltp'; // define wltp
     private $nefz = 'nefz'; //define nefz
+    private $fil;
+    private $val;
     public $id;
     public $name;
     public $b21;
@@ -105,6 +107,70 @@ class Car
 
         $stmt = $this->conn->prepare($query); //prepare query
         $stmt->bind_param('i', $this->id); //bind param for id
+        $stmt->execute(); //exec
+        $stmt->store_result(); //store result and return stmt
+        return $stmt;
+    }
+    function likeCheck(){
+        str_contains(strtoupper($this->theta),'LIKE') ? $this->val='%'.$this->value.'%' :$this->val=$this->value;
+    }   
+    function filterCheck(){//check if table is not supplied and add if missing
+        if(str_contains(strtolower($this->filter),'id'))         $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'name'))          $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'b21'))           $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'b22'))           $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'j'))             $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'vier'))          $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'d1'))            $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'d2'))            $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'zwei'))          $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'fuenf'))         $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'v9'))            $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'vierzehn'))      $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'p3'))            $this->fil='s.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'verbin'))        $this->fil='n.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'verbau'))        $this->fil='n.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'verbko'))        $this->fil='n.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'co2kom'))        $this->fil='n.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'sehrs'))         $this->fil='w.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'schnell'))       $this->fil='w.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'langsam'))       $this->fil='w.'.$this->filter ;elseif(
+        str_contains(strtolower($this->filter),'co2komb'))       $this->fil='w.'.$this->filter ;$this->fil=$this->filter;
+    } 
+    public function read_filter() //read lines with filter
+    {
+        $this->filterCheck();//check if table is not supplied and add if missing
+        $this->likeCheck();//if theta is LIKE then surround value with %
+        $query = 'SELECT 
+        s.id,
+        s.name,
+        s.b21,
+        s.b22,
+        s.j,
+        s.vier,
+        s.d1,
+        s.d2,
+        s.zwei,
+        s.fuenf,
+        s.v9,
+        s.vierzehn,
+        s.p3,
+        n.verbin,
+        n.verbau,
+        n.verbko,
+        n.co2kom,
+        w.sehrs,
+        w.schnell,
+        w.langsam,
+        w.co2komb
+        FROM ' . $this->table . ' s 
+        LEFT JOIN '
+            . $this->nefz . ' n ON s.id=n.id
+        LEFT JOIN '
+            . $this->wltp . ' w ON s.id=w.id
+        WHERE '.$this->fil.' '.$this->theta." '".$this->val."'".' ;'; //prepare syntax from query
+        $stmt = $this->conn->prepare($query); //prepare query
+        //$stmt->bind_param('ssi', $this->filter, $this->theta, $this->value); //bind param for id
         $stmt->execute(); //exec
         $stmt->store_result(); //store result and return stmt
         return $stmt;

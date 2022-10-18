@@ -1,0 +1,66 @@
+<?php
+header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
+header('Content-Type: appclication/json');//header for json
+
+include_once('../core/initialize.php');
+
+$car = new Car($cardb);
+
+$car->filter = isset($_GET['filter']) ? $_GET['filter'] : die(); //liest Werte für Filter, Operator/Theta und Wert ein
+$car->theta  = isset($_GET['theta']) ? $_GET['theta'] : die();
+$car->value  = isset($_GET['value']) ? $_GET['value'] : die();
+$result = $car->read_filter();                                  //Ausführen der Methode read_filter im Objekt von car
+$num = $result->num_rows;
+function fetchAssocStatement($stmt)
+{
+    if ($stmt->num_rows > 0) {
+        $result = array();
+        $md = $stmt->result_metadata();
+        $params = array();
+        while ($field = $md->fetch_field()) {
+            $params[] = &$result[$field->name];
+        }
+        call_user_func_array(array($stmt, 'bind_result'), $params);
+        if ($stmt->fetch())
+            return $result;
+    }
+
+    return null;
+}
+
+if($num>0){
+    $car_arr = array();
+    $car_arr['data']= array();
+
+    while($row=fetchAssocStatement($result)){
+            extract($row);
+            $car_item=array(
+                //'id'=>$id,
+                'id'        =>$id,
+                'name'      =>$name,
+                'b21'       =>$b21,
+                'b22'       =>$b22,
+                'j'         =>$j,
+                'vier'      =>$vier,
+                'd1'        =>$d1,
+                'd2'        =>$d2,
+                'zwei'      =>$zwei,
+                'fuenf'     =>$fuenf,
+                'v9'        =>$v9,
+                'vierzehn'  =>$vierzehn,
+                'p3'        =>$p3,
+                'verbin'    =>$verbin,
+                'verbau'    =>$verbau,
+                'verbko'    =>$verbko,
+                'co2kom'    =>$co2kom,
+                'sehrs'     =>$sehrs,
+                'schnell'   =>$schnell,
+                'langsam'   =>$langsam,
+                'co2komb'   =>$co2komb
+            );
+            array_push($car_arr['data'],$car_item);
+    }
+    echo json_encode($car_arr);
+    }else{
+        echo json_encode(array('message'=>'No cars found.'));
+    }

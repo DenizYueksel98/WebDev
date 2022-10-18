@@ -3,6 +3,7 @@
     --dark-gray: #262d39;
     --medium-gray: #999;
     --light-gray: #EFF1F4;
+    --super-light-gray: #f9f9f9;
 
     --primary-color: #0CF;
 
@@ -221,8 +222,21 @@ section.cta h2 {
     border-radius: var(--border-radius);
     text-transform: uppercase;
 }
+.inline-button {
+    display: inline;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    margin-left: 2em;
+    max-width: 4.5em;
+    max-height: 2em;
+    text-transform: uppercase;
+}
 
-.button:hover {
+.button:hover,
+.registerbutton:hover,
+.inline-button:hover {
     background: var(--primary-color);
     color: #FFF;
 }
@@ -405,11 +419,35 @@ form {
     margin: 0 0 1rem 0;
     height: 3rem;
 }
+.input-container-nearly-full {
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--medium-gray);
+    position: relative;
+    width: 90%;
+    padding: 0.5rem 20px;
+    margin: 0 0 0 5%;
+    height: 3rem;
+}
 
 .input-radio [type=label] {
     display: inline-block;
 }
-
+.input-filter [type=radio] {
+    display: inline-block;
+    width: auto;
+}
+#attribut,#theta,#value {
+    display: inline;
+    width: 15em;
+    padding-top: 4px;
+    border: 1px solid white;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../favicon.ico) 99% / 10% no-repeat white;
+}
 .input-radio[type=checkbox],
 .input-radio[type=radio] {
     display: inline-block;
@@ -452,4 +490,37 @@ input:not(:placeholder-shown)~.placeholder {
 
 input:focus~.placeholder {
     color: var(--dark-gray);
+}
+
+/*FILTER*/
+.filterable {
+    margin-top: 15px
+}
+
+.filterable .panel-heading .pull-right {
+    margin-top: -20px
+}
+
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto
+}
+.form-control{
+    color:white;
+}
+
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: rgb(255, 255, 255)
+}
+
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: rgb(255, 255, 255)
+}
+
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: rgb(255, 255, 255)
 }
