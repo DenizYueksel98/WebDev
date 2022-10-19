@@ -4,7 +4,7 @@ header('Content-Type: appclication/json');//header for json
 
 include_once('../core/initialize.php');
 
-$user = new User($db);
+$user = new User($userdb);
 $user->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 $result = $user->read_single();

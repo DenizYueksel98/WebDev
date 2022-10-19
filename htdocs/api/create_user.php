@@ -6,7 +6,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type
 
 include_once('../core/initialize.php');
 
-$user = new User($db);
+$user = new User($userdb);
 
 $data = json_decode(file_get_contents("php://input"));//decode data from recieved json
 

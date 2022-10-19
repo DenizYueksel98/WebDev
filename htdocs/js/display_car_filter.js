@@ -1,43 +1,24 @@
-
-async function postFormDataAsJson({ url, formData }) {
-	const plainFormData = Object.fromEntries(formData.entries());
-	const formDataJsonString = JSON.stringify(plainFormData);
-
-	const fetchOptions = {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			"Accept": "application/json",
+function updateRequest() {
+	$filter =jQuery(document.getElementById('filter')).val();
+	$theta =jQuery(document.getElementById('theta')).val();
+	$value =jQuery(document.getElementById('value')).val();
+	
+	$.ajax({
+		url: '../api/read_car_filter.php',
+		type: "POST",
+		cache: false,
+		data: "filter=" + filter + "&theta=" + theta + "&value=" + value,
+		async: false,
+		success: function (data) {
+			alert(data);
 		},
-		body: formDataJsonString,
-	};
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert(errorThrown);
+		}
+	});
 
-	const response = await fetch(url, fetchOptions);
-
-	if (!response.ok) {
-		const errorMessage = await response.text();
-		throw new Error(errorMessage);
-	}
-
-	return response.json();
 }
-
-async function handleFormSubmit(event) {
-	event.preventDefault();
-
-	const form = event.currentTarget;
-	const url = form.action;
-
-	try {
-		const formData = new FormData(form);
-		const responseData = await postFormDataAsJson({ url, formData });
-
-		console.log({ responseData });
-	} catch (error) {
-		console.error(error);
-	}
-}
-window.onload=function(){
-const formCreate = document.getElementById("filter-form");
-formCreate.addEventListener("submit", handleFormSubmit);    
+window.onload = function () {
+	const formCreate = document.getElementById("filter-form");
+	formCreate.addEventListener("submit", updateRequest);
 }

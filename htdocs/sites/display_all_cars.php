@@ -8,7 +8,7 @@
 
     <title>Kfz-Datenbank</title>
 
-    <!-- load stylesheets Schriftwart mit ICONS defnieren-->
+    <!-- load stylesheets Schriftart mit ICONS defnieren-->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">

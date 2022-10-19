@@ -1,4 +1,4 @@
-
+/*code snippet aus dem netz, funktioniert, aber leider noch nicht verstanden wie(so)*/
 function checkval() {
     1 == $("tbody tr:visible").length && "No result found" == $("tbody tr:visible td").html() ? $("#rowcount").html("0") : $("#rowcount").html($("tr:visible").length - 1)
 }

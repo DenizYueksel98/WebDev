@@ -12,9 +12,9 @@ class User
     public $timestamp;
 
 
-    public function __construct($db)
+    public function __construct($userdb)
     {
-        $this->conn = $db; //constructor
+        $this->conn = $userdb; //constructor
     }
     public function read() //read all lines and return stmt
     {

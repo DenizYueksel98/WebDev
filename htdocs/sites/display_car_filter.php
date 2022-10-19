@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration für Kfz-Datenbank</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/typicons.css">
     <link rel="stylesheet" href="../css/style.css?ts=<?= time() ?>" />
@@ -60,8 +61,8 @@
             <form id="filter-form" action="../api/read_car_filter.php" method="post">
                 <div class="input-container-nearly-full">
                     <div class="inline">
-                        <label for="attribut">Attribut:</label>
-                        <select class="input-filter" name="attribut" id="attribut">
+                        <label for="filter">Filter:</label>
+                        <select class="input-filter" name="filter" id="filter">
                             <option value="id">ID</option>
                             <option selected value="name">Fahrzeugname</option>
                             <option value="b21">B2.1 lt. Zulassungsbescheinigung Teil 1</option>
@@ -85,19 +86,17 @@
                             <option value="co2komb">CO2-Emission kombiniert lt. WLTP</option>
                         </select>
                         <label for="theta">Vergleichsoperator:</label>
-                        <select class="input-filter"name="theta" id="theta">
+                        <select class="input-filter" name="theta" id="theta">
                             <option value="=">
                                 =
                             </option>
                             <option value="<">
-                                <
-                            </option>
+                                < </option>
                             <option value=">">
                                 >
                             </option>
                             <option value="<=">
-                                <=
-                            </option>
+                                <= </option>
                             <option value=">=">
                                 >=
                             </option>
@@ -110,8 +109,8 @@
                         </select>
                         <label for="value">Wert:</label>
                         <input class="input-filter" name="value" id="value" placeholder=" " />
-                        
-                        <input class="inline-button" id="send" value="Suche" type="submit"/>
+
+                        <input class="inline-button" id="send" value="Suche" type="submit" />
                     </div>
                 </div>
 
@@ -129,7 +128,7 @@
             CURLOPT_RETURNTRANSFER, // data in a variable instead
             true                    // of dumping on screen
         );
-        $response = curl_exec($curl); // Executing curl store it in response
+        $response = curl_exec($curl); // Executing curl, store it in response
 
         if ($e = curl_error($curl)) { //Checking if any error occurs during request
             echo $e;
@@ -141,68 +140,70 @@
         }
         curl_close($curl);  // Closing curl
         ?>
+        <section>
+        </section>
         <section class="table">
             <?php
             if (isset($message)) {
                 echo $message;
             ?>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>B2.1</th>
-                    <th>B2.2</th>
-                    <th>J</th>
-                    <th>4</th>
-                    <th>D1</th>
-                    <th>D2</th>
-                    <th>2</th>
-                    <th>5</th>
-                    <th>V9</th>
-                    <th>14</th>
-                    <th>P3</th>
-                    <th>NEFZ Verbrauch in.</th>
-                    <th>NEFZ Verbrauch au.</th>
-                    <th>NEFZ Verbrauch ko.</th>
-                    <th>NEFZ CO2-Emission ko.</th>
-                    <th>WLTP Sehr schnell</th>
-                    <th>WLTP Schnell</th>
-                    <th>WLTP Langsam</th>
-                    <th>WLTP CO2-Emission ko.</th>
-                </tr>
-                <?php foreach ($cars as $car) { ?>
+                <table>
                     <tr>
-                        <td><?php echo $car['id']; ?></td>
-                        <td><?php echo $car['name']; ?></td>
-                        <td><?php echo $car['b21']; ?></td>
-                        <td><?php echo $car['b22']; ?></td>
-                        <td><?php echo $car['j']; ?></td>
-                        <td><?php echo $car['vier']; ?></td>
-                        <td><?php echo $car['d1']; ?></td>
-                        <td><?php echo $car['d2']; ?></td>
-                        <td><?php echo $car['zwei']; ?></td>
-                        <td><?php echo $car['fuenf']; ?></td>
-                        <td><?php echo $car['v9']; ?></td>
-                        <td><?php echo $car['vierzehn']; ?></td>
-                        <td><?php echo $car['p3']; ?></td>
-                        <td><?php echo $car['verbin']; ?></td>
-                        <td><?php echo $car['verbau']; ?></td>
-                        <td><?php echo $car['verbko']; ?></td>
-                        <td><?php echo $car['co2kom']; ?></td>
-                        <td><?php echo $car['sehrs']; ?></td>
-                        <td><?php echo $car['schnell']; ?></td>
-                        <td><?php echo $car['langsam']; ?></td>
-                        <td><?php echo $car['co2komb']; ?></td>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>B2.1</th>
+                        <th>B2.2</th>
+                        <th>J</th>
+                        <th>4</th>
+                        <th>D1</th>
+                        <th>D2</th>
+                        <th>2</th>
+                        <th>5</th>
+                        <th>V9</th>
+                        <th>14</th>
+                        <th>P3</th>
+                        <th>NEFZ Verbrauch in.</th>
+                        <th>NEFZ Verbrauch au.</th>
+                        <th>NEFZ Verbrauch ko.</th>
+                        <th>NEFZ CO2-Emission ko.</th>
+                        <th>WLTP Sehr schnell</th>
+                        <th>WLTP Schnell</th>
+                        <th>WLTP Langsam</th>
+                        <th>WLTP CO2-Emission ko.</th>
                     </tr>
-            <?php }
-            } else
-                echo $message;
-            ?>
-            </table>
+                    <?php foreach ($cars as $car) { ?>
+                        <tr>
+                            <td><?php echo $car['id']; ?></td>
+                            <td><?php echo $car['name']; ?></td>
+                            <td><?php echo $car['b21']; ?></td>
+                            <td><?php echo $car['b22']; ?></td>
+                            <td><?php echo $car['j']; ?></td>
+                            <td><?php echo $car['vier']; ?></td>
+                            <td><?php echo $car['d1']; ?></td>
+                            <td><?php echo $car['d2']; ?></td>
+                            <td><?php echo $car['zwei']; ?></td>
+                            <td><?php echo $car['fuenf']; ?></td>
+                            <td><?php echo $car['v9']; ?></td>
+                            <td><?php echo $car['vierzehn']; ?></td>
+                            <td><?php echo $car['p3']; ?></td>
+                            <td><?php echo $car['verbin']; ?></td>
+                            <td><?php echo $car['verbau']; ?></td>
+                            <td><?php echo $car['verbko']; ?></td>
+                            <td><?php echo $car['co2kom']; ?></td>
+                            <td><?php echo $car['sehrs']; ?></td>
+                            <td><?php echo $car['schnell']; ?></td>
+                            <td><?php echo $car['langsam']; ?></td>
+                            <td><?php echo $car['co2komb']; ?></td>
+                        </tr>
+                <?php }
+                } else
+                    echo $message;
+                ?>
+                </table>
         </section>
     </main>
     <script src="../js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../js/display_car_filter.js"></script>
 </body>
+
 </html>

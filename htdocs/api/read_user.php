@@ -4,7 +4,7 @@ header('Content-Type: appclication/json');//header for json
 
 include_once('../core/initialize.php');//init
 
-$user = new User ($db);
+$user = new User ($userdb);
 
 $result = $user->read();
 
