@@ -5,8 +5,8 @@ class Car
     private $table = 'schein'; //define table schein
     private $wltp = 'wltp'; // define wltp
     private $nefz = 'nefz'; //define nefz
-    private $fil;
-    private $val;
+    private $fil; //for filter setting by client
+    private $val; //for value setting by client
     public $id;
     public $name;
     public $b21;
@@ -175,6 +175,8 @@ class Car
         $stmt->store_result(); //store result and return stmt
         return $stmt;
     }
+    //Transaktionsmanagement TODO
+    //Try&Catch 
     public function create() //create new tupel in db
     {
         $query = 'INSERT INTO ' . $this->nefz . " (
@@ -198,7 +200,7 @@ class Car
             $this->verbko,
             $this->co2kom
         );
-        if (!$stmt->execute()) { //exec
+        if ($stmt->execute()==false) { //exec
             printf("Error while inserting in %s %s. \n", $this->nefz, $stmt->error); //error
         }
         $query = 'INSERT INTO ' . $this->wltp . " (

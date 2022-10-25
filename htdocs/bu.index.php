@@ -1,43 +1,56 @@
-<h1> test </h1>
+
 <?php //Wenn nur php dann kann ich mir das schließende php symobl sparen
+spl_autoload_register(function ($className) {
+    $file = './src/' . str_replace('\\','/',$className) . '.php';
+    if (file_exists($file)) {
+        include($file);
+        if (class_exists($className)==false) {
+            echo $className . ' not found in '.$file;   
+            exit(1); 
+        }
+    } else {
+        echo 'no file for class '. $className;
+        exit(1);
+    }
+});
+$frontController = new Framework\FrontController();
+$frontController->dispatch();
+$frontController->render(); 
 
-$name = "name";
-echo "hallo" . $name; //. = +
-echo 'hallo $niels'; //string literal - NUR Text
 
-//<section>
-for ($i = 0; $i < 10; $i++) {
-    echo $i . ", ";
+
+
+
+
+
+
+//namespace Car; 
+
+
+//$_REQUEST; Immer definiert; Array mit dem hinter der URI
+/*class Test{
+    function doAnything(){
+        echo "ok";
+    }
+}*/
+//Interfaces sehr früh definieren
+/*
+interface MyInterface{ //Vertrag den ich eingehe, du muss die Methoden und Properties implementieren
+    public function doMore(); 
 }
-//<section
+interface MyOtherInterface{ //Vertrag den ich eingehe, du muss die Methoden und Properties implementieren
+    public function doMore(); 
+}
+abstract class AbstractHello extends Test implements MyInterface{
+    public function doMore(){
 
-$j = 0;
-while ($j < 100) {
-    echo $j . "<br>"; //"
+    }
 }
 
-
-function sum($a, $b)
-{
-    return $a + $b;
+class Hallo extends AbstractHello{ //doppelt extends geht nicht, mehrere Interfaces geht allerdings
+    
 }
 
-$c = sum(3, 5);
-echo $c;
-
-$x = 0;
-if ($x == 0) { //=== typsicherer Vergleich IMMER SO!
-    echo "yes";
-} else {
-    echo "no";
-}
-
-include('funktions.php'); //eine externe php datei laden
-//sayHello("niels");
-
-?>
-
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis adipisci porro doloremque voluptatibus cupiditate assumenda nemo veniam fugiat, sint odit officiis reiciendis asperiores sed ullam aliquid placeat quod sunt! Suscipit.
-
-
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis adipisci porro doloremque voluptatibus cupiditate assumenda nemo veniam fugiat, sint odit officiis reiciendis asperiores sed ullam aliquid placeat quod sunt! Suscipit.
+$a=new Test;
+//$b = new OtherTest();
+$c= new Car\CarcontrollerName();*/

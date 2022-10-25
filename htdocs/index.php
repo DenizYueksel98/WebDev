@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
+    <?include_once('/core/initialize.php');?>
+
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
     <!--?php ob_start(); ?-->
@@ -53,7 +55,7 @@
     <nav id="sidenav">
         <ul>
             <li>
-                <a href="sites/datenbank.html">Datenbank</a>
+                <a href="/sites/display_all_cars.php">Datenbank</a>
             </li>
             <li>
                 <a href="sites/register.php">Registration/Anmeldung</a>
@@ -71,7 +73,7 @@
             <h1>Ihre Kfz-Datenbank</h1>
             <h2>Stöbern sie durch die verschiedensten Autos</h2>
             <p>Klicken Sie hier um direkt zur Abfrage zu gelangen.</p>
-            <form action="sites/register.php" method="get" target="_blank">
+            <form action="/sites/display_all_cars.php" method="get" target="_blank">
                 <button class='button' type="submit">Zur Kfz-Datenbank</button>
             </form>
         </section>

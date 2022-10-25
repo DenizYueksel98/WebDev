@@ -7,7 +7,7 @@ $database = "wwi2021a";
 $cardatabase = "cars";
 
 $cardb =new mysqli($host, $username, $password, $cardatabase);//connect to car db
-$db = new mysqli($host, $username, $password, $database);//connect to db
+$userdb = new mysqli($host, $username, $password, $database);//connect to db
 if ( mysqli_connect_errno() ) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error()); //exit if error
 }
