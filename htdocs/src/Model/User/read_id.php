@@ -6,9 +6,10 @@ header('Content-Type: application/json');//header for json
 include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'/core/initialize.php');
 
 $user = new User($userdb);
-$user->id = isset($_GET['id']) ? $_GET['id'] : die();
+$data = json_decode(file_get_contents("php://input"));//decode data from recieved json
+$user->id = isset($data->id) ? $data->id : die();
 
-$result = $user->read_single();
+$result = $user->read_id();
 $num = $result->num_rows;
 function fetchAssocStatement($stmt)
 {

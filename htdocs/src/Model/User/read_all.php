@@ -7,7 +7,7 @@ include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.
 
 $user = new User ($userdb);
 
-$result = $user->read();
+$result = $user->read_all();
 
 $num = $result->num_rows;
 function fetchAssocStatement($stmt)

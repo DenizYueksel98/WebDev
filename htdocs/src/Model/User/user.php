@@ -19,7 +19,7 @@ class User
     {
         $this->conn = $userdb; //constructor
     }
-    public function read() //read all lines and return stmt
+    public function read_all() //read all lines and return stmt
     {
         $query = 'SELECT 
         id,
@@ -37,7 +37,7 @@ class User
         return $stmt;
     }
 
-    public function read_single() //read single line and return stmt
+    public function read_id() //read single line and return stmt
     {
         $query = 'SELECT 
         id,
@@ -51,6 +51,25 @@ class User
 
         $stmt = $this->conn->prepare($query); //prepare query
         $stmt->bind_param('i', $this->id); //bind param for id
+        $stmt->execute(); //exec
+        $stmt->store_result(); //store result and return stmt
+        return $stmt;
+    }
+    
+    public function read_username() //read single line and return stmt
+    {
+        $query = 'SELECT 
+        id,
+        username,
+        password,
+        firstname,
+        lastname,
+        timestamp
+        FROM ' . $this->table .
+            ' WHERE username = ? LIMIT 1'; //prepare syntax from query
+
+        $stmt = $this->conn->prepare($query); //prepare query
+        $stmt->bind_param('s', $this->username); //bind param for id
         $stmt->execute(); //exec
         $stmt->store_result(); //store result and return stmt
         return $stmt;

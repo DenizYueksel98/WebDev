@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
 header('Content-Type: application/json');//header for json
 header('Access-Control-Allow-Methods: POST');//allow POST
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');//allow some other useful headers
-print_r(getcwd());
+
 include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'/core/initialize.php');
 
 $car = new Car($cardb);

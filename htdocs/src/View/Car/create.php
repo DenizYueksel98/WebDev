@@ -1,9 +1,10 @@
-<script src="../../../js/create_car_request.js"></script>
+<script src="../../../js/jQuery.min.js" type="text/javascript"></script>
+<script src="../../../js/create_car.js"></script>
 <section class="create-form">
     <h1>Insert a new car into the database </h1>
     <p>Use this handy form to insert new cars into our database.</p>
 
-    <form id="create-form" action="../../src/Model/create_car.php" method="post">
+    <form id="create-form" method="post">
         <div class="input-container">
             <input id="id" name="id" type="number" placeholder=" " />
             <label for="id" class="placeholder">ID</label>
@@ -97,8 +98,7 @@
             <label for="co2komb" class="placeholder">WLTP CO2 Emission kombiniert</label>
         </div>
         <!--input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7" /-->
-        <input class="button" id="send" value="Fahrzeug in die DB schreiben" type="submit" />
+        <input class="button" id="submit" value="Fahrzeug in die DB schreiben" type="submit" />
     </form>
 </section>
 <script src="../../../js/script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

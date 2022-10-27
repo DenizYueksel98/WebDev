@@ -61,7 +61,7 @@
                 <a href="/bu.index.php?c=user">Registration/Anmeldung</a>
             </li>
             <li>
-                <a href="bu.index.php?c=contact">Kontakt</a>
+                <a href="/bu.index.php?c=contact">Kontakt</a>
             </li>
         </ul>
     </nav>
@@ -109,7 +109,7 @@
     <!-- footer end -->
 
     <!-- load javascript -->
-    <script src="\js\check-password.js"></script>
+    <!--script src="\js\check-password.js"></script-->
     <!--script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script-->
 </body>
 
