@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
-    <?include_once('/core/initialize.php');?>
+    <?include_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'core/initialize.php');?>
 
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
@@ -42,7 +42,7 @@
             </ul>
             <!-- breadcrumb end -->
             <!-- search -->
-            <form class="search" action="bu.index.php?c=search&a=query" method="POST">
+            <form class="search" action="/bu.index.php?c=search&a=query" method="POST">
                 <input type="search" name="query" placeholder="Search...">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>

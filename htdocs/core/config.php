@@ -1,8 +1,8 @@
 <?php
 //set vars for db connection
-$host = "127.0.0.1"; 
+$host = "mariadb"; 
 $username = "root";
-$password = ""; //insert wwi2021a for docker
+$password = "wwi2021a"; //insert wwi2021a for docker
 $userdatabase = "wwi2021a";
 $cardatabase = "cars";
 
