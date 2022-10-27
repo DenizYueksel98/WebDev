@@ -1,7 +1,7 @@
 <?php
 
 namespace Framework;
-include_once('.\\core\\initialize.php');
+include_once('./core/initialize.php');
 class Layout
 {
     private $controller;
@@ -16,11 +16,11 @@ class Layout
 
     public function render($view)
     {
-        $this->view = $view;
-        include(LAYOUT_PATH.DS.'default.php');
+        $this->view = $view;//Hier steckt der Pfad für die dynamische View.php drin
+        include(LAYOUT_PATH.DS.'default.php');//Statischer Part
     }
 
-    public function renderView()
+    public function renderView()//Dynamischer Part
     {
         echo $this->controller->render($this->view);
     }

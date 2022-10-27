@@ -73,7 +73,7 @@
             <h1>Ihre Kfz-Datenbank</h1>
             <h2>Stöbern sie durch die verschiedensten Autos</h2>
             <p>Klicken Sie hier um direkt zur Abfrage zu gelangen.</p>
-            <form action="/sites/display_all_cars.php" method="get" target="_blank">
+            <form action="bu.index.php?c=car" method="get" target="_blank">
                 <button class='button' type="submit">Zur Kfz-Datenbank</button>
             </form>
         </section>

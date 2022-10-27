@@ -1,7 +1,6 @@
 <?php
 namespace Framework;
-
-include_once('.\\core\\initialize.php');
+include_once('./core/initialize.php');
 class FrontController
 {
     const DEFAULT_CONTROLLER = 'default';
@@ -12,6 +11,7 @@ class FrontController
     private $controller;
     private $action;
     private $layout;
+    private $id;
 
     public function __construct()
     {
@@ -21,20 +21,25 @@ class FrontController
 
     public function dispatch() 
     {
-        if (isset($_REQUEST['c'])) 
+        if (isset($_REQUEST['c'])==true) 
         {
-            $this->controllerName = $_REQUEST['c'];  
+            $this->controllerName = $_REQUEST['c'];//$_REQUEST?c="xyz"
         }
         if (isset($_REQUEST['a'])) 
         {
             $this->actionName = $_REQUEST['a'];  
         }
+        
 
         $controllerClassName = 'Controller\\' . ucfirst(strtolower($this->controllerName)) . 'Controller';
         $actionName = strtolower($this->actionName) . 'Action';
 
-        $this->controller = new $controllerClassName();
-
+        $this->controller = new $controllerClassName();//Controller\CarController()
+        if (isset($_REQUEST['i'])) 
+        {
+            $this->id = intval($_REQUEST['i']);
+            $this->controller->id=$this->id;
+        }
         if (method_exists($this->controller, $actionName)) 
         {
             $this->controller->$actionName();
@@ -43,7 +48,7 @@ class FrontController
         {
             echo 'action ' . $actionName . ' not found in ' . $controllerClassName;
         }
-
+        
         $this->layout = new Layout(
             $this->controller,
             $this->action,
@@ -51,7 +56,7 @@ class FrontController
     }
 
     public function render()
-    {
+    {//bu.index.php?c=car&a=default 
         $view = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';
         $this->layout->render($view);
     }

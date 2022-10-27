@@ -13,9 +13,10 @@ spl_autoload_register(function ($className) {
         exit(1);
     }
 });
-$frontController = new Framework\FrontController();
-$frontController->dispatch();
-$frontController->render(); 
+
+$frontController = new Framework\FrontController();//Instatiate mit Default für Controller und Action
+$frontController->dispatch();//Controller und Action Name festlegen, falls gesetzt, inklusive aller Pfade
+$frontController->render(); //Pfad für View festlegen
 
 
 

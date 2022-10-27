@@ -1,4 +1,5 @@
 <?php
+namespace Model\Car;
 class Car
 {
     private $conn;

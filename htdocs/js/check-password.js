@@ -56,7 +56,7 @@ function func2() {
     }
 }
 function setAction(form) {
-    form.action = "signup.php";
+    form.action = "./src/Model/User/signup.php";
     if ($pwcorrect) {
         return false;
     } else {

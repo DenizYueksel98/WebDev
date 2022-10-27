@@ -1,8 +1,9 @@
 <?php
+namespace Model\Car;
 header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
-header('Content-Type: appclication/json');//header for json
+header('Content-Type: application/json');//header for json
 
-include_once('../core/initialize.php');
+include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'/core/initialize.php');
 
 $car = new Car($cardb);
 

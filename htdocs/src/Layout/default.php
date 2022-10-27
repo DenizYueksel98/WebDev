@@ -23,7 +23,7 @@
     <!-- header -->
     <header>
         <div id="logo">
-            <a href="index.php">
+            <a href="bu.index.php">
                 <img src="/img/logo.png" />
             </a>
         </div>
@@ -55,13 +55,13 @@
     <nav id="sidenav">
         <ul>
             <li>
-                <a href="/sites/display_all_cars.php">Datenbank</a>
+                <a href="/bu.index.php?c=car">Datenbank</a>
             </li>
             <li>
-                <a href="sites/register.php">Registration/Anmeldung</a>
+                <a href="/bu.index.php?c=user">Registration/Anmeldung</a>
             </li>
             <li>
-                <a href="sites/kontakt.html">Kontakt</a>
+                <a href="bu.index.php?c=contact">Kontakt</a>
             </li>
         </ul>
     </nav>
@@ -70,10 +70,10 @@
     <!-- content -->
     <main>
         <?php
-        $this->renderView();
+        $this->renderView();//<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
         ?>
-</main>    
+    </main>    
     <!-- content end -->
 
     <!-- footer -->

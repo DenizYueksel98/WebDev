@@ -1,3 +1,30 @@
+/*
+$(document).ready(function() {
+    $('#create-form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: './src/Model/Userauthenticate.php',
+            data: $(this).serialize(),
+            success: function(response)
+            {
+                var jsonData = JSON.parse(response);
+  
+                // user is logged in successfully in the back-end
+                // let's redirect
+                if (jsonData.success == "1")
+                {
+                    location.href = 'bu.index.php?c=user&a=loggedin';
+                }
+                else
+                {
+                    alert('Invalid Credentials!');
+                }
+           }
+       });
+     });
+});*/
+
 
 async function postFormDataAsJson({ url, formData }) {
 	const plainFormData = Object.fromEntries(formData.entries());

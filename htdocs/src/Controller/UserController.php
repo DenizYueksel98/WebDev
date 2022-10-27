@@ -4,21 +4,29 @@ namespace Controller;
 
 use Framework\AbstractController;
 
-class CarController extends AbstractController
+class UserController extends AbstractController
 {
-    public $carModel = [];
-    public $singleCar = [];
-    public $detailLinkBegin="<br><a href=?c=car&a=";
-    public $detailLinkEnd=">Show details</a>";
+    public $userModel = [];
+    public $singleUser = [];
     public $message;
     public $id;
-    public function defaultAction()
+
+    public function defaultAction(){
+
+    }
+    public function registerAction(){
+
+    }
+    public function authenticateAction(){
+
+    }
+    public function readAction()
     {
         $curl = curl_init(); // Initializing curl
         curl_setopt(
             $curl,
             CURLOPT_URL,                            // Sending GET request to reqres.in
-            "http://localhost:8080/src/Model/Car/read_car.php" // API to get JSON data aka MODEL
+            "http://localhost:8080/src/Model/read_user.php" // API to get JSON data aka MODEL
         );
         curl_setopt(
             $curl,                  // Telling curl to store JSON
@@ -32,34 +40,21 @@ class CarController extends AbstractController
         } else {
             $decoded =
                 json_decode($response, true);   //decoding JSON, making array
-            $this->carModel = $decoded['data'];             //navigate one down into nested array into data field
+            $this->userModel = $decoded['data'];             //navigate one down into nested array into data field
             $this->message = "<h3>JSON file data</h3>";
         }
         curl_close($curl);  // Closing curl
-        /*
-        $this->carModel = [
-            'BMW',
-            'VW',
-            'Jaguar',
-            'Porsche',
-            'Mercedes',
-        ];*/
     }
     public function detailAction()
     {
-        $this->defaultAction();
-        $this->singleCar[]=$this->carModel[$this->id-1];
-        return "detail";
     }
-    public function getCarModel(){
+    public function getUserModel(){
         $this->defaultAction();
-        return $this->carModel; 
-    }
-    public function readAction(){
-        
+        return $this->userModel; 
     }
     public function createAction()
     {
+        
         //lege Fahrzeug an
     }
 }
