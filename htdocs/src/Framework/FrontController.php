@@ -68,7 +68,11 @@ class FrontController
     {//bu.index.php?c=car&a=default 
         if($this->controller->hasView){ // Pfad für Dynamische View bauen = //var/www/html'/src/view/Car/details.php
         $dynamicView = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';
+<<<<<<< Updated upstream
         $this->layout->render($dynamicView);// --> Übergang zu Framework/Layout.renderDynamic(Mit_der_hier_definierten_$dynamicView)  
+=======
+        $this->layout->renderStatic2($dynamicView);// --> Übergang zu Framework/Layout.renderDynamic(Mit_der_hier_definierten_$dynamicView)  
+>>>>>>> Stashed changes
         }
     }
 }
