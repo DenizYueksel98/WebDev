@@ -2,7 +2,10 @@
 
 namespace Controller;
 
+//Wir benutze den USE mit dem Namespace "Framework" damit wir direkt "extenden" können
+//Sonst müssten wir den Pfade den Namespace folgendermaßen nochmals angebne "...extends Framework\AbstractController" 
 use Framework\AbstractController;
+
 
 class CarController extends AbstractController
 {
@@ -12,6 +15,8 @@ class CarController extends AbstractController
     public $detailLinkEnd=">Show details</a>";
     public $message;
     public $id;
+
+    
     public function defaultAction()
     {
         $curl = curl_init(); // Initializing curl

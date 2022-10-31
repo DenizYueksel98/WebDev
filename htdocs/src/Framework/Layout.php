@@ -5,23 +5,29 @@ include_once('./core/initialize.php');
 class Layout
 {
     private $controller;
-    private $action;
-    private $view;
+    private $actionMethodName;
+    private $dynamicView;
 
-    public function __construct($controller, $action)
+    public function __construct($controller, $actionMethodName)
     {
         $this->controller = $controller;
-        $this->action = $action;
+        $this->action = $actionMethodName;
     }
 
-    public function render($view)
+
+    //Zuvor wird in der index.php frontController->dispatch() und frontController->render() aufgerufen
+  
+
+    public function renderStatic2($dynamicView)//--> Wird von der Frontcontroller.renderDynamic() aufgerufen
     {
-        $this->view = $view;//Hier steckt der Pfad für die dynamische View.php drin
-        include(LAYOUT_PATH.DS.'default.php');//Statischer Part
+        $this->dynamicView = $dynamicView; // $dynamicView =//var/www/html'/src/view/Car/details.php
+        include(LAYOUT_PATH.DS.'staticView.php');
+        //Statischer Part wird ausgeführt - Darin wird dann renderDynamicHTML() aufgerufen
     }
 
-    public function renderView()//Dynamischer Part
+    public function renderDynamic3()// --> Wird in der HTML (Layout/staticView.php) aufgerufen
     {
-        echo $this->controller->render($this->view);
+        echo $this->controller->renderDynamic4($this->dynamicView); // --> Wird von der AbstractController ausgeführt
+        // in der AbstractController wird nun ENDLICH mit include($dynamicView); die Dynamische sicht aufgerufen
     }
 }

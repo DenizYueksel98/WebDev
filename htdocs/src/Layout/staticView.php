@@ -70,7 +70,7 @@
     <!-- content -->
     <main>
         <?php
-        $this->renderView();//<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
+        $this->renderDynamic3();//<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
         ?>
     </main>    

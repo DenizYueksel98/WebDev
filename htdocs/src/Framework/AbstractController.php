@@ -4,8 +4,8 @@ namespace Framework;
 
 class AbstractController
 {
-    public function render($view)
+    public function renderDynamic4($dynamicView)
     {
-        include($view);
+        include($dynamicView);
     }
 }

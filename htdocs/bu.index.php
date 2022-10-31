@@ -1,5 +1,6 @@
 
 <?php //Wenn nur php dann kann ich mir das schließende php symobl sparen
+//Wird aufgerufen, sobald ich eine Klasse instanziiere, die es nicht gibt
 spl_autoload_register(function ($className) {
     $file = './src/' . str_replace('\\','/',$className) . '.php';
     if (file_exists($file)) {
@@ -14,9 +15,11 @@ spl_autoload_register(function ($className) {
     }
 });
 
+//START - Über localhost:8080 wird die index.php aufgerufen - nach dem "?" wird über c=car was mit c->car (methodenaufruf bzw. wie ein "." in Java)
+
 $frontController = new Framework\FrontController();//Instatiate mit Default für Controller und Action
 $frontController->dispatch();//Controller und Action Name festlegen, falls gesetzt, inklusive aller Pfade
-$frontController->render(); //Pfad für View festlegen
+$frontController->render1(); //Pfad für View festlegen
 
 
 
