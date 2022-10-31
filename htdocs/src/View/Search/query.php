@@ -41,8 +41,8 @@ We found <?php if(isset($this->searchResultContains)){echo count($this->searchRe
 
 </section>
 
-<?php if(isset($this->searchResultContains) && 
-count($this->searchResultExplicit)<>count($this->searchResultContains)){?> 
+<?php   if((isset($this->searchResultContains) && isset($this->searchResultExplicit)==false)
+        ||(isset($this->searchResultContains) && isset($this->searchResultExplicit))){?> 
 <section class=table>
     <table>
         <tr>

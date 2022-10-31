@@ -1,12 +1,13 @@
+//get Data from Form
 const getFormData = () => {
 	const form = document.getElementById("login-form");
 	return new FormData(form);
 }
 
 const toJson = function (event) {
-	const formData = getFormData();
-	event.preventDefault();
-	let object = {};
+	const formData = getFormData(); //get Data from Form
+	event.preventDefault();//Verhindere action Event
+	let object = {}; //neues Objekt für die Speicherung von Benutzereingaben
 	formData.forEach((value, key) => {
 		if (!Reflect.has(object, key)) {
 			object[key] = value;
@@ -15,22 +16,23 @@ const toJson = function (event) {
 		if (!Array.isArray(object[key])) {
 			object[key] = [object[key]];
 		}
-		object[key].push(value);
+		object[key].push(value); //Packe den WErt in das Objekt
 	});
-	let json = JSON.stringify(object);
+	let json = JSON.stringify(object);//erzeuge aus dem Objekt eine JSON
 	$.ajax({
-		type: 'POST',
-		url: 'http://localhost:8080/src/Model/User/login.php',
-		dataType: 'json',
+		type: 'POST', //Post-Methode ausgewählt
+		url: 'http://localhost:8080/src/Model/User/login.php',//Endpunkt der API (erwartet JSON)
+		dataType: 'json', //Angabe des Datentyps
 		data: json,
 		contentType: 'application/json',
-		success: function(data) {
+		success: function(data) {//Falls erfolgreich-> schicke Alert mit s.u.
 		  alert('Your registration was successfully')
 		}
 	  });
 };
 
+//Beim Laden des Fensters 
 window.onload = function () {
-	const submit = document.getElementById("loginbtn");
-	submit.addEventListener("click", toJson);
+	const submit = document.getElementById("loginbtn"); //submit-> Das Element mit der ID: loginbtn
+	submit.addEventListener("click", toJson);//Falls submit geklickt wurde, führe MEthode toJson aus
 }

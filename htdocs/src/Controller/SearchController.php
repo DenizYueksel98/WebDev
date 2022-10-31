@@ -6,13 +6,15 @@ use Controller\CarController;
 
 class SearchController extends CarController
 {
-    public $searchQuery = '';
-    public $searchResultExplicit;    
-    public $searchResultContains;
-    public $foundIn = array();
-    public $foundUnique = array();
-    public $carModel;
-    public $mappingArray = array(
+    public $query; //Angefragte ID/String/etc.
+    public $hint=""; //leerer Hint-String
+    public $searchQuery = ''; //leerer SearchQueryString
+    public $searchResultExplicit; //leeres searchResultExplicit Array, enthält exakte Suchtreffer
+    public $searchResultContains; //leeres searchResultContains Array, enthält Suchtreffer, die SuchString enthalten
+    public $foundIn = array(); //Array zur Speicherung der IDs in denen der Wert gefunden wurde, enthält Duplikate
+    public $foundUnique = array(); //foundIn, bloß ohne Duplikate
+    public $carModel; // carModel Array als Ergebnis der gesamthaften Datenbankabfrage
+    public $mappingArray = array( //Mappingarray, dass ich drüber iterieren kann, statt die Bezeichnung anzugeben, siehe. queryAction innerhalb der for SChleifen
         'id',
         'name',
         'b21',
@@ -35,40 +37,64 @@ class SearchController extends CarController
         'langsam',
         'co2komb'
     );
-    public function queryAction()
+    public function suggestAction()//VorschlagsMethode
     {
-        if (isset($_REQUEST['query'])) {
-            $this->searchQuery = $_REQUEST['query'];
+        $this->disableView();//Anzeige deaktiviert, sonst ist der Response die komplette Seite (inkl. Statischen Inhalten)
+        if (isset($this->query)) {//Falls ein query-String angegeben wurde
+            $this->searchQuery = $this->query;//setze den Wert von searchQuery auf den Wert von Query
+            $this->carModel = parent::getCarModel(); //carModelAbfrage über Elternteil (diese Klasse hier erbt von CarController)
+
+            for ($i = 0; $i < count($this->carModel); $i++) {//Für alle i von 0 bis carModel.length
+                //Falls das Array im Feld Name, unseren gesuchten Wert enthält
+                if (str_contains(strtolower(strval($this->carModel[$i]['name'])), strtolower($this->searchQuery))) {
+                    //Füge den Hint-String die ID hinzu
+                    $this->hint .= $this->carModel[$i]['id'].", ";
+                }
+            }
+        }
+        //Gib den hint aus, damit er vom JS angezeigt werden kann
+        echo $this->hint;
+    }
+    public function queryAction()//Funktion für Suchanfrage
+    {
+        $this->enableView(); //Aktiviere View, könnte von suggestAction deaktiviert worden sein
+        if (isset($this->query)) { //Falls ein Suchstring
+            $this->searchQuery = $this->query; //Setze Suchstring in die Variable
 
             // do the search
-            $this->carModel = parent::getCarModel();
+            $this->carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
 
-            //var_dump($this->carModel);
-            //print_r($this->carModel[0]['id']);
-
-            for ($i = 0; $i < count($this->carModel); $i++) {
-                for ($j = 1; $j < count($this->carModel[$i]); $j++) {
-                    if (strval($this->searchQuery) == strval($this->carModel[$i][$this->mappingArray[$j]]) or 
-                        intval($this->searchQuery) == intval($this->carModel[$i]['id'])) {
-                        
+            for ($i = 0; $i < count($this->carModel); $i++) { //Für alle ergebnisse von 0 bis carModel.length, iteriere i
+                for ($j = 1; $j < count($this->carModel[$i]); $j++) { //Für alle innerhalb carModel[i], iteriere j
+                    if (//Falls Eingabe komplett übereinstimmt als String oder Int (Differenzierung wegen int in Spalte id)
+                        strval($this->searchQuery) == strval($this->carModel[$i][$this->mappingArray[$j]]) or
+                        intval($this->searchQuery) == intval($this->carModel[$i]['id'])
+                    ) {
+                        //Packe das Suchergebnis in das Array für die expliziten Treffer
                         $this->searchResultExplicit[] = $this->carModel[$i];
                     }
-                    if(str_contains(strtolower(strval($this->carModel[$i][$this->mappingArray[$j]])),strtolower($this->searchQuery))){
+                    //Falls der Inhalt wiedergefunden wurde
+                    if (str_contains(strtolower(strval($this->carModel[$i][$this->mappingArray[$j]])), strtolower($this->searchQuery))) {
+                        //Packe das Suchergebnis in das Array für die "contains" Treffer
                         $this->searchResultContains[] = $this->carModel[$i];
                     }
                 }
             }
-            if (isset($this->searchResultExplicit)) {
+            //Falls searchResultEplicit Elemente enthält
+            if (isset($this->searchResultExplicit)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
                 $this->searchResultExplicit = array_map("unserialize", array_unique(array_map("serialize", $this->searchResultExplicit)));
             }
-            if (isset($this->searchResultContains)) {
+            //Falls searchResultContains Elemente enthält
+            if (isset($this->searchResultContains)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
                 $this->searchResultContains = array_map("unserialize", array_unique(array_map("serialize", $this->searchResultContains)));
             }
-            /*$this->searchResult = [
-                'a',
-                'b'
-            ];*/
             //var_dump($this->searchResult);
         }
+    }
+    //Funktion zum zurückgeben der Expliziten Suchtreffer
+    public function getSearchResultExplicit()
+    {
+        $this->queryAction();
+        return $this->searchResultExplicit;
     }
 }

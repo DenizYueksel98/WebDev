@@ -6,10 +6,10 @@ use Framework\AbstractController;
 
 class UserController extends AbstractController
 {
-    public $userModel = [];
-    public $singleUser = [];
-    public $message;
-    public $id;
+    public $userModel = []; //Array für alle User
+    public $singleUser = []; // Array für einzelnen User
+    public $message; //Message String
+    public $id; //Gesuchte id, wird vom Frontcontroller gesetzt, falls in der URI mit angegeben 
 
     public function defaultAction(){
 
@@ -48,6 +48,7 @@ class UserController extends AbstractController
     public function detailAction()
     {
     }
+    //Funktion zur Rückgabe des userModel-Arrays, damit es auserhalb der Klasse abrufbar ist
     public function getUserModel(){
         $this->defaultAction();
         return $this->userModel; 

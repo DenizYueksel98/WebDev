@@ -9,14 +9,14 @@ use Framework\AbstractController;
 
 class CarController extends AbstractController
 {
-    public $carModel = [];
-    public $singleCar = [];
-    public $detailLinkBegin="<br><a href=?c=car&a=";
-    public $detailLinkEnd=">Show details</a>";
-    public $message;
-    public $id;
+    public $carModel = []; //Beinhaltet später alle Cars, die die API geliefert hat, als Array 
+    public $singleCar = []; //Abfrage einzelnes Auto
+    public $detailLinkBegin="<br><a href=?c=car&a="; //Definiere den Beginn unseres Links, dass er aus der HTML (VIEW) abrufbar ist
+    public $detailLinkEnd=">Show details</a>"; //Definiere das Ende des Detail Links, dass er aus der HTML (View/Car/) abrufbar ist
+    public $message; //Antwort der Abfrage
+    public $id; // id, die angefragt wurde
 
-    
+
     public function defaultAction()
     {
         $curl = curl_init(); // Initializing curl
@@ -52,11 +52,11 @@ class CarController extends AbstractController
     }
     public function detailAction()
     {
-        $this->defaultAction();
-        $this->singleCar[]=$this->carModel[$this->id-1];
-        return "detail";
+        $this->defaultAction();//Damit carModel gefüllt ist
+        $this->singleCar[]=$this->carModel[$this->id-1];//Packe in das singleCar Array die Daten des Autos aus dem carModel Array
+        return "detail";//gib detail zurück
     }
-    public function getCarModel(){
+    public function getCarModel(){//returned einfach das CarModel, so kann es von anderen Klassen angefragt werden
         $this->defaultAction();
         return $this->carModel; 
     }

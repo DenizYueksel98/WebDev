@@ -5,15 +5,24 @@ $('.registerbutton').mouseleave(function () {
     $('.holder').removeClass('open');
 });*/
 
-
+//Beim Öffnen der Seite setzte pwcorrect auf false, und führe func 1 und func 2 aus
 window.onload = function () {
     $pwcorrect = false;
     func1();
     func2();
 }
-function start() {
 
+function setAction(form) {
+    form.action = "./src/Model/User/create.php";
+    if ($pwcorrect) {
+        return false;
+    } else {
+        return form.action;
+    }
 }
+
+
+/*funktionierender Code für PW Check
 function func1() {//RegisterRun
     document.getElementById("regbtn").addEventListener("mouseover", run);
     function run() {
@@ -54,18 +63,6 @@ function func2() {
             return false;
         }
     }
-}
-function setAction(form) {
-    form.action = "./src/Model/User/signup.php";
-    if ($pwcorrect) {
-        return false;
-    } else {
-        return form.action;
-    }
-}
-
-
-/*funktionierender Code für PW Check
-    
+}   
     
 */

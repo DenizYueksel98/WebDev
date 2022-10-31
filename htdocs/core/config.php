@@ -1,6 +1,6 @@
 <?php
 //set vars for db connection
-$host = "mariadb"; 
+$host = "mariadb"; //insert mariadb for docker
 $username = "root";
 $password = "wwi2021a"; //insert wwi2021a for docker
 $userdatabase = "wwi2021a";
@@ -11,4 +11,4 @@ $userdb = 	new mysqli($host, $username, $password, $userdatabase);//connect to u
 if ( mysqli_connect_errno() ) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error()); //exit if error
 }
-define('APP_NAME','Kraftfahrzeug-Datenbank');
+define('APP_NAME','Kraftfahrzeug-Datenbank');//Define APP_NAME -> bestPractice

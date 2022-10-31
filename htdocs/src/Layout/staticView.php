@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
-    <?include_once(dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'core/initialize.php');?>
-
+    <? include_once('/core/initialize.php'); ?>
+    
+    <script src="../../js/search.js"></script>
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
     <!--?php ob_start(); ?-->
@@ -23,7 +24,7 @@
     <!-- header -->
     <header>
         <div id="logo">
-            <a href="bu.index.php">
+            <a href="index.php">
                 <img src="/img/logo.png" />
             </a>
         </div>
@@ -42,10 +43,15 @@
             </ul>
             <!-- breadcrumb end -->
             <!-- search -->
-            <form class="search" action="/bu.index.php?c=search&a=query" method="POST">
+            <!--form class="search" action="bu.index.php?c=search&a=query" method="POST">
                 <input type="search" name="query" placeholder="Search...">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
+            </form-->
+            <form class="search" action="" method="POST" >
+                <input type="search" name="query" placeholder="Search..." onkeyup="showHint(this.value)">
+                <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
+            <p>Suggestions: <span id="txtHint"></span></p>
             <!-- search end -->
         </nav>
     </header>
@@ -53,27 +59,44 @@
 
     <!-- navigation -->
     <nav id="sidenav">
-        <ul>
+        <ol>
             <li>
-                <a href="/bu.index.php?c=car">Datenbank</a>
+                <a href="/index.php?c=car">Datenbank</a>
+                <ul>
+                    <li>
+                        <a href="/index.php?c=car">Alle Fahrzeuge</a>
+                    </li>
+                    <li>
+                        <a href="/index.php?c=search&a=query">Suche</a>
+                    </li>
+                </ul>
             </li>
             <li>
-                <a href="/bu.index.php?c=user">Registration/Anmeldung</a>
+                <a href="/index.php?c=user">Benutzerverwaltung</a>
+                <ul>
+                    <li>
+                        <a href="/index.php?c=user&a=create">Registration</a>
+                    </li>
+                    <li>
+                        <a href="/index.php?c=user&a=login">Login</a>
+                    </li>
+                </ul>
             </li>
             <li>
-                <a href="/bu.index.php?c=contact">Kontakt</a>
+                <a href="/index.php?c=contact">Kontakt</a>
             </li>
-        </ul>
+        </ol>
     </nav>
     <!-- navigation end -->
-
+    
     <!-- content -->
     <main>
+        
         <?php
-        $this->renderDynamic3();//<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
+        $this->renderDynamic3(); //<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
         ?>
-    </main>    
+    </main>
     <!-- content end -->
 
     <!-- footer -->
@@ -109,7 +132,8 @@
     <!-- footer end -->
 
     <!-- load javascript -->
-    <!--script src="\js\check-password.js"></script-->
+
+    <script src="../../js/script.js"></script>
     <!--script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script-->
 </body>
 

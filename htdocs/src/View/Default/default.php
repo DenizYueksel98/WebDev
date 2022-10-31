@@ -1,4 +1,14 @@
 <section>
+    <div id="wait" >
+        <h1>
+            WAITING
+        </h1>
+    </div>
+    <div id='result'>
+        LINKS:
+    </div>
+</section>
+<section>
     <h1>Ihre Kfz-Datenbank</h1>
     <h2>Stöbern sie durch die verschiedensten Autos</h2>
     <p>Klicken Sie hier um direkt zur Abfrage zu gelangen.</p>

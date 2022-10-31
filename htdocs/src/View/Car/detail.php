@@ -1,5 +1,5 @@
 <section>
-    <a href=bu.index.php?c=car>Zurück zur Übersicht</a>
+    <a href=index.php?c=car>Zurück zur Übersicht</a>
     <img src=./img/<?php echo $this->singleCar[0]['id'];?>.jpeg>
 <?php
     if (isset($this->message)) {
