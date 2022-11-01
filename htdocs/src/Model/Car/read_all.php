@@ -13,7 +13,7 @@ $num = $result->num_rows;
 function fetchAssocStatement($stmt)
 {
     if($stmt->num_rows>0){
-        $result = array();
+        $result = array(); //instantiierung Ergebnis Array
         $md = $stmt->result_metadata();
         $params = array();
         while($field = $md->fetch_field()) {

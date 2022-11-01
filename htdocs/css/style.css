@@ -60,7 +60,10 @@ header {
     align-items: center;
     margin: 0 2em;
 }
-
+#txtHint{
+    margin:20px;
+    padding: 20px;
+}
 /* breadcrumb */
 .breadcrumb {
     display: flex;

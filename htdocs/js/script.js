@@ -14,6 +14,7 @@ wait.style.display = "block"; // Blende des wait, Platzhalter ein
 xhr.onreadystatechange = function () { 
     if (this.readyState == 4 && this.status == 200) {//Falls xhr eine sinnvolle Antwort bekommt
         handleResult(this.responseText); //Verarbeite Ergebnis
+
     }
 }
 
@@ -24,6 +25,7 @@ handleResult = function (data) { //Diese Funktion wird ausgeführt sobald die An
 
     let container = document.getElementById('result')//definiere den Container in dem das ERgebnis anzuzeigen ist, (ID = result)
     for (let i = 0; i < result.length; i++) {//für alle i von 0 bis zur länge des Ergebnisses
+        
         console.log(result[i]) //Ausgabe in Konsole
         let node = document.createElement('a'); //Erstelle neue node mit a (für einen Link)
         node.href = result[i].url //setze den Link von der node auf die angegebene url

@@ -22,7 +22,7 @@ class Layout
 
     public function renderDynamic3()//Dynamischer Part // --> Wird in der HTML (Layout/staticView.php) aufgerufen
     {
-        echo $this->controller->render($this->dynamicView); // --> Wird von der AbstractController ausgeführt
+        echo $this->controller->renderDynamic4($this->dynamicView); // --> Wird von der AbstractController ausgeführt
         // in der AbstractController wird nun ENDLICH mit include($dynamicView); die Dynamische sicht aufgerufen
     }
     

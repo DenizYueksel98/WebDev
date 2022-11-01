@@ -7,7 +7,7 @@ use Controller\CarController;
 class SearchController extends CarController
 {
     public $query; //Angefragte ID/String/etc.
-    public $hint=""; //leerer Hint-String
+    public $hint; //leerer Hint
     public $searchQuery = ''; //leerer SearchQueryString
     public $searchResultExplicit; //leeres searchResultExplicit Array, enthält exakte Suchtreffer
     public $searchResultContains; //leeres searchResultContains Array, enthält Suchtreffer, die SuchString enthalten
@@ -48,12 +48,17 @@ class SearchController extends CarController
                 //Falls das Array im Feld Name, unseren gesuchten Wert enthält
                 if (str_contains(strtolower(strval($this->carModel[$i]['name'])), strtolower($this->searchQuery))) {
                     //Füge den Hint-String die ID hinzu
-                    $this->hint .= $this->carModel[$i]['id'].", ";
+                    $url='http://localhost:8080/index.php?c=car&a=detail&i='.$this->carModel[$i]['id'];
+                    $this->hint[]= array(
+                        'label'=>$this->carModel[$i]['id'], //Label des Objekts
+                        'url'=>$url //Link des Objekts
+                    );
                 }
             }
         }
+        $json=json_encode($this->hint);
         //Gib den hint aus, damit er vom JS angezeigt werden kann
-        echo $this->hint;
+        echo $json;
     }
     public function queryAction()//Funktion für Suchanfrage
     {
@@ -88,7 +93,7 @@ class SearchController extends CarController
             if (isset($this->searchResultContains)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
                 $this->searchResultContains = array_map("unserialize", array_unique(array_map("serialize", $this->searchResultContains)));
             }
-            //var_dump($this->searchResult);
+            //var_dump($this->searchResultExplicit);
         }
     }
     //Funktion zum zurückgeben der Expliziten Suchtreffer

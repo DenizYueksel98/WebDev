@@ -1,5 +1,5 @@
-<script src="../../../js/jQuery.min.js" type="text/javascript"></script>
 <script src="../../../js/create_car.js"></script>
+
 <section class="create-form">
     <h1>Insert a new car into the database </h1>
     <p>Use this handy form to insert new cars into our database.</p>
@@ -102,3 +102,5 @@
     </form>
 </section>
 <script src="../../../js/script.js"></script>
+
+<script src="../../../js/jQuery.min.js" type="text/javascript"></script>

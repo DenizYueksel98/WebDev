@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
     <? include_once('/core/initialize.php'); ?>
-    
     <script src="../../js/search.js"></script>
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
@@ -47,11 +46,12 @@
                 <input type="search" name="query" placeholder="Search...">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form-->
-            <form class="search" action="" method="POST" >
-                <input type="search" name="query" placeholder="Search..." onkeyup="showHint(this.value)">
+            <form class="search" action="/index.php?c=search&a=query" method="POST" >
+                <input type="search" name="q" placeholder="Search..." onkeyup="showHint(this.value)">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
-            <p>Suggestions: <span id="txtHint"></span></p>
+            <p id="txtHint">Suggestions:</p>
+            <div id="txtHint"></div>
             <!-- search end -->
         </nav>
     </header>

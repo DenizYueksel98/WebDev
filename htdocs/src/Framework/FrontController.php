@@ -41,9 +41,9 @@ class FrontController
             $this->id = intval($_REQUEST['i']); //z.B. localhost:8080?['i']=3
             $this->controller->id=$this->id; //this.controller.id = this.id - Schreibe den integer in die klasse "controller" (instanz von Klasse CarController)
         }
-        if (isset($_REQUEST['query'])) 
+        if (isset($_REQUEST['q'])) 
         {
-            $this->controller->query=strval($_REQUEST['query']);;
+            $this->controller->query=strval($_REQUEST['q']);;
         }
         
         if (method_exists($this->controller, $actionName)) //Prüfe ob die actionMethodeName-Methode in Controller-Klasse existiert
@@ -68,11 +68,7 @@ class FrontController
     {//bu.index.php?c=car&a=default 
         if($this->controller->hasView){ // Pfad für Dynamische View bauen = //var/www/html'/src/view/Car/details.php
         $dynamicView = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';
-<<<<<<< Updated upstream
-        $this->layout->render($dynamicView);// --> Übergang zu Framework/Layout.renderDynamic(Mit_der_hier_definierten_$dynamicView)  
-=======
         $this->layout->renderStatic2($dynamicView);// --> Übergang zu Framework/Layout.renderDynamic(Mit_der_hier_definierten_$dynamicView)  
->>>>>>> Stashed changes
         }
     }
 }
