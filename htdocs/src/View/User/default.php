@@ -1,3 +1,4 @@
+    <section>
         <h1>Hier direkt für die Kfz-Datenbank registrieren</h1>
         <form name="register" onsubmit="setAction(this)" method="post" id="regform">
             <div class="input-container">
@@ -35,6 +36,6 @@
                 Anmelden
             </button>
         </form>
-
+    <section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../../../js/script.js"></script>
+    <script src="../../../js/create_user.js"></script>

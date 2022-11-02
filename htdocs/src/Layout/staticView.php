@@ -90,7 +90,11 @@
 
     <!-- content -->
     <main>
-
+    <div id="wait" style="display:none">
+        <h1>
+            WAITING
+        </h1>
+    </div>
         <?php
         $this->renderDynamic3(); //<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);

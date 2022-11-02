@@ -33,8 +33,9 @@ const toJson = function (event) {
 function func1() {//RegisterRun
 	var btn =document.getElementById("regbtn")
     btn.addEventListener("mouseover", run);//Neuer Eventlistener, falls Cursor drüber ist, wir run() ausgeführt
+    pwcorrect=false;
     function run() {
-        if (!$pwcorrect) {//Falls pw nicht korrekt
+        if (!pwcorrect) {//Falls pw nicht korrekt
             if (!btn.style.left) { //Falls btn.style.left noch nicht vom script gesetzt wurde
                 btn.style.left = "300px"; //Setze Linken Abstand auf 300px
             } else {
@@ -62,12 +63,12 @@ function func2() {
         var passw = /^[A-Za-z]\w{7,14}$/;//definiere erlaubte PW Specs. (zws. 7-20 Zeichen und nur Buchstaben)
         if (this.value.match(passw)) {//Falls es zutrifft
             $("regform").submit();//Sende Form ab
-            $pwcorrect = true;//Setze pw auf correct
+            pwcorrect = true;//Setze pw auf correct
             document.getElementById("regbtn").removeEventListener("mouseover", run);//entferne EventListener für hover			
         }
         else { //PW entspricht noch nicht den Anforderungen
             alert('PW muss zwischen 7-20 Zeichen lang sein, muss mit einem Buchstaben beginnen und darf keine Sonderzeichen enthalten');
-            $pwcorrect = false;//variable bleibt falsch
+            pwcorrect = false;//variable bleibt falsch
             return false;
         }
     }
@@ -75,6 +76,7 @@ function func2() {
 //Beim Ladend es Fensters
 window.onload = function () {
 	var btn = document.getElementById("regbtn"); //Button der Variable btn zuweisen
+    var pwcorrect=false;
 	func1(); //Führe func1 aus, sorgt für Links und Rechts Springen des Buttons (Run [awayFromMouse])
 	func2(); //Führe func2 aus
 	btn.addEventListener("click", toJson);

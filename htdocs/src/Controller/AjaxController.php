@@ -24,7 +24,7 @@ class AjaxController extends AbstractController
         ];
         $json = json_encode($result); //Encode macht aus Objekt eine JSON
 
-        sleep(2);//Warte für Animation (Redundant, allerdings nur da, dass man das rotieren sieht)
+        //Warte für Animation (Redundant, allerdings nur da, dass man das rotieren sieht)
         print_r($json);//gibt aus
     }
     public function detailAction()

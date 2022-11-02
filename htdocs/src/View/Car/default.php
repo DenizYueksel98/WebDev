@@ -1,8 +1,4 @@
-    <div id="wait" style="display:none">
-        <h1>
-            WAITING
-        </h1>
-    </div>
+    
     <section class="table">
     <?php
     if (isset($this->message)) {
