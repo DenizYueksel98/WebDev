@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
     <? include_once('/core/initialize.php'); ?>
-    <script src="../../js/search.js"></script>
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
     <!--?php ob_start(); ?-->
@@ -46,11 +45,11 @@
                 <input type="search" name="query" placeholder="Search...">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form-->
-            <form class="search" action="/index.php?c=search&a=query" method="POST" >
+            <form class="search" action="/index.php?c=search&a=query" method="POST">
                 <input type="search" name="q" placeholder="Search..." onkeyup="showHint(this.value)">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
-            <p id="txtHint">Suggestions:</p>
+            <p>Suggestions:</p>
             <div id="txtHint"></div>
             <!-- search end -->
         </nav>
@@ -88,10 +87,10 @@
         </ol>
     </nav>
     <!-- navigation end -->
-    
+
     <!-- content -->
     <main>
-        
+
         <?php
         $this->renderDynamic3(); //<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
@@ -132,8 +131,9 @@
     <!-- footer end -->
 
     <!-- load javascript -->
-
-    <script src="../../js/script.js"></script>
+    
+    <script src="../../js/search.js"></script>
+    <!--script src="../../js/script.js"></script-->
     <!--script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script-->
 </body>
 

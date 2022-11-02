@@ -50,10 +50,14 @@ class SearchController extends CarController
                     //Füge den Hint-String die ID hinzu
                     $url='http://localhost:8080/index.php?c=car&a=detail&i='.$this->carModel[$i]['id'];
                     $this->hint[]= array(
-                        'label'=>$this->carModel[$i]['id'], //Label des Objekts
+                        'label'=>$this->carModel[$i]['name'], //Label des Objekts
                         'url'=>$url //Link des Objekts
                     );
                 }
+                
+            }
+            if (isset($this->hint)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
+                $this->hint = array_map("unserialize", array_unique(array_map("serialize", $this->hint)));
             }
         }
         $json=json_encode($this->hint);

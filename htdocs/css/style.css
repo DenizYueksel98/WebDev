@@ -64,6 +64,9 @@ header {
     margin:20px;
     padding: 20px;
 }
+#txtHint a{
+    margin: 0 5px;
+}
 /* breadcrumb */
 .breadcrumb {
     display: flex;
