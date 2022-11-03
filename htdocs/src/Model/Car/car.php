@@ -8,11 +8,6 @@ class Car
 {
     private $repo;
     private $conn;
-    private $table = 'schein'; //define table schein
-    private $wltp = 'wltp'; // define wltp
-    private $nefz = 'nefz'; //define nefz
-    private $fil; //for filter setting by client
-    private $val; //for value setting by client
     public $id;
     public $name;
     public $b21;
@@ -53,12 +48,10 @@ class Car
         $v9,
         $vierzehn,
         $p3,
-        $nid,
         $verbin,
         $verbau,
         $verbko,
         $co2kom,
-        $wid,
         $sehrs,
         $schnell,
         $langsam,
@@ -77,12 +70,12 @@ class Car
         $this->v9 = $v9;
         $this->vierzehn = $vierzehn;
         $this->p3 = $p3;
-        $this->nid = $nid;
+        $this->nid = $id;
         $this->verbin = $verbin;
         $this->verbau = $verbau;
         $this->verbko = $verbko;
         $this->co2kom = $co2kom;
-        $this->wid = $wid;
+        $this->wid = $id;
         $this->sehrs = $sehrs;
         $this->schnell = $schnell;
         $this->langsam = $langsam;

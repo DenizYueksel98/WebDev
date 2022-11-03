@@ -3,9 +3,15 @@ function buildHtmlTable(selector) {
     var columns = addAllColumnHeaders(carModel, selector);
     for (var i = 0; i < carModel.length; i++) {
         var row$ = $('<tr/>');
-        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-            var cellValue = carModel[i][columns[colIndex]];
+        for (var colIndex = 0; colIndex < (columns.length+1); colIndex++) {
+            if(colIndex==columns.length){
+                var cellValue= "<a href='/index.php?c=car&a=detail&i="+carModel[i]['id']+"'>Show Details</a>";
+            }
+            else{
+                var cellValue = carModel[i][columns[colIndex]];
+            }
             if (cellValue == null) cellValue = "";
+            
             row$.append($('<td/>').html(cellValue));
         }
         $(selector).append(row$);

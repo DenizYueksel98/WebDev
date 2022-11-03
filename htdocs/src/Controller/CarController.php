@@ -8,6 +8,7 @@ header('Access-Control-Allow-Origin: *'); //cross-origin resource sharing header
 use Framework\AbstractController;
 use Framework\CarDatabase;
 use Framework\CarRepository;
+use Model\Car\Car;
 
 class CarController extends AbstractController
 {
@@ -49,18 +50,79 @@ class CarController extends AbstractController
         $this->readAll();
         //print_r($result);
     }
-    public function readAll(){
+    public function cleanupCars()
+    {
+        foreach ($GLOBALS as $name => $var) {
+            if ($var instanceof Car) {
+                unset($GLOBALS[$name]);
+            }
+        }
+    }
+    public function readFromDB()
+    {
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
-        if ($result = $repo->readAll()) { 
-            $this->message="<h3>JSON file data</h3>";
-            $decoded = json_decode($result, true);//Parse JSON into Arrays in Arrays
+        if ($result = $repo->readAll()) {
+            $this->message = "<h3>JSON file data</h3>";
+            $decoded = json_decode($result, true); //Parse JSON into Arrays in Arrays
             $this->carModel = $decoded;
-        }
-        else{
-            $this->message=json_encode(array('message' => 'No cars found.'));
+            $db->close();
+            return $this->carModel;
+        } else {
+            $this->message = json_encode(array('message' => 'No cars found.'));
         }
         $db->close();
+    }
+    //Liest neues Auto-Array von der DB ab, prüft ob er es in diesem Zustand kennt und falls nicht, 
+    //wird das Auto-Array geupdated und die Auto-Objekte neu erzeugt. 
+    public function readAll()
+    {
+        if (isset($this->carModel)) {
+            if ($this->readFromDB() == $this->carModel) {
+                return $this->carModel;
+                //Stimmen überein
+            } else {
+                //Stimmen nicht überein
+                $this->cleanupCars();
+                $this->carModel=$this->readFromDB();
+                $this->createCars();
+                return $this->carModel;
+            }
+        } 
+        else 
+        {
+            $this->carModel=$this->readFromDB();
+            return $this->carModel;
+            //$this->createCars();
+        }
+    }
+    public function createCars()
+    {
+        foreach ($this->carModel as $car) {
+            $car = new Car(
+                $car['id'],
+                $car['name'],
+                $car['b21'],
+                $car['b22'],
+                $car['j'],
+                $car['vier'],
+                $car['d1'],
+                $car['d2'],
+                $car['zwei'],
+                $car['fuenf'],
+                $car['v9'],
+                $car['vierzehn'],
+                $car['p3'],
+                $car['verbin'],
+                $car['verbau'],
+                $car['verbko'],
+                $car['co2kom'],
+                $car['sehrs'],
+                $car['schnell'],
+                $car['langsam'],
+                $car['co2komb']
+            );
+        }
     }
     public function detailAction()
     {

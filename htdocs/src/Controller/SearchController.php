@@ -69,7 +69,6 @@ class SearchController extends CarController
         $this->enableView(); //Aktiviere View, könnte von suggestAction deaktiviert worden sein
         if (isset($this->query)) { //Falls ein Suchstring
             $this->searchQuery = $this->query; //Setze Suchstring in die Variable
-
             // do the search
             $this->carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
             $this->searchResultContains=array();
@@ -91,7 +90,9 @@ class SearchController extends CarController
             }
             //Falls searchResultExplicit Elemente enthält
             if (isset($this->searchResultExplicit)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
-                $this->searchResultExplicit = array_map("unserialize", array_unique(array_map("serialize", $this->searchResultExplicit)));
+                $this->searchResultExplicit = array_map("unserialize", 
+                                 array_unique(array_map("serialize", 
+                                 $this->searchResultExplicit)));
             }
             //Falls searchResultContains Elemente enthält
             if (isset($this->searchResultContains)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
