@@ -61,7 +61,7 @@ class SearchController extends CarController
             }
         }
         $json=json_encode($this->hint);
-        //Gib den hint aus, damit er vom JS angezeigt werden kann
+        //Gib den hint als json aus, damit er vom JS angezeigt werden kann
         echo $json;
     }
     public function queryAction()//Funktion für Suchanfrage

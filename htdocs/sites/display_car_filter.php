@@ -58,7 +58,7 @@
 
     <main>
         <section class="filter-form">
-            <form id="filter-form" action="../api/read_car_filter.php" method="post">
+            <form id="filter-form" action="../src/Model/Car/.read_car_filter.php" method="post">
                 <div class="input-container-nearly-full">
                     <div class="inline">
                         <label for="filter">Filter:</label>

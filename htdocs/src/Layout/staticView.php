@@ -28,7 +28,7 @@
         </div>
         <nav id="mainnav">
             <!-- breadcrumb -->
-            <ul class="breadcrumb - Pfad">
+            <!--ul class="breadcrumb - Pfad">
                 <li>
                     <a href="#">Nav Item 1</a>
                 </li>
@@ -38,10 +38,10 @@
                 <li>
                     Nav Item 3
                 </li>
-            </ul>
+            </ul-->
             <!-- breadcrumb end -->
             <!-- search -->
-            <!--form class="search" action="bu.index.php?c=search&a=query" method="POST">
+            <!--form class="search" action="/index.php?c=search&a=query" method="POST">
                 <input type="search" name="query" placeholder="Search...">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form-->
