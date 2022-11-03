@@ -25,10 +25,10 @@ class CarRepository extends AbstractRepository
         return $this->db->prepare($sql);
     }
     public function doMagic($stmt){
-        $stmt->execute();
-        $stmt->store_result();
-        $resultArray= $this->handleResult($stmt);
-        return $resultArray;
+        $stmt->execute();//do query
+        $stmt->store_result();//recive information into mysqli_stmt-object
+        $result= $this->handleResult($stmt);//Stmt parse into Array & parse into JSON-String
+        return $result;
     }
     public function readFilter($filter, $theta, $value){
         $sql=$this->readFilterSql($filter, $theta, $value);
@@ -43,9 +43,9 @@ class CarRepository extends AbstractRepository
     }
     public function readAll()
     {
-        $sql = $this->readAllSql();
-        $stmt = $this->prepare($sql);
-        return $this->doMagic($stmt);
+        $sql = $this->readAllSql(); //read sql query as string from function
+        $stmt = $this->prepare($sql);//define mysqli_stmt-object
+        return $this->doMagic($stmt); //result JSON-String
     }
     function fetchAssocStatement($stmt)
     {

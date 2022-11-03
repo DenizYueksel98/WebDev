@@ -51,10 +51,10 @@ class CarController extends AbstractController
     }
     public function readAll(){
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        $repo = new CarRepository($db);
-        if ($result = $repo->readAll()) {
+        $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
+        if ($result = $repo->readAll()) { 
             $this->message="<h3>JSON file data</h3>";
-            $decoded = json_decode($result, true);
+            $decoded = json_decode($result, true);//Parse JSON into Arrays in Arrays
             $this->carModel = $decoded;
         }
         else{

@@ -72,7 +72,7 @@ class SearchController extends CarController
 
             // do the search
             $this->carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
-
+            $this->searchResultContains=array();
             for ($i = 0; $i < count($this->carModel); $i++) { //Für alle ergebnisse von 0 bis carModel.length, iteriere i
                 for ($j = 1; $j < count($this->carModel[$i]); $j++) { //Für alle innerhalb carModel[i], iteriere j
                     if (//Falls Eingabe komplett übereinstimmt als String oder Int (Differenzierung wegen int in Spalte id)
@@ -85,17 +85,34 @@ class SearchController extends CarController
                     //Falls der Inhalt wiedergefunden wurde
                     if (str_contains(strtolower(strval($this->carModel[$i][$this->mappingArray[$j]])), strtolower($this->searchQuery))) {
                         //Packe das Suchergebnis in das Array für die "contains" Treffer
-                        $this->searchResultContains[] = $this->carModel[$i];
+                        array_push($this->searchResultContains,$this->carModel[$i]);
                     }
                 }
             }
-            //Falls searchResultEplicit Elemente enthält
+            //Falls searchResultExplicit Elemente enthält
             if (isset($this->searchResultExplicit)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
                 $this->searchResultExplicit = array_map("unserialize", array_unique(array_map("serialize", $this->searchResultExplicit)));
             }
             //Falls searchResultContains Elemente enthält
             if (isset($this->searchResultContains)) { //Räume Duplikate auf (array_unique) und vergib indizes neu, (sonst gibts Lücken)
-                $this->searchResultContains = array_map("unserialize", array_unique(array_map("serialize", $this->searchResultContains)));
+                $no_duplicates = array();
+                
+                for($i=0;$i<count($this->searchResultContains);$i++){
+                    if($i>0){
+                        if($this->searchResultContains[$i]['id']==$this->searchResultContains[$i-1]['id']){
+                            //actual tuple is identical to last one, so do nothing
+                        }
+                        else{
+                            //actual tuple is different, so push it into the no_duplicates Array
+                            array_push($no_duplicates,$this->searchResultContains[$i]);
+                        }
+                    }
+                    else{
+                        //first tuple is unique by law
+                        array_push($no_duplicates,$this->searchResultContains[$i]);
+                    }
+                }
+                $this->searchResultContains=$no_duplicates;//overwrite searchResultContains-Array with recently created no_duplicate array
             }
             //var_dump($this->searchResultExplicit);
         }

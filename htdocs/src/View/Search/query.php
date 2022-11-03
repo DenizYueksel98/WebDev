@@ -1,80 +1,45 @@
-We found <?php if(isset($this->searchResultExplicit)){echo count($this->searchResultExplicit);}else{ echo "0";} ?> explicit matching items for your query '<?php echo $this->searchQuery; ?>'
-<br>
-If your aren't happy with that...
-We found <?php if(isset($this->searchResultContains)){echo count($this->searchResultContains);}else{ echo "0";} ?> matching items containing your query '<?php echo $this->searchQuery; ?>'
-
-<hr />
-<?php if(isset($this->searchResultExplicit)){?> 
-<section class=table>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>B2.1</th>
-            <th>B2.2</th>
-            <th>J</th>
-            <th>4</th>
-            <th>D1</th>
-            <th>D2</th>
-            <th>2</th>
-            <th>5</th>
-            <th>V9</th>
-            <th>14</th>
-            <th>P3</th>
-            <th>NEFZ Verbrauch in.</th>
-            <th>NEFZ Verbrauch au.</th>
-            <th>NEFZ Verbrauch ko.</th>
-            <th>NEFZ CO2-Emission ko.</th>
-            <th>WLTP Sehr schnell</th>
-            <th>WLTP Schnell</th>
-            <th>WLTP Langsam</th>
-            <th>WLTP CO2-Emission ko.</th>
-        </tr>
-        <?php foreach ($this->searchResultExplicit as $car) {?>
-            <tr>
-                <?php foreach($car as $singleCar){?>
-                <td><?php echo $singleCar;?></td>
-                <?php }?>
-            </tr>
-        <?php }} ?>
+We found <?php if (isset($this->searchResultContains)) {
+                echo count($this->searchResultContains);
+            } else {
+                echo "0";
+            } ?> matching items containing your query '<?php echo $this->searchQuery; ?>'
+<section class="table">
+    <table id="excelDataTable">
     </table>
 
-</section>
+    <script type="text/javascript">
+        var carModel =<?php echo json_encode($this->searchResultContains)?>;
+        function buildHtmlTable(selector) {
+            var columns = addAllColumnHeaders(carModel, selector);
+            for (var i = 0; i < carModel.length; i++) {
+                var row$ = $('<tr/>');
+                for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                    var cellValue = carModel[i][columns[colIndex]];
+                    if (cellValue == null) cellValue = "";
+                    row$.append($('<td/>').html(cellValue));
+                }
+                $(selector).append(row$);
+            }
+        }
 
-<?php   if((isset($this->searchResultContains) && isset($this->searchResultExplicit)==false)
-        ||(isset($this->searchResultContains) && isset($this->searchResultExplicit))){?> 
-<section class=table>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>B2.1</th>
-            <th>B2.2</th>
-            <th>J</th>
-            <th>4</th>
-            <th>D1</th>
-            <th>D2</th>
-            <th>2</th>
-            <th>5</th>
-            <th>V9</th>
-            <th>14</th>
-            <th>P3</th>
-            <th>NEFZ Verbrauch in.</th>
-            <th>NEFZ Verbrauch au.</th>
-            <th>NEFZ Verbrauch ko.</th>
-            <th>NEFZ CO2-Emission ko.</th>
-            <th>WLTP Sehr schnell</th>
-            <th>WLTP Schnell</th>
-            <th>WLTP Langsam</th>
-            <th>WLTP CO2-Emission ko.</th>
-        </tr>
-        <?php foreach ($this->searchResultContains as $car) {?>
-            <tr>
-                <?php foreach($car as $singleCar){?>
-                <td><?php echo $singleCar;?></td>
-                <?php }?>
-            </tr>
-        <?php }} ?>
-    </table>
-
+        // Adds a header row to the table and returns the set of columns.
+        // Need to do union of keys from all records as some records may not contain
+        // all records.
+        function addAllColumnHeaders(carModel, selector) {
+            var columnSet = [];
+            var headerTr$ = $('<tr/>');
+            for (var i = 0; i < carModel.length; i++) {
+                var rowHash = carModel[i];
+                for (var key in rowHash) {
+                    if ($.inArray(key, columnSet) == -1) {
+                        columnSet.push((key));
+                        headerTr$.append($('<th/>').html(key));
+                    }
+                }
+            }
+            $(selector).append(headerTr$);
+            return columnSet;
+        }
+    </script>
+    <!--script type="text/javascript" src="../../../js/display_table.js"></script-->
 </section>

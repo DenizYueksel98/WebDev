@@ -16,9 +16,10 @@
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
     <!--?php ob_start(); ?-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body onLoad="buildHtmlTable('#excelDataTable')">
     <!-- header -->
     <header>
         <div id="logo">
