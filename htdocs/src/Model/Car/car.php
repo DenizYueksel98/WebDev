@@ -6,8 +6,6 @@ use Framework\CarRepository;
 
 class Car
 {
-    private $repo;
-    private $conn;
     public $id;
     public $name;
     public $b21;
@@ -81,7 +79,7 @@ class Car
         $this->langsam = $langsam;
         $this->co2komb = $co2komb;
     }
-
+    /*
     public function readAll()
     {
         $resultArray = $this->repo->readAll();
@@ -117,14 +115,10 @@ class Car
         LEFT JOIN '
             . $this->wltp . ' w ON s.id=w.id;
         '; //prepare syntax from query
-        /*
-        $stmt = $this->conn->prepare($query); //prepare query
-        $stmt->execute(); //exec
-        $stmt->store_result(); //store result and return stmt
-        return $stmt;*/
+        
         return $query;
-    }
-
+    }*/
+    /*
     public function read_single() //read single line and return stmt
     {
         $query = 'SELECT 
@@ -272,7 +266,7 @@ class Car
         $stmt->execute(); //exec
         $stmt->store_result(); //store result and return stmt
         return $stmt;
-    }
+    }*/
     //Transaktionsmanagement TODO
     //Try&Catch 
     public function create() //create new tupel in db

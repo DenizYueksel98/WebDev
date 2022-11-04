@@ -19,6 +19,7 @@ const toJson = function (event) {
 		object[key].push(value); //pack den value in das Objekt unter Verwendung des Schlüssels
 	});
 	let json = JSON.stringify(object);//Stringify macht eine hübsche JSON aus einem Objekt
+	console.log(json);
 	$.ajax({
 		type: 'POST', //Post- Methode ausgewählt
 		url: 'http://localhost:8080/src/Model/Car/create.php', //Endpunkt der API, diese erwartet eine JSON

@@ -1,4 +1,5 @@
-<script src="../../../js/create_car.js"></script>
+
+<script src="../../../js/jQuery.min.js" type="text/javascript"></script>
 
 <section class="create-form">
     <h1>Insert a new car into the database </h1>
@@ -101,6 +102,5 @@
         <input class="button" id="submit" value="Fahrzeug in die DB schreiben" type="submit" />
     </form>
 </section>
-<script src="../../../js/script.js"></script>
-
-<script src="../../../js/jQuery.min.js" type="text/javascript"></script>
+<!--script src="../../../js/script.js"></script-->
+<script src="../../../js/create_car.js"></script>

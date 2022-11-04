@@ -44,6 +44,65 @@ class CarController extends AbstractController
         }
         curl_close($curl);  // Closing curl
     }
+    public function uploadImageAction()
+    {
+        $upload_folder = './img/'; //Das Upload-Verzeichnis
+        $this->carModel=$this->readFromDB(); //update CarModel
+        $filename = $this->carModel[$this->id-1]['id']; //carID - 1 = ArrayIndex (car mit ID 21 steht im Arrayan der Stelle[20]=[(21-1)])
+        $extension = strtolower(pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION));//Dateiendung wird ausgelesen
+        //Überprüfung der Dateiendung, nur JPEG und JPG sind erlaubt
+        $allowed_extensions = array('jpeg', 'jpg');
+        if (!in_array($extension, $allowed_extensions)) {
+            die("Ungültige Dateiendung. Nur  jpeg-Dateien sind erlaubt");
+        }
+
+        //Überprüfung der Dateigröße
+        $max_size = 5000 * 1024; //5000 KB
+        if ($_FILES['fileToUpload']['size'] > $max_size) {
+            die("Bitte keine Dateien größer 5000kb hochladen");
+        }
+
+        //Überprüfung dass das Bild keine Fehler enthält
+        if (function_exists('exif_imagetype')) { //exif_imagetype erfordert die exif-Erweiterung
+            $allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+            $detected_type = exif_imagetype($_FILES['fileToUpload']['tmp_name']);
+            if (!in_array($detected_type, $allowed_types)) {
+                die("Nur der Upload von Bilddateien ist gestattet");
+            }
+        }
+        
+        //Pfad zum Upload inklusive Dateiname&Endung ./img/21.jpeg
+        $new_path = $upload_folder . $filename . '.jpeg';
+
+        //Neuer Dateiname falls die Datei bereits existiert, 
+        if (file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Dateinamen
+            $id = 1;
+            do {
+                $new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
+                $id++;
+            } while (file_exists($new_path));
+        }
+
+        //Alles okay, verschiebe Datei an neuen Pfad
+        move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $new_path);
+        echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';
+    }
+    public function testAction()
+    {
+        /*$this->cleanupCars();
+        $this->readFromDB();
+        $this->createCars();
+        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
+        $this->getSingleId(3);*/
+    }
+    public function getSingleId($id)
+    {
+
+        foreach ($GLOBALS as $name => $var) {
+            print_r($GLOBALS[$name]);
+        }
+    }
     public function defaultAction()
     {
         //$this->curlQuery();
@@ -84,14 +143,12 @@ class CarController extends AbstractController
             } else {
                 //Stimmen nicht überein
                 $this->cleanupCars();
-                $this->carModel=$this->readFromDB();
+                $this->carModel = $this->readFromDB();
                 $this->createCars();
                 return $this->carModel;
             }
-        } 
-        else 
-        {
-            $this->carModel=$this->readFromDB();
+        } else {
+            $this->carModel = $this->readFromDB();
             return $this->carModel;
             //$this->createCars();
         }

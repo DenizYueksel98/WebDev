@@ -67,6 +67,9 @@
                         <a href="/index.php?c=car">Alle Fahrzeuge</a>
                     </li>
                     <li>
+                        <a href="/index.php?c=car&a=create">Neu anlegen</a>
+                    </li>
+                    <li>
                         <a href="/index.php?c=search&a=query">Suche</a>
                     </li>
                 </ul>
@@ -91,11 +94,11 @@
 
     <!-- content -->
     <main>
-    <div id="wait" style="display:none">
-        <h1>
-            WAITING
-        </h1>
-    </div>
+        <div id="wait" style="display:none">
+            <h1>
+                WAITING
+            </h1>
+        </div>
         <?php
         $this->renderDynamic3(); //<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
@@ -136,7 +139,7 @@
     <!-- footer end -->
 
     <!-- load javascript -->
-    
+
     <script src="../../js/search.js"></script>
     <!--script src="../../js/script.js"></script-->
     <!--script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script-->

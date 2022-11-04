@@ -1,7 +1,15 @@
 <section>
     <a href=index.php?c=car>Zurück zur Übersicht</a>
+    <?php if(file_exists('./img/'.$this->singleCar[0]['id'].'.jpeg')){?>
     <img src=./img/<?php echo $this->singleCar[0]['id'];?>.jpeg>
-<?php
+<?php }
+    else{?>
+        <form action="index.php?c=car&a=uploadImage&i=<?php echo $this->id;?>" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+        </form>
+    <?php }
     if (isset($this->message)) {
         echo $this->message;
     ?>
