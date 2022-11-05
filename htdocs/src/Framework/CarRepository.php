@@ -91,7 +91,7 @@ class CarRepository extends AbstractRepository
         $stmt = $this->prepare($sql2); //prepare query, store in stmt
         $stmt->bind_param(              //binding the supplied values from Car object
             'idddd',
-            $car->wid,
+            $car->id,
             $car->sehrs,
             $car->schnell,
             $car->langsam,

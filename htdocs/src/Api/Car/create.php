@@ -15,28 +15,30 @@ $db=new CarDatabase("127.0.0.1","root","","cars");
 $repo=new CarRepository($db);
 
 $data = json_decode(file_get_contents("php://input"));//decode data from recieved json
-$car = new Car(
-$repo->real_escape_string($data->id),//define fields from json in car constructor
-$repo->real_escape_string($data->name),
-$repo->real_escape_string($data->b21),
-$repo->real_escape_string($data->b22),
-$repo->real_escape_string($data->j),
-$repo->real_escape_string($data->vier),
-$repo->real_escape_string($data->d1),
-$repo->real_escape_string($data->d2),
-$repo->real_escape_string($data->zwei),
-$repo->real_escape_string($data->fuenf),
-$repo->real_escape_string($data->v9),
-$repo->real_escape_string($data->vierzehn),
-$repo->real_escape_string($data->p3),
-$repo->real_escape_string($data->verbin),
-$repo->real_escape_string($data->verbau),
-$repo->real_escape_string($data->verbko),
-$repo->real_escape_string($data->co2kom),
-$repo->real_escape_string($data->sehrs),
-$repo->real_escape_string($data->schnell),
-$repo->real_escape_string($data->langsam),
-$repo->real_escape_string($data->co2komb));
+$car = new Car();
+$car->setid($repo->real_escape_string($data->id));//define fields from json in car constructor
+$car->setname($repo->real_escape_string($data->name));
+$car->setb21($repo->real_escape_string($data->b21));
+$car->setb22($repo->real_escape_string($data->b22));
+$car->setj($repo->real_escape_string($data->j));
+$car->setvier($repo->real_escape_string($data->vier));
+$car->setd1($repo->real_escape_string($data->d1));
+$car->setd2($repo->real_escape_string($data->d2));
+$car->setzwei($repo->real_escape_string($data->zwei));
+$car->setfuenf($repo->real_escape_string($data->fuenf));
+$car->setv9($repo->real_escape_string($data->v9));
+$car->setvierzehn($repo->real_escape_string($data->vierzehn));
+$car->setp3($repo->real_escape_string($data->p3));
+$car->setnid($repo->real_escape_string($data->id));
+$car->setverbin($repo->real_escape_string($data->verbin));
+$car->setverbau($repo->real_escape_string($data->verbau));
+$car->setverbko($repo->real_escape_string($data->verbko));
+$car->setco2kom($repo->real_escape_string($data->co2kom));
+$car->setwid($repo->real_escape_string($data->id));
+$car->setsehrs($repo->real_escape_string($data->sehrs));
+$car->setschnell($repo->real_escape_string($data->schnell));
+$car->setlangsam($repo->real_escape_string($data->langsam));
+$car->setco2komb($repo->real_escape_string($data->co2komb));
 
 if ($repo->create($car)) {
     echo json_encode(
