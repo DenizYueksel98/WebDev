@@ -43,11 +43,19 @@ class CarRepository extends AbstractRepository
         //$result = $this->db->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
         return $carArray;
     }
+    public function doOldMagic($stmt){
+        //$stmt->get_result(); //recieve information into mysqli_stmt-object
+        //$stmt->fetch_all(MYSQLI_ASSOC);
+        $result = $this->db->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
+        return $result;
+    }
     public function readFilter($filter, $theta, $value)
     {
         $sql = $this->db->readFilterSql($filter, $theta, $value);
         $stmt = $this->prepare($sql);
-        return $this->doMagic($stmt);
+        $stmt->execute();
+        $stmt->store_result();
+        return $this->doOldMagic($stmt);
     }
     public function readSingle($id)
     {
