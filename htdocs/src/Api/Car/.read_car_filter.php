@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Car;
+namespace Api\Car;
 
 use Framework\CarDatabase;
 use Framework\CarRepository;
@@ -43,5 +43,6 @@ if (isset($filter) && isset($value) && isset($theta)) {
 $db = new CarDatabase("127.0.0.1", "root", "", "cars");
 $repo = new CarRepository($db);
 $result = $repo->readFilter($filter, $theta, $value);
+$json= json_encode($result);
 $db->close();
-echo $result;
+echo $json;

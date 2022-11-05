@@ -26,7 +26,7 @@ class UserController extends AbstractController
         curl_setopt(
             $curl,
             CURLOPT_URL,                            // Sending GET request to reqres.in
-            "http://localhost:8080/src/Model/User/read_all.php" // API to get JSON data aka MODEL
+            "http://localhost:8080/src/Api/User/read_all.php" // API to get JSON data aka MODEL
         );
         curl_setopt(
             $curl,                  // Telling curl to store JSON

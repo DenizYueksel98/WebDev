@@ -1,7 +1,8 @@
 <?php
-namespace Model\Car;
+namespace Api\Car;
 use Framework\CarDatabase;
 use Framework\CarRepository;
+use Model\Car\Car;
 header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
 header('Content-Type: application/json');//header for json
 header('Access-Control-Allow-Methods: POST');//allow POST
@@ -15,7 +16,7 @@ $repo=new CarRepository($db);
 
 $data = json_decode(file_get_contents("php://input"));//decode data from recieved json
 $car = new Car(
-$repo->real_escape_string($data->id),//define fields from json
+$repo->real_escape_string($data->id),//define fields from json in car constructor
 $repo->real_escape_string($data->name),
 $repo->real_escape_string($data->b21),
 $repo->real_escape_string($data->b22),
@@ -42,7 +43,8 @@ if ($repo->create($car)) {
         array('message' => 'Car created.')
     );
 } else {
-    echo array('message' => 'Car not created');
+    echo json_encode(
+        array('message' => 'Car not created'));
 }
 $db->close();
 

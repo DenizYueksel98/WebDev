@@ -3,7 +3,8 @@
         </table>
 
         <script type="text/javascript">
-            var carModel = <?php echo json_encode($this -> carModel) ?>
+            var carModel = <?php echo $this -> json ?>;
+            console.log(carModel);
         </script>
         <script type="text/javascript" src="../../../js/display_table.js"></script>
     </section>

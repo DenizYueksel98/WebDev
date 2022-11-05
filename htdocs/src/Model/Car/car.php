@@ -2,9 +2,10 @@
 
 namespace Model\Car;
 
+use Framework\AbstractModel;
 use Framework\CarRepository;
-
-class Car
+include_once(FRAMEWORK_PATH.DS."./AbstractModel.php");
+class Car extends AbstractModel
 {
     public $id;
     public $name;
@@ -30,8 +31,54 @@ class Car
     public $langsam;
     public $co2komb;
 
+    public function setid($id){$this->id=$id;}
+    public function setname($name){$this->name=$name;}
+    public function setb21($b21){$this->b21=$b21;}
+    public function setb22($b22){$this->b22=$b22;}
+    public function setj($j){$this->j=$j;}
+    public function setvier($vier){$this->vier=$vier;}
+    public function setd1($d1){$this->d1=$d1;}
+    public function setd2($d2){$this->d2=$d2;}
+    public function setzwei($zwei){$this->zwei=$zwei;}
+    public function setfuenf($fuenf){$this->fuenf=$fuenf;}
+    public function setv9($v9){$this->v9=$v9;}
+    public function setvierzehn($vierzehn){$this->vierzehn=$vierzehn;}
+    public function setp3($p3){$this->p3=$p3;}
+    public function setnid($nid){$this->nid=$nid;}
+    public function setverbin($verbin){$this->verbin=$verbin;}
+    public function setverbau($verbau){$this->verbau=$verbau;}
+    public function setverbko($verbko){$this->verbko=$verbko;}
+    public function setco2kom($co2kom){$this->co2kom=$co2kom;}
+    public function setwid($wid){$this->wid=$wid;}
+    public function setsehrs($sehrs){$this->sehrs=$sehrs;}
+    public function setschnell($schnell){$this->schnell=$schnell;}
+    public function setlangsam($langsam){$this->langsam=$langsam;}
+    public function setco2komb($co2komb){$this->co2komb=$co2komb;}
 
-
+    public function getid(){return $this->id;}
+    public function getname(){return $this->name;}
+    public function getb21(){return $this->b21;}
+    public function getb22(){return $this->b22;}
+    public function getj(){return $this->j;}
+    public function getvier(){return $this->vier;}
+    public function getd1(){return $this->d1;}
+    public function getd2(){return $this->d2;}
+    public function getzwei(){return $this->zwei;}
+    public function getfuenf(){return $this->fuenf;}
+    public function getv9(){return $this->v9;}
+    public function getvierzehn(){return $this->vierzehn;}
+    public function getp3(){return $this->p3;}
+    public function getnid(){return $this->nid;}
+    public function getverbin(){return $this->verbin;}
+    public function getverbau(){return $this->verbau;}
+    public function getverbko(){return $this->verbko;}
+    public function getco2kom(){return $this->co2kom;}
+    public function getwid(){return $this->wid;}
+    public function getsehrs(){return $this->sehrs;}
+    public function getschnell(){return $this->schnell;}
+    public function getlangsam(){return $this->langsam;}
+    public function getco2komb(){return $this->co2komb;}
+    /*
     public function __construct(
         $id,
         $name,
@@ -78,7 +125,7 @@ class Car
         $this->schnell = $schnell;
         $this->langsam = $langsam;
         $this->co2komb = $co2komb;
-    }
+    }*/
     /*
     public function readAll()
     {

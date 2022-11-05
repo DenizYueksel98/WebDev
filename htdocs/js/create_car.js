@@ -22,7 +22,7 @@ const toJson = function (event) {
 	console.log(json);
 	$.ajax({
 		type: 'POST', //Post- Methode ausgewählt
-		url: 'http://localhost:8080/src/Model/Car/create.php', //Endpunkt der API, diese erwartet eine JSON
+		url: 'http://localhost:8080/src/Api/Car/create.php', //Endpunkt der API, diese erwartet eine JSON
 		dataType: 'json', //Datentyp angeben
 		data: json, 
 		contentType: 'application/json',

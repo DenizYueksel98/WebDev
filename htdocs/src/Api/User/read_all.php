@@ -1,5 +1,6 @@
 <?php
-namespace Model\User;
+namespace Api\User;
+use Model\User\User;
 header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
 header('Content-Type: application/json');//header for json
 

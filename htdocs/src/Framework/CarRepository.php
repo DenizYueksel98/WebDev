@@ -9,9 +9,6 @@ include_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'AbstractRepository.php')
 class CarRepository extends AbstractRepository
 {
     protected $db; //CarDatabase, muss im Constructor mitgegeben werden
-    private $table = 'schein'; //define table schein
-    private $wltp = 'wltp'; // define wltp
-    private $nefz = 'nefz'; //define nefz
     public $carArray = array();
 
     public function __construct(CarDatabase $db)
@@ -23,89 +20,63 @@ class CarRepository extends AbstractRepository
     {
         return $this->db->real_escape_string($str);
     }
-    public function execute($sql)
-    {
-        $this->db->execute($sql);
-    }
     public function prepare($sql)
     {
         return $this->db->prepare($sql);
     }
-
+    //give it a prepared stmt and it answers the result  
     public function doMagic($stmt)
     {
         $stmt->execute(); //do query
-        $stmt->store_result(); //recive information into mysqli_stmt-object
-        $result = $this->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
-        return $result;
+        $result=mysqli_stmt_get_result($stmt);
+        $result->fetch_all(MYSQLI_ASSOC);
+        
+        foreach($result as $row){
+            $car = new Car();
+            $car->fromArray((array)$row);
+            
+            $carArray[]=$car;
+        }
+        //print_r($cars[0]);
+        //$stmt->store_result(); //recieve information into mysqli_stmt-object
+        //$result = $stmt->fetch_all(MYSQLI_ASSOC);
+        //$result = $this->db->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
+        return $carArray;
     }
     public function readFilter($filter, $theta, $value)
     {
-        $sql = $this->readFilterSql($filter, $theta, $value);
+        $sql = $this->db->readFilterSql($filter, $theta, $value);
         $stmt = $this->prepare($sql);
         return $this->doMagic($stmt);
     }
     public function readSingle($id)
     {
-        $query = $this->readSingleSql();
+        $query = $this->db->readSingleSql();
         $stmt = $this->prepare($query); //prepare query
         $stmt->bind_param('i', $id); //bind param for id
         return $this->doMagic($stmt);
     }
+    public function readSingleCar($id)
+    {
+        $query = $this->db->readSingleSql();
+        $stmt = $this->prepare($query); //prepare query
+        $stmt->bind_param('i', $id); //bind param for id
+        $carArray=$this->doMagic($stmt);
+        $car=$carArray[0];
+        return $car;
+    }
     public function readAll()
     {
-        $sql = $this->readAllSql(); //read sql query as string from function
+        $sql = $this->db->readAllSql(); //read sql query as string from function
         $stmt = $this->prepare($sql); //define mysqli_stmt-object
-        return $this->doMagic($stmt); //result JSON-String
+        return $this->doMagic($stmt); //Array with car objects
     }
-    public function createNefzSql()
-    {
-        $query = 'INSERT INTO ' . $this->nefz . " (
-            id,
-            verbin,
-            verbau,
-            verbko,
-            co2kom)
-            VALUES(?, ?, ?, ?, ?)";
-        return $query;
-    }
-    public function createWltpSql()
-    {
-        $query = 'INSERT INTO ' . $this->wltp . " (
-            id,
-            sehrs,
-            schnell,
-            langsam,
-            co2komb)
-            VALUES(?, ?, ?, ?, ?)";
-        return $query;
-    }
-    public function createScheinSql()
-    {
-
-        $query = 'INSERT INTO ' . $this->table . " (
-            id,
-            name,
-            b21,
-            b22,
-            j,
-            vier,
-            d1,
-            d2,
-            zwei,
-            fuenf,
-            v9,
-            vierzehn,
-            p3) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; //prepare syntax from query
-        return $query;
-    }
+    
     public function create(Car $car) //create new tupel in db
     {
-        $sql1 = $this->createNefzSql();
-        $stmt = $this->prepare($sql1); //prepare query
-        
-        $stmt->bind_param(
+        $sql1 = $this->db->createNefzSql();//getting the sql query for writing into nefz table
+        $stmt = $this->prepare($sql1); //prepare query, store in stmt obj.        
+        $stmt->bind_param(              //binding the supplied values from Car object
             'idddd',
             $car->nid,
             $car->verbin,
@@ -116,10 +87,9 @@ class CarRepository extends AbstractRepository
         if ($stmt->execute() == false) { //exec
             printf("Error while inserting in %s %s. \n", $this->nefz, $stmt->error); //error
         }
-        $sql2 = $this->createWltpSql();
-        $stmt = $this->prepare($sql2); //prepare query
-        
-        $stmt->bind_param(
+        $sql2 = $this->db->createWltpSql();//get SQL-String for INSERT INTO wltp
+        $stmt = $this->prepare($sql2); //prepare query, store in stmt
+        $stmt->bind_param(              //binding the supplied values from Car object
             'idddd',
             $car->wid,
             $car->sehrs,
@@ -130,9 +100,9 @@ class CarRepository extends AbstractRepository
         if ($stmt->execute() == false) { //exec
             printf("Error while inserting in %s %s. \n", $this->wltp, $stmt->error); //error
         }
-        $sql3 = $this->createScheinSql();
-        $stmt = $this->prepare($sql3); //prepare query
-        $stmt->bind_param(
+        $sql3 = $this->db->createScheinSql();//get SQL-String for INSER INTO schein
+        $stmt = $this->prepare($sql3); //prepare query, store in stmt
+        $stmt->bind_param(              //binding the supplied values from Car object
             'issssssssssss',
             $car->id,
             $car->name,
@@ -154,156 +124,6 @@ class CarRepository extends AbstractRepository
         }
         return true;
     }
-    function fetchAssocStatement($stmt)
-    {
-        if ($stmt->num_rows > 0) {
-            $result = array(); //instantiierung Ergebnis Array
-            $md = $stmt->result_metadata();
-            $params = array();
-            while ($field = $md->fetch_field()) {
-                $params[] = &$result[$field->name];
-            }
-            call_user_func_array(array($stmt, 'bind_result'), $params);
-            if ($stmt->fetch())
-                return $result;
-        }
 
-        return null;
-    }
-    public function handleResult($result)
-    {
-        $num = $result->num_rows;
-        if ($num > 0) {
-            $car_arr = array();
-
-            while ($row = $this->fetchAssocStatement($result)) {
-                extract($row);
-                $car_item = array(
-                    'id' => $id,
-                    'name' => $name,
-                    'b21' => $b21,
-                    'b22' => $b22,
-                    'j' => $j,
-                    'vier' => $vier,
-                    'd1' => $d1,
-                    'd2' => $d2,
-                    'zwei' => $zwei,
-                    'fuenf' => $fuenf,
-                    'v9' => $v9,
-                    'vierzehn' => $vierzehn,
-                    'p3' => $p3,
-                    'verbin' => $verbin,
-                    'verbau' => $verbau,
-                    'verbko' => $verbko,
-                    'co2kom' => $co2kom,
-                    'sehrs' => $sehrs,
-                    'schnell' => $schnell,
-                    'langsam' => $langsam,
-                    'co2komb' => $co2komb
-                );
-                array_push($car_arr, $car_item);
-            }
-            return json_encode($car_arr);
-        } else {
-            return json_encode(array('message' => 'No cars found.'));
-        }
-    }
-    public function readFilterSql($filter, $theta, $value) //read lines with filter
-    {
-        //$this->filterCheck(); //check if table is not supplied and add if missing
-        //$this->likeCheck(); //if theta is LIKE then surround value with %
-        $query = 'SELECT 
-        s.id,
-        s.name,
-        s.b21,
-        s.b22,
-        s.j,
-        s.vier,
-        s.d1,
-        s.d2,
-        s.zwei,
-        s.fuenf,
-        s.v9,
-        s.vierzehn,
-        s.p3,
-        n.verbin,
-        n.verbau,
-        n.verbko,
-        n.co2kom,
-        w.sehrs,
-        w.schnell,
-        w.langsam,
-        w.co2komb
-        FROM ' . $this->table . ' s 
-        LEFT JOIN '
-            . $this->nefz . ' n ON s.id=n.id
-        LEFT JOIN '
-            . $this->wltp . ' w ON s.id=w.id
-        WHERE ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
-        return $query;
-    }
-    public function readAllSql() //read all lines and return stmt
-    {
-        $query = 'SELECT 
-        s.id,
-        s.name,
-        s.b21,
-        s.b22,
-        s.j,
-        s.vier,
-        s.d1,
-        s.d2,
-        s.zwei,
-        s.fuenf,
-        s.v9,
-        s.vierzehn,
-        s.p3,
-        n.verbin,
-        n.verbau,
-        n.verbko,
-        n.co2kom,
-        w.sehrs,
-        w.schnell,
-        w.langsam,
-        w.co2komb
-        FROM ' . $this->table . ' s 
-        LEFT JOIN '
-            . $this->nefz . ' n ON s.id=n.id
-        LEFT JOIN '
-            . $this->wltp . ' w ON s.id=w.id;
-        ';
-        return $query;
-    }
-    public function readSingleSql() //read single line and return stmt
-    {
-        $query = 'SELECT 
-        s.id,
-        s.name,
-        s.b21,
-        s.b22,
-        s.j,
-        s.vier,
-        s.d1,
-        s.d2,
-        s.zwei,
-        s.fuenf,
-        s.v9,
-        s.vierzehn,
-        s.p3,
-        n.verbin,
-        n.verbau,
-        n.verbko,
-        n.co2kom,
-        w.sehrs,
-        w.schnell,
-        w.langsam,
-        w.co2komb
-        FROM ' . $this->table . ' s 
-        LEFT JOIN 
-            nefz n ON s.id=n.id
-        LEFT JOIN
-            wltp w ON s.id=w.id
-        WHERE s.id = ? LIMIT 1'; //prepare syntax from query
-        return $query;
-    }
+    
 }

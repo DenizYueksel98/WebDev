@@ -1,5 +1,6 @@
 <?php
-namespace Model\User;
+namespace Api\User;
+use Model\User\User;
 header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
 header('Content-Type: application/json');//header for json
 
@@ -7,9 +8,9 @@ include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.
 
 $user = new User($userdb);
 $data = json_decode(file_get_contents("php://input"));//decode data from recieved json
-$user->id = isset($data->id) ? $data->id : die();
+$user->username = isset($data->username) ? $data->username : die();
 
-$result = $user->read_id();
+$result = $user->read_username();
 $num = $result->num_rows;
 function fetchAssocStatement($stmt)
 {
@@ -46,5 +47,5 @@ if ($num === 1) {
     }
     echo json_encode($user_arr);
 } else {
-    echo json_encode(array('message' => 'No user with this id found.'));
+    echo json_encode(array('message' => 'No user with this username found.'));
 }

@@ -2,7 +2,8 @@
 
 namespace Model\User;
 
-class User
+use Framework\AbstractModel;
+class User extends AbstractModel
 {
     private $conn;
     private $table = 'users'; //define table

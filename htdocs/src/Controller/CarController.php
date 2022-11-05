@@ -13,7 +13,8 @@ use Model\Car\Car;
 class CarController extends AbstractController
 {
     public $carModel = []; //Beinhaltet später alle Cars, die die API geliefert hat, als Array 
-    public $singleCar = []; //Abfrage einzelnes Auto
+    public $car;           //Beinhaltet später das einzeln abgefragte CarObjekt
+    public $json;          //Beinhaltet später alle Cars, die die API geliefert hat, als JSON
     public $detailLinkBegin = "<br><a href=?c=car&a="; //Definiere den Beginn unseres Links, dass er aus der HTML (VIEW) abrufbar ist
     public $detailLinkEnd = ">Show details</a>"; //Definiere das Ende des Detail Links, dass er aus der HTML (View/Car/) abrufbar ist
     public $message; //Antwort der Abfrage
@@ -25,7 +26,7 @@ class CarController extends AbstractController
         curl_setopt(
             $curl,
             CURLOPT_URL,                            // Sending GET request to reqres.in
-            "http://localhost:8080/src/Model/Car/read_all.php" // API to get JSON data aka MODEL
+            "http://localhost:8080/src/Api/Car/read_all.php" // API to get JSON data aka MODEL
         );
         curl_setopt(
             $curl,                  // Telling curl to store JSON
@@ -48,7 +49,7 @@ class CarController extends AbstractController
     {
         $upload_folder = './img/'; //Das Upload-Verzeichnis
         $this->carModel=$this->readFromDB(); //update CarModel
-        $filename = $this->carModel[$this->id-1]['id']; //carID - 1 = ArrayIndex (car mit ID 21 steht im Arrayan der Stelle[20]=[(21-1)])
+        $filename = $this->carModel[$this->id-1]->id; //carID - 1 = ArrayIndex (car mit ID 21 steht im Arrayan der Stelle[20]=[(21-1)])
         $extension = strtolower(pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION));//Dateiendung wird ausgelesen
         //Überprüfung der Dateiendung, nur JPEG und JPG sind erlaubt
         $allowed_extensions = array('jpeg', 'jpg');
@@ -89,12 +90,6 @@ class CarController extends AbstractController
     }
     public function testAction()
     {
-        /*$this->cleanupCars();
-        $this->readFromDB();
-        $this->createCars();
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
-        $this->getSingleId(3);*/
     }
     public function getSingleId($id)
     {
@@ -119,12 +114,14 @@ class CarController extends AbstractController
     }
     public function readFromDB()
     {
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        $db = new CarDatabase("127.0.0.1", "root", "", "cars"); //Conntect to DB
         $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
-        if ($result = $repo->readAll()) {
+        if ($result = $repo->readAll()) { //Recieve JSON and save into $result var
             $this->message = "<h3>JSON file data</h3>";
-            $decoded = json_decode($result, true); //Parse JSON into Arrays in Arrays
-            $this->carModel = $decoded;
+            $json=json_encode($result);
+            $this->json=$json;//Set plain result(json-string) so class variable json and make it available for CarView
+            //$decoded = json_decode($result, true); //Parse JSON into 2D Array (Arrays in Array)
+            $this->carModel = $result; 
             $db->close();
             return $this->carModel;
         } else {
@@ -136,26 +133,15 @@ class CarController extends AbstractController
     //wird das Auto-Array geupdated und die Auto-Objekte neu erzeugt. 
     public function readAll()
     {
-        if (isset($this->carModel)) {
-            if ($this->readFromDB() == $this->carModel) {
-                return $this->carModel;
-                //Stimmen überein
-            } else {
-                //Stimmen nicht überein
-                $this->cleanupCars();
-                $this->carModel = $this->readFromDB();
-                $this->createCars();
-                return $this->carModel;
-            }
-        } else {
-            $this->carModel = $this->readFromDB();
-            return $this->carModel;
-            //$this->createCars();
-        }
+        //$this->cleanupCars();
+        $this->carModel = $this->readFromDB();
+        $this->createCars();
+        return $this->carModel;
     }
     public function createCars()
     {
-        foreach ($this->carModel as $car) {
+        $carArray=array();
+        foreach (json_decode($this->json, true) as $car) {
             $car = new Car(
                 $car['id'],
                 $car['name'],
@@ -179,13 +165,22 @@ class CarController extends AbstractController
                 $car['langsam'],
                 $car['co2komb']
             );
+            array_push($carArray,$car);
         }
+        //var_dump($carArray);
+        //var_dump($this->carModel);
     }
     public function detailAction()
     {
+        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
+        $car = $repo->readSingleCar($this->id);
+        $this->car=$car;
+        /*
         $this->readAll(); //Damit carModel gefüllt ist
         $this->singleCar[] = $this->carModel[$this->id - 1]; //Packe in das singleCar Array die Daten des Autos aus dem carModel Array
         return "detail"; //gib detail zurück
+    */
     }
     public function getCarModel()
     { //returned einfach das CarModel, so kann es von anderen Klassen angefragt werden
