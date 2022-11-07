@@ -14,16 +14,15 @@ class Layout
         $this->action = $action;
     }
 
-    public function renderStatic2($dynamicView)
+    public function renderStatic($dynamicView)
     {
-        $this->dynamicView = $dynamicView;//Hier steckt der Pfad für die dynamische dynamicView.php drin
-        include(LAYOUT_PATH.DS.'staticView.php');//Statischer Part
+        $this->dynamicView = $dynamicView; // hand over dynamic view for call in staticView
+        include(LAYOUT_PATH.DS.'staticView.php'); // call static view
     }
 
-    public function renderDynamic3()//Dynamischer Part // --> Wird in der HTML (Layout/staticView.php) aufgerufen
+    public function renderDynamic1() // call dynamic view (staticView)
     {
-        echo $this->controller->renderDynamic4($this->dynamicView); // --> Wird von der AbstractController ausgeführt
-        // in der AbstractController wird nun ENDLICH mit include($dynamicView); die Dynamische sicht aufgerufen
+        echo $this->controller->renderDynamic2($this->dynamicView); // call dynamic view in specific controller object
     }
     
 }
