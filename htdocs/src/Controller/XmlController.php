@@ -2,21 +2,23 @@
 
 namespace Controller;
 
-use Framework\AbstractController;
+use Controller\CarController;
 use Directory;
 use Framework\CarDatabase;
 use Framework\CarRepository;
 use SimpleXMLElement;
 
-class XmlController extends AbstractController
+class XmlController extends CarController
 {
-
+    protected $error_message;
+    protected $upload_message;
     public function defaultAction()
     {
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $db->connect();
         $db->truncateTable("`xml`");
         $affectedRow = 0;
+        
         $file = file_get_contents("./input.xml");
         $xml = simplexml_load_string($file)
             or die("Error: Cannot create object");
@@ -105,10 +107,10 @@ class XmlController extends AbstractController
                 $langsam . "','" .
                 $co2komb . "')";
             $result = $db->query2($sql);
-            if (!empty($result)) {
+            if (empty($result)==false) {
                 $affectedRow++;
             } else {
-                //$error_message = mysqli_error($db->dbhandle) . "\n";
+                $this->error_message = mysqli_error($db->getdbhandle()) . "\n";
             }
         }
         $db->close();
@@ -118,10 +120,47 @@ class XmlController extends AbstractController
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $db->connect();
         $file = file_get_contents("./input.xml");
-        //$xml = simplexml_load_string($file)
-        //    or die("Error: Cannot create object");
-        $xml = new SimpleXMLElement('<xml></xml>');
-        
-        
+        $xml = simplexml_load_string($file)
+            or die("Error: Cannot create object");
+        $carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
+        //print_r($carModel);
+        $xml = new SimpleXMLElement('<db></db>');
+        $caritem=$xml->addChild('car');
+        foreach($carModel as $car){
+            $caritem->addChild('id',$car->id);
+            $caritem->addChild('name',$car->name);
+
+            $schein=$caritem->addChild('schein');
+            $schein->addChild('b21',$car->b21);
+            $schein->addChild('b22',$car->b22);
+            $schein->addChild('j',$car->j);
+            $schein->addChild('vier',$car->vier);
+            $schein->addChild('d1',$car->d1);
+            $schein->addChild('d21',$car->d21);
+            $schein->addChild('d22',$car->d22);
+            $schein->addChild('d23',$car->d23);
+            $schein->addChild('zwei',$car->zwei);
+            $schein->addChild('fuenf1',$car->fuenf1);
+            $schein->addChild('fuenf2',$car->fuenf2);
+            $schein->addChild('v9',$car->v9);
+            $schein->addChild('vierzehn',$car->vierzehn);
+            $schein->addChild('p3',$car->p3);
+
+            $nefz=$caritem->addChild('nefz');
+            $verbin=$nefz->addChild('verbin',$car->verbin);
+            $verbin->addAttribute('unit', $car->verbin_unit);
+            $nefz->addChild('verbau',$car->verbau);
+            $nefz->addChild('verbko',$car->verbko);
+            $nefz->addChild('co2kom',$car->co2kom);
+
+            $wltp=$schein->addChild('wltp');
+            $wltp->addChild('sehrs',$car->sehrs);
+            $wltp->addChild('schnell',$car->schnell);
+            $wltp->addChild('langsam',$car->langsam);
+            $wltp->addChild('co2kom',$car->co2komb);
+        }
+
+        $xml->asXML('export.xml');
+        $this->upload_message="Successfully exported your XML-File.";
     }
 }
