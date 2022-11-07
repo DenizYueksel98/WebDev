@@ -3,19 +3,8 @@
     <h1>Ihre Kfz-Datenbank</h1>
     <h2>Stöbern sie durch die verschiedensten Autos</h2>
     <p>Klicken Sie hier um direkt zur Abfrage zu gelangen.</p>
-    <form action="localhost:8080/bu.index.php?c=car">
-        <button class='button' type="submit">Zur Kfz-Datenbank</button>
-    </form>
+    <a href="index.php?c=car">Zur Datenbank</a>
 </section>
-<section>
-    <h1>this is a headline</h1>
-    <h2>and this is a subline</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quod dolor dolore totam mollitia magnam dolorem? Necessitatibus molestiae excepturi totam, maiores dolore corrupti obcaecati blanditiis, dolorum corporis modi fugit. Consequatur?</p>
-    <button class="button">
-        click me
-    </button>
-</section>
-
 <section class="table">
     <table>
         <tr>

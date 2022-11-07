@@ -6,6 +6,7 @@ header('Access-Control-Allow-Origin: *'); //cross-origin resource sharing header
 //Wir benutze den USE mit dem Namespace "Framework" damit wir direkt "extenden" können
 //Sonst müssten wir den Pfade den Namespace folgendermaßen nochmals angebne "...extends Framework\AbstractController" 
 use Framework\AbstractController;
+use Framework\CarDatabase;
 use Model\Car\Car;
 
 class CarController extends AbstractController
@@ -112,6 +113,7 @@ class CarController extends AbstractController
     public function readFromDB()
     {
         include(__DIR__.'/../../core/config.php');
+        
         if ($result = $repo->readAll()) { //Recieve JSON and save into $result var
             $this->message = "<h3>JSON file data</h3>";
             $json=json_encode($result);
