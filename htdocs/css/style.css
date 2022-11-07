@@ -54,6 +54,12 @@ header {
     font-weight: 800;
     font-size: 2em;
 }
+#logopng {
+    width: var(--left-col-width);
+    height: 60px;
+    background: var(--dark-gray);
+
+}
 
 #mainnav {
     display: flex;
