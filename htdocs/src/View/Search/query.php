@@ -4,7 +4,7 @@ We found <?php if (isset($this->searchResultContains)) {
                 echo "0";
             } ?> matching items containing your query '<?php echo $this->searchQuery; ?>'
 <section class="table">
-    <table id="excelDataTable">
+    <table id="carDataTable">
     </table>
 
     <script type="text/javascript">

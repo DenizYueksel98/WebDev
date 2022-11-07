@@ -1,7 +1,7 @@
 <script type="text/javascript" src="../../js/display_table.js"></script>
     
-<section class="filter-form">
-    <form id="filter-form" action="../src/Api/Car/.read_car_filter.php" method="post">
+<section class="filter-form" onLoad="buildHtmlTable('#carDataTable', <?php echo json_encode($this->carModel);?>)">
+    <form id="filter-form" action="" method="post">
         <div class="input-container-nearly-full">
             <div class="inline">
                 <label for="filter">Filter:</label>
@@ -58,7 +58,7 @@
     </form>
 </section>
 <section class="table">
-    <table id="excelDataTable">
+    <table id="carDataTable">
     </table>
 
     <script type="text/javascript">

@@ -4,7 +4,7 @@ updateCarModel = function (value) {
     console.log(filter)
     let theta = document.getElementById('theta').value;
     console.log(theta)
-    var url = 'http://localhost:8080/src/Api/Car/.read_car_filter.php?filter=' + filter + '&theta=' + theta + '&value=' + value;
+    var url = 'http://localhost:8080/src/Api/Car/read_filter.php?filter=' + filter + '&theta=' + theta + '&value=' + value;
     console.log(url)
     getJSON(url);
 
@@ -42,10 +42,10 @@ handleResult = function (data)
     carModel = JSON.parse(data)//Parse die Daten in der JSON in die Variable result
     //console.log(carModel);
 
-    buildHtmlTable('#excelDataTable', carModel);
+    buildHtmlTable('#carDataTable', carModel);
 }
 function buildHtmlTable(selector, carModel) {
-    var Table = document.getElementById('excelDataTable');
+    var Table = document.getElementById('carDataTable');
     Table.innerHTML = "";
     var columns = addAllColumnHeaders(carModel, selector);
     console.log(carModel)
@@ -86,4 +86,7 @@ function addAllColumnHeaders(carModel, selector) {
 }
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+window.onload= function onLoad(){
+    updateCarModel("");
 }

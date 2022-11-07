@@ -21,7 +21,7 @@ const toJson = function (event) {
 	let json = JSON.stringify(object);//erzeuge aus dem Objekt eine JSON
 	$.ajax({
 		type: 'POST', //Post-Methode ausgewählt
-		url: 'http://localhost:8080/src/Model/User/login.php',//Endpunkt der API (erwartet JSON)
+		url: 'http://localhost:8080/src/Api/User/login.php',//Endpunkt der API (erwartet JSON)
 		dataType: 'json', //Angabe des Datentyps
 		data: json,
 		contentType: 'application/json',

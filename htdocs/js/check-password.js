@@ -13,7 +13,7 @@ window.onload = function () {
 }
 
 function setAction(form) {
-    form.action = "./src/Model/User/create.php";
+    form.action = "./src/Api/User/create.php";
     if ($pwcorrect) {
         return false;
     } else {

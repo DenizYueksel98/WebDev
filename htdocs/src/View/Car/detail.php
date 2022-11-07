@@ -27,7 +27,7 @@
             <li>V9:     <?php   echo $this->car->v9;        ?></li>
             <li>14:     <?php   echo $this->car->vierzehn;  ?></li>
             <li>P3:     <?php   echo $this->car->p3;        ?></li>
-            <li>NEFZ Verbrauch innerorts:   <?php   echo $this->car->verbin;  ?></li>
+            <li>NEFZ Verbrauch innerorts:   <?php   echo $this->car->verbin." ".$this->car->verbin_unit;  ?></li>
             <li>NEFZ Verbrauch au:          <?php   echo $this->car->verbau;  ?></li>
             <li>NEFZ Verbrauch ko:          <?php   echo $this->car->verbko;  ?></li>
             <li>NEFZ CO2-Emission kombiniert:<?php  echo $this->car->co2kom;  ?></li>

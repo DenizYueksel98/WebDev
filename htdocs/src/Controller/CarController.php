@@ -6,8 +6,6 @@ header('Access-Control-Allow-Origin: *'); //cross-origin resource sharing header
 //Wir benutze den USE mit dem Namespace "Framework" damit wir direkt "extenden" können
 //Sonst müssten wir den Pfade den Namespace folgendermaßen nochmals angebne "...extends Framework\AbstractController" 
 use Framework\AbstractController;
-use Framework\CarDatabase;
-use Framework\CarRepository;
 use Model\Car\Car;
 
 class CarController extends AbstractController
@@ -93,7 +91,6 @@ class CarController extends AbstractController
     }
     public function getSingleId($id)
     {
-
         foreach ($GLOBALS as $name => $var) {
             print_r($GLOBALS[$name]);
         }
@@ -114,8 +111,7 @@ class CarController extends AbstractController
     }
     public function readFromDB()
     {
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars"); //Conntect to DB
-        $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
+        include(__DIR__.'/../../core/config.php');
         if ($result = $repo->readAll()) { //Recieve JSON and save into $result var
             $this->message = "<h3>JSON file data</h3>";
             $json=json_encode($result);
@@ -172,15 +168,10 @@ class CarController extends AbstractController
     }
     public function detailAction()
     {
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        $repo = new CarRepository($db); //CarCollection from Methods and DB Functionality
+        include(__DIR__.'/../../core/config.php');
         $car = $repo->readSingleCar($this->id);
+        $db->close();
         $this->car=$car;
-        /*
-        $this->readAll(); //Damit carModel gefüllt ist
-        $this->singleCar[] = $this->carModel[$this->id - 1]; //Packe in das singleCar Array die Daten des Autos aus dem carModel Array
-        return "detail"; //gib detail zurück
-    */
     }
     public function getCarModel()
     { //returned einfach das CarModel, so kann es von anderen Klassen angefragt werden

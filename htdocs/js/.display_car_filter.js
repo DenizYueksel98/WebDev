@@ -4,7 +4,7 @@ function updateRequest() {
 	$value =jQuery(document.getElementById('value')).val();
 	
 	$.ajax({
-		url: 'http://localhost:8080/src/Model/Car/read_car_filter.php',
+		url: 'http://localhost:8080/src/Api/Car/read_filter.php',
 		type: "POST",
 		cache: false,
 		data: "filter=" + filter + "&theta=" + theta + "&value=" + value,

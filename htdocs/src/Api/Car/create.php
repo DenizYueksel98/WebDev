@@ -1,7 +1,5 @@
 <?php
 namespace Api\Car;
-use Framework\CarDatabase;
-use Framework\CarRepository;
 use Model\Car\Car;
 header('Access-Control-Allow-Origin: *');//cross-origin resource sharing header
 header('Content-Type: application/json');//header for json
@@ -9,11 +7,7 @@ header('Access-Control-Allow-Methods: POST');//allow POST
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');//allow some other useful headers
 
 include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'/core/initialize.php');//init
-include_once(FRAMEWORK_PATH.DS."CarDatabase.php");
-include_once(FRAMEWORK_PATH.DS.'CarRepository.php');
-$db=new CarDatabase("127.0.0.1","root","","cars");
-$repo=new CarRepository($db);
-
+//include_once(MODEL_PATH.DS.'Car/car.php');
 $data = json_decode(file_get_contents("php://input"));//decode data from recieved json
 $car = new Car();
 $car->setid($repo->real_escape_string($data->id));//define fields from json in car constructor

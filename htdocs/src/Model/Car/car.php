@@ -316,6 +316,7 @@ class Car extends AbstractModel
     }*/
     //Transaktionsmanagement TODO
     //Try&Catch 
+    /*
     public function create() //create new tupel in db
     {
         $query = 'INSERT INTO ' . $this->nefz . " (
@@ -416,5 +417,5 @@ class Car extends AbstractModel
         }
         printf("Error while inserting in %s %s. \n", $this->table, $stmt->error); //error
         return false;
-    }
+    }*/
 }

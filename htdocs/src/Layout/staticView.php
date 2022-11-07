@@ -19,7 +19,7 @@
     <script src="../../js/jQuery.min.js"></script>
 </head>
 
-<body onLoad="buildHtmlTable('#excelDataTable', <?php echo $this->json?>)," >
+<body>
     <!-- header -->
     <header>
         <div id="logo">

@@ -4,6 +4,7 @@ use Framework\AbstractController;
 use Framework\AbstractRepository;
 use Framework\Database;
 //Wird noch entfernt, wurde von Niels nur zu Demozwecken verwendet
+
 class MySqlController extends AbstractController
 {
     public function defaultAction()
