@@ -13,7 +13,7 @@
 	<xs:complexType name="cartype">
 		<xs:sequence>
 			<xs:element name="id" type="int999" maxOccurs="1" />
-			<xs:element name="name" type="xs:string" maxOccurs="1" />
+			<xs:element name="name" type="string60" maxOccurs="1" />
 			<xs:element name="schein" type="scheintyp" maxOccurs="1" />
 			<xs:element name="nefz" type="nefztyp" maxOccurs="1" />
 			<xs:element name="wltp" type="wltptyp" maxOccurs="1" />
@@ -25,16 +25,16 @@
 			<xs:element name="b21" type="int4" maxOccurs="1" />
 			<xs:element name="b22" type="int3" maxOccurs="1" />
 			<xs:element name="j" type="string2" maxOccurs="1" />
-			<xs:element name="vier" type="int4" maxOccurs="1" />
-			<xs:element name="d1" type="string30" maxOccurs="1" />
-			<xs:element name="d21" type="string8" maxOccurs="1" />
-			<xs:element name="d22" type="string8" maxOccurs="1" />
-			<xs:element name="d23" type="string8" maxOccurs="1" />
-			<xs:element name="zwei" type="string30" maxOccurs="1" />
-			<xs:element name="fuenf1" type="string30" maxOccurs="1" />
-			<xs:element name="fuenf2" type="string30" maxOccurs="1" />
-			<xs:element name="v9" type="string30" maxOccurs="1" />
-			<xs:element name="vierzehn" type="string30" maxOccurs="1" />
+			<xs:element name="vier" type="string4" maxOccurs="1" />
+			<xs:element name="d1" type="string60" maxOccurs="1" />
+			<xs:element name="d21" type="string3" maxOccurs="1" />
+			<xs:element name="d22" type="string4" maxOccurs="1" />
+			<xs:element name="d23" type="string60" maxOccurs="1" />
+			<xs:element name="zwei" type="string60" maxOccurs="1" />
+			<xs:element name="fuenf1" type="string60" maxOccurs="1" />
+			<xs:element name="fuenf2" type="string60" maxOccurs="1" />
+			<xs:element name="v9" type="string60" maxOccurs="1" />
+			<xs:element name="vierzehn" type="string60" maxOccurs="1" />
 			<xs:element name="p3" type="fuel" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
@@ -50,22 +50,22 @@
 
 	<xs:complexType name="wltptyp">
 		<xs:sequence>
-			<xs:element name="sehrs" type="wltptyp_km" maxOccurs="1" />
-			<xs:element name="schnell" type="wltptyp_km" maxOccurs="1" />
-			<xs:element name="langsam" type="wltptyp_km" maxOccurs="1" />
+			<xs:element name="sehrs" type="consumption" maxOccurs="1" />
+			<xs:element name="schnell" type="consumption" maxOccurs="1" />
+			<xs:element name="langsam" type="consumption" maxOccurs="1" />
 			<xs:element name="co2kom" type="co2" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:simpleType name="int4">
-		<xs:restriction base="xs:int">
-			<xs:pattern value="\d{4}"></xs:pattern>
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="int3">
 		<xs:restriction base="xs:int">
 			<xs:pattern value="\d{3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="int4">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="\d{4}"></xs:pattern>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -85,72 +85,59 @@
 
 	<xs:simpleType name="double0_300">
 		<xs:restriction base="xs:double">
-			<xs:minInclusive value="0.0" />
-			<xs:maxInclusive value="100.0" />
+			<xs:minInclusive value="0.00" />
+			<xs:maxInclusive value="300.00" />
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string2">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="\d{2}"></xs:pattern>
+  				<xs:maxLength value = "2"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string3">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="\d{2}"></xs:pattern>
+  				<xs:maxLength value = "3"/>
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="string8">
+	<xs:simpleType name="string4">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="\d{2}"></xs:pattern>
+  				<xs:maxLength value = "4"/>
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="string30">
+	<xs:simpleType name="string60">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="\d{10}"></xs:pattern>
+  				<xs:maxLength value = "60"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="fuel">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Benzin" />
-			<xs:enumeration value="Diesel" />
-			<xs:enumeration value="Elektro" />
-			<xs:enumeration value="Wasserstoff" />
+			<xs:enumeration value="BENZIN"/>
+			<xs:enumeration value="DIESEL"/>
+			<xs:enumeration value="GAS"/>
+			<xs:enumeration value="ELEKTRO"/>
+			<xs:enumeration value="WASSERSTOFF"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 
-	<xs:complexType name = "wltptyp_km">
-		<xs:simpleContent>
-			<xs:extension base="double0_300">
-				<xs:attribute type="range" default="km" name="unit" use="optional" />
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-
-	<xs:simpleType name="range">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="km"/>
-			<xs:enumeration value="miles"/>
-		</xs:restriction>
-	</xs:simpleType>
 
 	<xs:complexType name = "consumption">
 		<xs:simpleContent>
 			<xs:extension base="double0_300">
-				<xs:attribute type="l100" default="Liter/100 km" name="unit" use="optional" />
+				<xs:attribute type="cper100" name="unit"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:simpleType name="l100">
+	<xs:simpleType name="cper100">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Liter/100 km"/>
-			<xs:enumeration value="gals/100 miles" />
+			<xs:enumeration value="l/100km"/>
+ 			<xs:enumeration value="kWh/100km" />
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -165,10 +152,7 @@
 	<xs:simpleType name="gkm">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="g/km"/>
-			<xs:enumeration value="p/mile"/>
 		</xs:restriction>
 	</xs:simpleType>
-
-
 
 </xs:schema>

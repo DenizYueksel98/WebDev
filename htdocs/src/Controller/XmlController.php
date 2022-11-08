@@ -19,7 +19,7 @@ class XmlController extends CarController
         $db->truncateTable("`xml`");
         $affectedRow = 0;
 
-        $file = file_get_contents("./input.xml");
+        $file = file_get_contents("./dbXML.xml");
         $xml = simplexml_load_string($file)
             or die("Error: Cannot create object");
         foreach ($xml->children() as $row) {
@@ -119,7 +119,7 @@ class XmlController extends CarController
     {
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $db->connect();
-        $file = file_get_contents("./input.xml");
+        $file = file_get_contents("./dbXML.xml");
         $xml = simplexml_load_string($file)
             or die("Error: Cannot create object");
         $carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
@@ -170,9 +170,9 @@ class XmlController extends CarController
         libxml_use_internal_errors(true);
 
         $xml = new \DOMDocument();
-        $xml->load('input.xml');
+        $xml->load('dbXML.xml');
 
-        if (!$xml->schemaValidate('xmlschema.xsd')) {
+        if (!$xml->schemaValidate('dbschema.xsd')) {
             print '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
             $this->libxml_display_errors();
         }
