@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
-    <? include_once('/core/initialize.php'); ?>
+    <? include_once('./core/initialize.php'); ?>
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
     <!--?php ob_start(); ?-->
@@ -102,7 +102,6 @@
             </h1>
         </div>
         <?php
-        $this->renderDynamic1(); //<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
         ?>
     </main>

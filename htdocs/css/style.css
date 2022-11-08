@@ -76,9 +76,14 @@ header {
 #txtHint{
     margin:20px;
     padding: 20px;
+    
 }
 #txtHint a{
     margin: 0 5px;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+   padding: 5px;
+    color: #333;
 }
 /* breadcrumb */
 .breadcrumb {
