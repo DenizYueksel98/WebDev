@@ -14,61 +14,56 @@ class FrontController
     const DEFAULT_ACTION = 'default';
 
     public function __construct()
-    {//Zuerst mal alles auf 'default'
+    { // fist - set all parameter variables to default
         $this->controllerName = self::DEFAULT_CONTROLLER;
         $this->actionName = self::DEFAULT_ACTION;
     }
 
-    public function dispatch() 
+    public function dispatch() // check all the parameters in the URI and instantiate the corresponding Layout object(index.php)
     {
-        if (isset($_REQUEST['c'])==true) // Wenn $_REQUEST['c'] (Array-Zeiger) einen Wert besitzt 'default' mit diesem ersetzen
+        if (isset($_REQUEST['c'])==true) // check if there is a controller-paramter Wenn $_REQUEST['c'] (Array-Zeiger) einen Wert besitzt 'default' mit diesem ersetzen
         {
-            $this->controllerName = $_REQUEST['c'];//$_REQUEST?c="xyz"
+            $this->controllerName = $_REQUEST['c']; //give controller-parameter as String - $_REQUEST?c="xyz"
         }
-        if (isset($_REQUEST['a'])) // Wenn $_REQUEST['a'] (Array-Zeiger) einen Wert besitzt 'default' mit diesem ersetzen
+        if (isset($_REQUEST['a'])) // check if there is an action-parameter $_REQUEST['a'] (Array-Zeiger) 
         {
-            $this->actionName = $_REQUEST['a'];  
-        }
-        
-        // Zusammenbauen des des Pfades für entsprechende Controller-Klasse (z.B. Conroller\\CarController)
-        $controllerClassName = 'Controller\\' . ucfirst(strtolower($this->controllerName)) . 'Controller';
-        // Zusammenbauen des des Pfades für entsprechende Action-Methode (z.B. detailAction)
-        $actionName = strtolower($this->actionName) . 'Action';
-        //Nun wird die Controller-Klasse instanziiert (Conroller/CarController)
-        $this->controller = new $controllerClassName();//Controller\CarController()
-        if (isset($_REQUEST['i'])) 
-        {
-            $this->id = intval($_REQUEST['i']); //z.B. localhost:8080?['i']=3
-            $this->controller->id=$this->id; //this.controller.id = this.id - Schreibe den integer in die klasse "controller" (instanz von Klasse CarController)
-        }
-        if (isset($_REQUEST['q'])) 
-        {
-            $this->controller->query=strval($_REQUEST['q']);;
+            $this->actionName = $_REQUEST['a'];  //give action-parameter
         }
         
-        if (method_exists($this->controller, $actionName)) //Prüfe ob die actionMethodeName-Methode in Controller-Klasse existiert
+
+        $controllerClassName = 'Controller\\' . ucfirst(strtolower($this->controllerName)) . 'Controller'; // built controller path
+        $actionName = strtolower($this->actionName) . 'Action'; // built action path (e.g. detail action)
+        $this->controller = new $controllerClassName(); // instantiate controller object
+        if (isset($_REQUEST['i'])) // check if there is an id-parameter
         {
-            //actionMethodeName-Methode ausführen
-            $this->controller->$actionName();
+            $this->id = intval($_REQUEST['i']); // get integer of id-parameter
+            $this->controller->id=$this->id; // hand over id-parameter to controller object
+        }
+        if (isset($_REQUEST['q'])) // check if there is an query-parameter
+        {
+            $this->controller->query=strval($_REQUEST['q']);; // get string of query-parameter 
+        }
+        
+        if (method_exists($this->controller, $actionName)) // check if there is a corresponding action-method in controller object
+        {
+            $this->controller->$actionName(); // do action()
         } 
         else 
         {
-            echo 'action ' . $actionName . ' not found in ' . $controllerClassName; // Fehlermeldung
+            echo 'action ' . $actionName . ' not found in ' . $controllerClassName; // error if there is no action
         }
         
-        // GEHT DER AUFRUF OHNE USE FRAMEWORK WEIL DIE KLASSE LAYOUT IM SELBEN ORDNER IST?
-        // Ich euzeuge nun ein layout-Objekt mit dem controller-Objekt und dem ActionMethodenNamen (Brauche ich für die render())
-        $this->layout = new Layout(
+        $this->layout = new Layout( // instantiate new layout objct
             $this->controller,
-            $this->actionName,
+            $this->actionName, 
         );
     }
 
-    public function render1()//--> Wird von der index.php aufgerufen (Übergeordnete Render-Funktion)
-    {//bu.index.php?c=car&a=default 
-        if($this->controller->hasView){ // Pfad für Dynamische View bauen = //var/www/html'/src/view/Car/details.php
-        $dynamicView = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';
-        $this->layout->renderStatic2($dynamicView);// --> Übergang zu Framework/Layout.renderDynamic(Mit_der_hier_definierten_$dynamicView)  
+    public function render() // first render (index.php)
+    {
+        if($this->controller->hasView){ //check if view-switch is on (AbstractController)
+        $dynamicView = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';//built path for dynamic view
+        $this->layout->renderStatic($dynamicView);// call static view in layout hand over dynamic view for later call  
         }
     }
 }

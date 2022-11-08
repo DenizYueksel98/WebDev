@@ -4,14 +4,14 @@ namespace Framework;
 
 class AbstractController
 {
-    public $hasView=true;//Initial haben alle Controller eine View
-    protected function disableView(){//Falls eine View nicht gewünscht ist, kann diese Methode aufgerufen werden
+    public $hasView=true;// view-switch on (Frontcontroller)
+    protected function disableView(){// view-switch off (for java script)
         $this->hasView=false;
     }
-    protected function enableView(){
+    protected function enableView(){// view-switch on (for dynamic view)
         $this->hasView=true;
     }
-    public function renderDynamic4($dynamicView)
+    public function renderDynamic2($dynamicView) // call dynamic view
     {
         include($dynamicView);
     }
