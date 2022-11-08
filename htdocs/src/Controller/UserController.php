@@ -53,9 +53,4 @@ class UserController extends AbstractController
         $this->defaultAction();
         return $this->userModel; 
     }
-    public function createAction()
-    {
-        
-        //lege Fahrzeug an
-    }
 }

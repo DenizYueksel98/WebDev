@@ -1,0 +1,3 @@
+<h1>FAQs</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, facere sed illo earum culpa repellendus fugit nulla, quidem, molestias dicta non nam sunt temporibus. Corrupti distinctio facere impedit asperiores voluptatibus!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quo earum non facilis! Odit sequi aut officiis harum eius! Assumenda eveniet suscipit, porro ratione aperiam doloribus velit fuga eius illo.

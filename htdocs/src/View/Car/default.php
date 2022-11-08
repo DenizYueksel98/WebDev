@@ -1,6 +1,6 @@
 <script type="text/javascript" src="../../js/display_table.js"></script>
-    
-<section class="filter-form" onLoad="buildHtmlTable('#carDataTable', <?php echo json_encode($this->carModel);?>)">
+
+<section class="filter-form" onLoad="buildHtmlTable('#carDataTable', <?php echo json_encode($this->carModel); ?>)">
     <form id="filter-form" action="" method="post">
         <div class="input-container-nearly-full">
             <div class="inline">
@@ -51,10 +51,10 @@
                     </option>
                 </select>
                 <label for="value">Wert:</label>
-                <input class="input-filter" name="value" id="value" placeholder=" "  onkeyup="updateCarModel(this.value)"/>
-              </div>
+                <input class="input-filter" name="value" id="value" placeholder=" " onkeyup="updateCarModel(this.value)" />
+            </div>
         </div>
-
+        <a id="resultcount"></a>
     </form>
 </section>
 <section class="table">
@@ -65,4 +65,4 @@
         var carModel = <?php echo $this->json ?>;
         console.log(carModel);
     </script>
-   </section>
+</section>

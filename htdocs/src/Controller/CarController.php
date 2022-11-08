@@ -4,8 +4,8 @@ namespace Controller;
 
 //Wir benutze den USE mit dem Namespace "Framework" damit wir direkt "extenden" können
 //Sonst müssten wir den Pfade den Namespace folgendermaßen nochmals angebne "...extends Framework\AbstractController" 
+
 use Framework\AbstractController;
-use Framework\CarDatabase;
 use Model\Car\Car;
 
 class CarController extends AbstractController
@@ -13,8 +13,6 @@ class CarController extends AbstractController
     public $carModel = []; //Beinhaltet später alle Cars, die die API geliefert hat, als Array 
     public $car;           //Beinhaltet später das einzeln abgefragte CarObjekt
     public $json;          //Beinhaltet später alle Cars, die die API geliefert hat, als JSON
-    public $detailLinkBegin = "<br><a href=?c=car&a="; //Definiere den Beginn unseres Links, dass er aus der HTML (VIEW) abrufbar ist
-    public $detailLinkEnd = ">Show details</a>"; //Definiere das Ende des Detail Links, dass er aus der HTML (View/Car/) abrufbar ist
     public $message; //Antwort der Abfrage
     public $id; // id, die angefragt wurde
 
@@ -51,7 +49,7 @@ class CarController extends AbstractController
         $extension = strtolower(pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION));//Dateiendung wird ausgelesen
         //Überprüfung der Dateiendung, nur JPEG und JPG sind erlaubt
         $allowed_extensions = array('jpeg', 'jpg');
-        if (!in_array($extension, $allowed_extensions)) {
+        if (in_array($extension, $allowed_extensions)==false) {
             die("Ungültige Dateiendung. Nur  jpeg-Dateien sind erlaubt");
         }
 
@@ -111,7 +109,7 @@ class CarController extends AbstractController
     }
     public function readFromDB()
     {
-        include('./core/config.php');
+        include(__DIR__.'/../../core/config.php');
         
         if ($result = $repo->readAll()) { //Recieve JSON and save into $result var
             $this->message = "<h3>JSON file data</h3>";

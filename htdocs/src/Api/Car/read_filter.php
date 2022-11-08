@@ -16,7 +16,7 @@ $value = isset($_GET['value']) ? $_GET['value'] : "";
 if (isset($filter) && isset($value) && isset($theta)) {
     if (str_contains(strtoupper($theta), 'LIKE')) {
         $value = '%' . $value . '%';
-    }
+    }/*
     if    (str_contains(strtolower($filter),'id'))      $filter='s.'.$filter;
     elseif(str_contains(strtolower($filter),'name'))    $filter='s.'.$filter;
     elseif(str_contains(strtolower($filter),'b21'))     $filter='s.'.$filter;
@@ -38,6 +38,7 @@ if (isset($filter) && isset($value) && isset($theta)) {
     elseif(str_contains(strtolower($filter),'schnell')) $filter='w.'.$filter;
     elseif(str_contains(strtolower($filter),'langsam')) $filter='w.'.$filter;
     elseif(str_contains(strtolower($filter),'co2komb')) $filter='w.'.$filter;
+    */
 }
 
 $result = $repo->readFilter($filter, $theta, $value);

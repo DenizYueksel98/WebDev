@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/typicons.css">
     <link rel="stylesheet" href="/css/style.css?ts=<?= time() ?>" />
-    <? include_once('./core/initialize.php'); ?>
+    <? include_once('/core/initialize.php'); ?>
     <!--?php include "includes/login-check.php"; ?-->
     <!--?php $_SESSION['url'] = $_SERVER['REQUEST_URI']; ?-->
     <!--?php ob_start(); ?-->
@@ -28,33 +28,11 @@
             </a>
         </div>
         <nav id="mainnav">
-            <!-- breadcrumb -->
-            <!--ul class="breadcrumb - Pfad">
-                <li>
-                    <a href="#">Nav Item 1</a>
-                </li>
-                <li>
-                    <a href="#">Nav Item 2</a>
-                </li>
-                <li>
-                    Nav Item 3
-                </li>
-            </ul-->
-            <!-- breadcrumb end -->
-            <!-- search -->
-            <!--form class="search" action="/index.php?c=search&a=query" method="POST">
-                <input type="search" name="query" placeholder="Search...">
-                <button type="submit"><span class="typcn typcn-arrow-right"></button>
-            </form-->
             <form class="search" action="/index.php?c=search&a=query" method="POST">
                 <input type="search" name="q" placeholder="Suche..." onkeyup="showHint(this.value)">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
-
-            <div class="suggestion">
-                 Vorschläge:
-            </div>
-            
+            <div class="suggestions">Vorschläge:</div>
             <div id="txtHint"></div>
             <!-- search end -->
         </nav>
@@ -68,26 +46,12 @@
                 <a href="/index.php?c=car">Datenbank</a>
                 <ul>
                     <li>
-                        <a href="/index.php?c=car">Alle Fahrzeuge</a>
-                    </li>
-                    <li>
                         <a href="/index.php?c=car&a=create">Neu anlegen</a>
-                    </li>
-                    <li>
-                        <a href="/index.php?c=search&a=query">Suche</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="/index.php?c=user">Registration</a>
-                <ul>
-                    <li>
-                        <a href="/index.php?c=user&a=create">Registration -löschen?</a>
-                    </li>
-                    <li>
-                        <a href="/index.php?c=user&a=login">Login</a>
-                    </li>
-                </ul>
+                <a href="/index.php?c=user">Sign-Up / Login</a>
             </li>
             <li>
                 <a href="/index.php?c=contact">Kontakt</a>
@@ -110,37 +74,30 @@
     </main>
     <!-- content end -->
 
-    <!-- footer -->
     <footer>
         <div class="social">
-        <a href="#"><span class="typcn typcn-social-facebook"></span></a>
-           <a href="#"><span class="typcn typcn-social-instagram"></span></a>
-            <a href="#"><span class="typcn typcn-social-twitter"></span></a>
-           <a href="google.de" class="let me google this for you"></a>
-</div>
-           <ul class="list">
+            <a href="facebook.de"><span class="typcn typcn-social-facebook"></span></a>
+            <a href="instagram.com"><span class="typcn typcn-social-instagram"></span></a>
+            <a href="twitter.de"><span class="typcn typcn-social-twitter"></span></a>
+            <a href="google.de" class="let me google this for you"></a>
+        </div>
+        <ul class="list">
             <li>
-            <a href="#">Impressum  </a>
-</li>
-<li>
-            <a href="#">Cookie Hinweis  </a>
-</li>
+                <a href="/index.php?c=contact&a=impressum">Impressum</a>
+            </li>
+            <li>
+                <a href="/index.php?c=contact&a=cookie">Cookie Hinweis</a>
+            </li>
+            <li>
+                <a href="/index.php?c=contact&a=faq">FAQ</a>
+            </li>
+        </ul>
+        <p class="copyright"> &copy; 2022 car-24 GmbH. Alle Rechte vorbehalten.
+        </p>
 
-<li>
-            <a href="#"> Datenschutz  </a>
-</li>
 
-<li>
-            <a href="#">FAQ</a>
-</li>
-</ul>
-<p class ="copyright">  &copy; 2022 car-24 GmbH. Alle Rechte vorbehalten.
-            </p>
-        
-        
     </footer>
     <!-- footer end -->
-
     <!-- load javascript -->
 
     <script src="../../js/search.js"></script>

@@ -2,9 +2,7 @@
 <script src="../../../js/jQuery.min.js" type="text/javascript"></script>
 
 <section class="create-form">
-    <h1>Neuanlage eines Autos </h1>
-    
-
+    <h1>Fahrzeug zur Datenbank hinzufügen</h1>
     <form id="create-form" method="post">
         <div class="input-container">
             <input id="id" name="id" type="number" placeholder=" " />
@@ -65,6 +63,8 @@
             <label class="inline" for="ethanol">Ethanol</label>
             <input class="inline" id="gas" name="p3" type="radio" value="Gas" />
             <label class="inline" for="gas">Gas</label>
+            <input class="inline" id="gas" name="p3" type="radio" value="Gas" />
+            <label class="inline" for="gas">Wasserstoff</label>
         </div>
         <div class="input-container">
             <input id="verbin" name="verbin" type="text" placeholder=" " />
@@ -99,8 +99,7 @@
             <label for="co2komb" class="placeholder">WLTP CO2 Emission kombiniert</label>
         </div>
         <!--input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7" /-->
-        
-        <input value="Fahrzeug in die DB schreiben" style="position: left" class="registerbutton" id="submit" type="submit"/>
+        <input class="button" id="submit" value="Fahrzeug in die DB schreiben" type="submit" />
     </form>
 </section>
 <!--script src="../../../js/script.js"></script-->

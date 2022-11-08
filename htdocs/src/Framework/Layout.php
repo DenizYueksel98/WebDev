@@ -1,22 +1,20 @@
 <?php
 
 namespace Framework;
-include_once('./core/initialize.php');
+include_once(__DIR__.DS.'..'.DS.'..'.DS.'core/initialize.php');
 class Layout
 {
     private $controller;
-    private $action;
     private $dynamicView;
 
-    public function __construct($controller, $action)
+    public function __construct($controller, $dynamicView)
     {
         $this->controller = $controller;
-        $this->action = $action;
+        $this->dynamicView= $dynamicView;
     }
 
-    public function renderStatic($dynamicView)
-    {
-        $this->dynamicView = $dynamicView; // hand over dynamic view for call in staticView
+    public function renderStatic()
+    { // hand over dynamic view for call in staticView
         include(LAYOUT_PATH.DS.'staticView.php'); // call static view
     }
 
