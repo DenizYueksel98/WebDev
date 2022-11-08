@@ -31,7 +31,9 @@ class CarDatabase implements Database
         $this->password = $password;
         $this->userdatabase = $userdatabase;
     }
-
+    public function getdbhandle(){
+        return $this->dbhandle;
+    }
     public function connect()
     {
         $this->dbhandle = mysqli_connect(
