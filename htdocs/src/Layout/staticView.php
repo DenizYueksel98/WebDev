@@ -50,7 +50,9 @@
                 <input type="search" name="q" placeholder="Search..." onkeyup="showHint(this.value)">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
-            <p>Suggestions:</p>
+            <div class="suggestion">
+                 Suggestions:
+            </div>
             <div id="txtHint"></div>
             <!-- search end -->
         </nav>
@@ -111,7 +113,7 @@
         <div>
             <img src="\img\logo.png" />
             <p>
-                &copy; 2022 WWI2021a
+                &copy; 2022 car-24 GmbH. Alle Rechte vorbehalten.
             </p>
         </div>
         <div>

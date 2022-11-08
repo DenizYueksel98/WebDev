@@ -99,7 +99,7 @@
             <label for="co2komb" class="placeholder">WLTP CO2 Emission kombiniert</label>
         </div>
         <!--input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7" /-->
-        <input class="button" id="submit" value="Fahrzeug in die DB schreiben" type="submit" />
+        <input class="button" id="submit" value="Fahrzeug abspeichern" type="submit" />
     </form>
 </section>
 <!--script src="../../../js/script.js"></script-->

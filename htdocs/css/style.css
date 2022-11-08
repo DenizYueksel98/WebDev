@@ -61,6 +61,13 @@ header {
 
 }
 
+#cover{
+    padding: 0;
+    margin-bottom: 20px;
+    text-align:center;
+    
+}
+
 #mainnav {
     display: flex;
     align-items: center;
@@ -91,6 +98,10 @@ header {
 
 .breadcrumb a:hover {
     color: var(--primary-color);
+}
+
+.carimg{
+    padding:15px;
 }
 
 /* nav */
@@ -135,7 +146,7 @@ footer ul a::before {
 }
 
 footer a:hover {
-    color: var(--primary-color);
+    color: #FA5858;
 }
 
 footer .typcn {
@@ -151,7 +162,8 @@ footer .typcn {
 
 #sidenav a:hover {
     background: var(--dark-gray);
-    color: var(--primary-color);
+    color: #FA5858;
+    /*color: var(--primary-color);*/
 }
 
 /* search */
@@ -190,7 +202,7 @@ form.search button[type="submit"] {
 
 form.search button[type="submit"]:hover {
     color: #FFF;
-    background-color: var(--primary-color);
+    background-color: #FA5858;
 }
 
 form.search input[type="search"]:focus {
@@ -226,18 +238,25 @@ section.cta h2 {
 /* buttons */
 .button {
     display: flex;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid #FA5858;
+    color: #FA5858;
+    /*border: 2px solid var(--primary-color);
+    color: var(--primary-color);*/
     padding: 0.5em 2em;
     margin: 2em;
     align-items: center;
     border-radius: var(--border-radius);
     text-transform: uppercase;
+    
 }
+
+
 .inline-button {
     display: inline;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid #FA5858;
+    color: #FA5858;
+    /*border: 2px solid var(--primary-color);
+    color: var(--primary-color);*/
     border-radius: var(--border-radius);
     font-size: 16px;
     margin-left: 2em;
@@ -267,14 +286,15 @@ section.cta h2 {
 .button:hover,
 .registerbutton:hover,
 .inline-button:hover {
-    background: var(--primary-color);
-    color: #FFF;
+    background: #FA5858;
+   color: #FFF;
+   
 }
 
 .registerbutton {
     position: absolute;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid #FA5858;
+    color: #FA5858;
     padding: 0.5em 2em 0.5em 2em;
     margin: 2em;
     width: 30%;
@@ -282,6 +302,13 @@ section.cta h2 {
     border-radius: var(--border-radius);
     text-transform: uppercase;
 }
+
+#suggestion {
+    margin: 20x;
+    border: 20px;
+  }
+  
+
 
 /*
 #circle {
@@ -557,3 +584,5 @@ input:focus~.placeholder {
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: rgb(255, 255, 255)
 }
+
+/*CONTACT*/
