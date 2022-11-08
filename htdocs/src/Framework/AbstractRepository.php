@@ -1,6 +1,7 @@
 <?php
 
 namespace Framework;
+use Framework\Database;
 //Braucht DB Verbindung
 class AbstractRepository
 {

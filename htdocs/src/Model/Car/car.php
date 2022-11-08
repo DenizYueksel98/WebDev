@@ -3,8 +3,8 @@
 namespace Model\Car;
 
 use Framework\AbstractModel;
-use Framework\CarRepository;
-include_once(FRAMEWORK_PATH.DS."./AbstractModel.php");
+use Directory;
+include_once(__DIR__.DS.'..'.DS.'..'.DS.'Framework/AbstractModel.php');
 class Car extends AbstractModel
 {
     public $id;
@@ -30,6 +30,8 @@ class Car extends AbstractModel
     public $schnell;
     public $langsam;
     public $co2komb;
+    public $verb_unit;
+    public $co2_unit;
 
     public function setid($id){$this->id=$id;}
     public function setname($name){$this->name=$name;}
@@ -54,6 +56,8 @@ class Car extends AbstractModel
     public function setschnell($schnell){$this->schnell=$schnell;}
     public function setlangsam($langsam){$this->langsam=$langsam;}
     public function setco2komb($co2komb){$this->co2komb=$co2komb;}
+    public function setverb_unit($verb_unit){$this->verb_unit=$verb_unit;}
+    public function setco2_unit($co2_unit){$this->co2_unit=$co2_unit;}
 
     public function getid(){return $this->id;}
     public function getname(){return $this->name;}
@@ -78,6 +82,8 @@ class Car extends AbstractModel
     public function getschnell(){return $this->schnell;}
     public function getlangsam(){return $this->langsam;}
     public function getco2komb(){return $this->co2komb;}
+    public function getverb_unit(){return $this->verb_unit;}
+    public function getco2_unit(){return $this->co2_unit;}
     /*
     public function __construct(
         $id,

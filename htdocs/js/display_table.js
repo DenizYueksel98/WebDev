@@ -40,8 +40,14 @@ handleResult = function (data)
 {
     console.log(data)
     carModel = JSON.parse(data)//Parse die Daten in der JSON in die Variable result
-    //console.log(carModel);
-
+    console.log(carModel);
+    var resultcount= document.getElementById('resultcount');
+    if(carModel.length>0){
+    resultcount.innerHTML = carModel.length+" cars fit with your filter.";
+    }
+    else {
+        resultcount.innerHTML = "Poorly we found no cars matching your filters.";
+    }
     buildHtmlTable('#carDataTable', carModel);
 }
 function buildHtmlTable(selector, carModel) {
@@ -53,7 +59,7 @@ function buildHtmlTable(selector, carModel) {
         var row$ = $('<tr/>');
         for (var colIndex = 0; colIndex < (columns.length + 1); colIndex++) {
             if (colIndex == columns.length) {
-                var cellValue = "<a id='showdetails' href='/index.php?c=car&a=detail&i=" + carModel[i]['id'] + "'>Show Details</a>";
+                var cellValue = "<a id='showDetails' href='/index.php?c=car&a=detail&i=" + carModel[i]['id'] + "'>Show Details</a>";
             }
             else {
                 var cellValue = carModel[i][columns[colIndex]];

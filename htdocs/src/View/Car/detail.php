@@ -1,10 +1,8 @@
 <section>
-    <button class = "button" onclick="location.href='index.php?c=car'"> Zurück zur Übersicht 
-    </button>
-
-    <!--<?php echo $this->car->getid(); ?>-->
+    <a href=index.php?c=car>Zurück zur Übersicht</a>
+    <?php echo $this->car->getid(); ?>
     <?php if (file_exists('./img/' . $this->car->getid() . '.jpeg')) { ?>
-        <img class=carimg src=./img/<?php echo $this->car->id; ?>.jpeg>
+        <img src=./img/<?php echo $this->car->id; ?>.jpeg>
     <?php } else { ?>
         <form action="index.php?c=car&a=uploadImage&i=<?php echo $this->car->id; ?>" method="post" enctype="multipart/form-data">
             Select image to upload:

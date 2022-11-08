@@ -11,7 +11,8 @@ use SimpleXMLElement;
 class XmlController extends CarController
 {
     protected $error_message;
-    protected $upload_message;
+    protected $export_message;
+    protected $validate_message;
     public function defaultAction()
     {
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
@@ -43,7 +44,6 @@ class XmlController extends CarController
             $vierzehn = $schein->vierzehn[0];
             $p3 = $schein->p3[0];
             $verbin = $nefz->verbin[0];
-            $verbin_unit = $nefz->verbin['unit'];
             $verbau = $nefz->verbau[0];
             $verbko = $nefz->verbko[0];
             $co2kom = $nefz->co2kom[0];
@@ -51,6 +51,8 @@ class XmlController extends CarController
             $schnell = $wltp->schnell[0];
             $langsam = $wltp->langsam[0];
             $co2komb = $wltp->co2kom[0];
+            $verb_unit = $nefz->verbin['unit'];
+            $co2_unit = $wltp->co2kom['unit'];
 
             //print_r($verbin['unit']);
 
@@ -73,14 +75,15 @@ class XmlController extends CarController
                 `vierzehn`,
                 `p3`,
                 `verbin`,
-                `verbin_unit`,
                 `verbau`,
                 `verbko`,
                 `co2kom`,
                 `sehrs`,
                 `schnell`,
                 `langsam`,
-                `co2komb`) VALUES ('" .
+                `co2komb`,
+                `verb_unit`,
+                `co2_unit`) VALUES ('" .
                 $id . "','" .
                 $name . "','" .
                 $b21 . "','" .
@@ -98,14 +101,15 @@ class XmlController extends CarController
                 $vierzehn . "','" .
                 $p3 . "','" .
                 $verbin . "','" .
-                $verbin_unit . "','" .
                 $verbau . "','" .
                 $verbko . "','" .
                 $co2kom . "','" .
                 $sehrs . "','" .
                 $schnell . "','" .
                 $langsam . "','" .
-                $co2komb . "')";
+                $co2komb .  "','" .
+                $verb_unit . "','" .
+                $co2_unit ."')";
             $result = $db->query2($sql);
             if (empty($result) == false) {
                 $affectedRow++;
@@ -119,7 +123,7 @@ class XmlController extends CarController
     {
         $db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $db->connect();
-        $file = file_get_contents("./dbXML.xml");
+        $file = file_get_contents("./input.xml");
         $xml = simplexml_load_string($file)
             or die("Error: Cannot create object");
         $carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
@@ -148,21 +152,30 @@ class XmlController extends CarController
 
             $nefz = $caritem->addChild('nefz');
             $verbin = $nefz->addChild('verbin', $car->verbin);
-            $verbin->addAttribute('unit', $car->verbin_unit);
-            $nefz->addChild('verbau', $car->verbau);
-            $nefz->addChild('verbko', $car->verbko);
-            $nefz->addChild('co2kom', $car->co2kom);
+            $verbau=$nefz->addChild('verbau', $car->verbau);
+            $verbko=$nefz->addChild('verbko', $car->verbko);
+            $co2kom=$nefz->addChild('co2kom', $car->co2kom);
+            $verbin->addAttribute('unit', $car->verb_unit);
+            $verbau->addAttribute('unit', $car->verb_unit);
+            $verbko->addAttribute('unit', $car->verb_unit);
+            $co2kom->addAttribute('unit', $car->co2_unit);
 
             $wltp = $schein->addChild('wltp');
-            $wltp->addChild('sehrs', $car->sehrs);
-            $wltp->addChild('schnell', $car->schnell);
-            $wltp->addChild('langsam', $car->langsam);
-            $wltp->addChild('co2kom', $car->co2komb);
+            $sehrs=$wltp->addChild('sehrs', $car->sehrs);
+            $schnell=$wltp->addChild('schnell', $car->schnell);
+            $langsam=$wltp->addChild('langsam', $car->langsam);
+            $co2komb=$wltp->addChild('co2kom', $car->co2komb);
+            $sehrs->addAttribute('unit', $car->verb_unit);
+            $schnell->addAttribute('unit', $car->verb_unit);
+            $langsam->addAttribute('unit', $car->verb_unit);
+            $co2komb->addAttribute('unit', $car->co2_unit);
+
         }
 
         $xml->asXML('export.xml');
-        $this->upload_message = "Successfully exported your XML-File.";
+        $this->export_message = "XML-File erfolgreich exportiert.";
     }
+
     public function validateAction()
     {
 
@@ -176,6 +189,7 @@ class XmlController extends CarController
             print '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
             $this->libxml_display_errors();
         }
+        $this->validate_message="XML erfolgreich mit Schema abgeglichen.";
     }
     function libxml_display_error($error)
     {

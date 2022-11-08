@@ -6,8 +6,8 @@ use Model\Car\Car;
 use Directory;
 
 //Braucht DB Verbindung
-include_once(__DIR__ . DS . 'Database.php');
-include_once(__DIR__ . DS . ".." . DS . "Model" . DS . "Car" . DS . "car.php");
+include_once(__DIR__. DS.'Database.php');
+include_once(__DIR__.DS."..".DS."Model".DS."Car".DS."car.php");
 //DB-Type: MariaDB
 class CarDatabase implements Database
 {
@@ -31,8 +31,7 @@ class CarDatabase implements Database
         $this->password = $password;
         $this->userdatabase = $userdatabase;
     }
-    public function getdbhandle()
-    {
+    public function getdbhandle(){
         return $this->dbhandle;
     }
     public function connect()
@@ -72,24 +71,23 @@ class CarDatabase implements Database
         ); //fetch_all(MYSQLI_ASSOC)
         return $result;
     }
-    public function truncateTable($table)
-    {
-        $sql = "TRUNCATE " . $table;
-        $result = mysqli_query($this->dbhandle, $sql);
+    public function truncateTable($table){
+        $sql= "TRUNCATE ".$table;
+        $result= mysqli_query($this->dbhandle, $sql);
         return $result;
     }
     //give it a prepared stmt and it answers the result  
     public function doMagic($stmt)
     {
         $stmt->execute(); //do query
-        $result = mysqli_stmt_get_result($stmt);
+        $result=mysqli_stmt_get_result($stmt);
         $result->fetch_all(MYSQLI_ASSOC);
-
-        foreach ($result as $row) {
+        
+        foreach($result as $row){
             $car = new Car();
             $car->fromArray((array)$row);
-
-            $carArray[] = $car;
+            
+            $carArray[]=$car;
         }
         //print_r($cars[0]);
         //$stmt->store_result(); //recieve information into mysqli_stmt-object
@@ -97,41 +95,35 @@ class CarDatabase implements Database
         //$result = $this->db->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
         return $carArray;
     }
-    public function doOldMagic($stmt)
-    {
+    public function doOldMagic($stmt){
         //$stmt->get_result(); //recieve information into mysqli_stmt-object
         //$stmt->fetch_all(MYSQLI_ASSOC);
         $result = $this->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
         return $result;
     }
-    public function readFilter($filter, $theta, $value)
-    {
+    public function readFilter($filter, $theta, $value){
         $stmt = $this->prepare($this->readFilterSql($filter, $theta, $value));
         $stmt->execute();
         $stmt->store_result();
         return $this->doOldMagic($stmt);
     }
-    public function readSingle($id)
-    {
+    public function readSingle($id){
         $stmt = $this->prepare($this->readSingleSql()); //prepare query
         $stmt->bind_param('i', $id); //bind param for id
         return $this->doMagic($stmt);
     }
-    public function readAll()
-    {
+    public function readAll(){
         $stmt = $this->prepare($this->readAllSql()); //define mysqli_stmt-object
         return $this->doMagic($stmt); //Array with car objects
     }
-    public function readSingleCar($id)
-    {
+    public function readSingleCar($id){
         $stmt = $this->prepare($this->readSingleSql()); //prepare query
         $stmt->bind_param('i', $id); //bind param for id
-        $carArray = $this->doMagic($stmt);
-        $car = $carArray[0];
+        $carArray=$this->doMagic($stmt);
+        $car=$carArray[0];
         return $car;
     }
-    public function create(Car $car)
-    {
+    public function create(Car $car){
         //getting the sql query for writing into nefz table
         $stmt = $this->prepare($this->createNefzSql()); //prepare query, store in stmt obj.        
         $stmt->bind_param(              //binding the supplied values from Car object
@@ -219,12 +211,9 @@ class CarDatabase implements Database
                     'j' => $j,
                     'vier' => $vier,
                     'd1' => $d1,
-                    'd21' => $d21,
-                    'd22' => $d22,
-                    'd23' => $d23,
+                    'd2' => $d2,
                     'zwei' => $zwei,
-                    'fuenf1' => $fuenf1,
-                    'fuenf2' => $fuenf2,
+                    'fuenf' => $fuenf,
                     'v9' => $v9,
                     'vierzehn' => $vierzehn,
                     'p3' => $p3,
@@ -235,9 +224,7 @@ class CarDatabase implements Database
                     'sehrs' => $sehrs,
                     'schnell' => $schnell,
                     'langsam' => $langsam,
-                    'co2komb' => $co2komb,
-                    'verb_unit' => $verb_unit,
-                    'co2_unit' => $co2_unit
+                    'co2komb' => $co2komb
                 );
                 array_push($car_arr, $car_item);
             }
@@ -293,20 +280,93 @@ class CarDatabase implements Database
         //$this->filterCheck(); //check if table is not supplied and add if missing
         //$this->likeCheck(); //if theta is LIKE then surround value with %
         $query = 'SELECT 
-        * FROM `xml` WHERE ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
+        s.id,
+        s.name,
+        s.b21,
+        s.b22,
+        s.j,
+        s.vier,
+        s.d1,
+        s.d2,
+        s.zwei,
+        s.fuenf,
+        s.v9,
+        s.vierzehn,
+        s.p3,
+        n.verbin,
+        n.verbau,
+        n.verbko,
+        n.co2kom,
+        w.sehrs,
+        w.schnell,
+        w.langsam,
+        w.co2komb
+        FROM `schein` s, `nefz` n, `wltp` w WHERE s.id=n.id AND s.id=w.id 
+        AND ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
         return $query;
     }
     public function readAllSql() //read all lines and return stmt
     {
         $query = 'SELECT 
-        * FROM `xml`;';
+        s.id,
+        s.name,
+        s.b21,
+        s.b22,
+        s.j,
+        s.vier,
+        s.d1,
+        s.d2,
+        s.zwei,
+        s.fuenf,
+        s.v9,
+        s.vierzehn,
+        s.p3,
+        n.verbin,
+        n.verbau,
+        n.verbko,
+        n.co2kom,
+        w.sehrs,
+        w.schnell,
+        w.langsam,
+        w.co2komb
+        FROM ' . $this->table . ' s 
+        LEFT JOIN '
+            . $this->nefz . ' n ON s.id=n.id
+        LEFT JOIN '
+            . $this->wltp . ' w ON s.id=w.id;
+        ';
         return $query;
     }
     public function readSingleSql() //read single line and return stmt
     {
         $query = 'SELECT 
-        * FROM `xml`
-        WHERE id = ? LIMIT 1'; //prepare syntax from query
+        s.id,
+        s.name,
+        s.b21,
+        s.b22,
+        s.j,
+        s.vier,
+        s.d1,
+        s.d2,
+        s.zwei,
+        s.fuenf,
+        s.v9,
+        s.vierzehn,
+        s.p3,
+        n.verbin,
+        n.verbau,
+        n.verbko,
+        n.co2kom,
+        w.sehrs,
+        w.schnell,
+        w.langsam,
+        w.co2komb
+        FROM ' . $this->table . ' s 
+        LEFT JOIN 
+            nefz n ON s.id=n.id
+        LEFT JOIN
+            wltp w ON s.id=w.id
+        WHERE s.id = ? LIMIT 1'; //prepare syntax from query
         return $query;
     }
 }

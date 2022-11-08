@@ -1,11 +1,13 @@
 <?php
 
-namespace Framework;
+namespace Repository;
 
 use Model\Car\Car;
+use Framework\AbstractRepository;
+use Framework\CarDatabase;
 
+include_once(__DIR__.'/../Framework/AbstractRepository.php');
 //Braucht DB Verbindung
-include_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'AbstractRepository.php');
 class CarRepository extends AbstractRepository
 {
     protected $db; //CarDatabase, muss im Constructor mitgegeben werden

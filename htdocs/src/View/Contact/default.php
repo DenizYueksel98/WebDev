@@ -1,29 +1,24 @@
-<form id="contact-form-id" class="contact-form-class" method="post" action="contact-form-process.php">
-
-    <div class="contact-form">
-        <label for="Name" class="contact-form-label">Ihr Name</label>
-        <div class="contact-form-input-group">
-            <input type="text" id="Name" name="Name" placeholder="Name" class="contact-form-control" required>
+<section>
+    <form class="form" method="post" action="contact.php">
+    <h1>Schick uns hier ganz einfach eine Nachricht:</h1>
+        <div>
+            <div class="input-container">
+                <input type="text" id="Name" name="Name" placeholder=" " required>
+                <label for="Name" class="placeholder">Wie dürfen wir dich nennen:</label>
+            </div>
         </div>
-    </div>
-
-    <div class="contact-form">
-        <label for="Email" class="contact-form-label">Ihre E-Mail Adresse</label>
-        <div class="contact-form-input-group">
-            <input type="email" id="Email" name="Email" placeholder ="E-Mail"  class="contact-form-control" required>
+        <div>
+            <div class="input-container">
+                <input type="email" id="Email" name="Email" placeholder=" " required>
+                <label for="Email" class="placeholder">Unter welcher E-Mail bist du zu erreichen:</label>
+            </div>
         </div>
-    </div>
-
-    <div class="contact-form">
-        <label for="Message" class="contact-form-label">Ihre Nachricht</label>
-        <div class="contact-form-input-group">
-            <textarea id="Message" name="Message" placeholder="Nachricht" class="contact-form-control" rows="6" maxlength="3000" required></textarea>
+        <div>
+            <div class="input-container">
+                <input id="Message" name="Message" placeholder=" " required></textarea>
+                <label for="Message" class="placeholder">Deine Nachricht an uns:</label>
+            </div>
         </div>
-    </div>
-
-    <div class="contact-form">
-        <button class="button" type="submit" id="contact-form-btn" class="contact-form-button">Nachricht senden</button>
-    </div>
-
-</form>
-
+        <input class="button" id="submit-btn" value="Senden" type="submit" />
+    </form>
+</section>

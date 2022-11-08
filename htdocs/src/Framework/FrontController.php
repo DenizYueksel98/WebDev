@@ -1,6 +1,6 @@
 <?php
 namespace Framework; //Was passiert wenn ich den namespace gleich lasse aber die Datei in einen anderen Ordner lege?
-include_once('./core/initialize.php');
+include_once(__DIR__.'/../../core/initialize.php');
 class FrontController
 {
     private $controllerName;
@@ -52,18 +52,18 @@ class FrontController
         {
             echo 'action ' . $actionName . ' not found in ' . $controllerClassName; // error if there is no action
         }
+        $dynamicView = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';//built path for dynamic view
         
         $this->layout = new Layout( // instantiate new layout objct
             $this->controller,
-            $this->actionName, 
+            $dynamicView, 
         );
     }
 
     public function render() // first render (index.php)
     {
         if($this->controller->hasView){ //check if view-switch is on (AbstractController)
-        $dynamicView = VIEW_PATH.DS . ucfirst(strtolower($this->controllerName)) . DS . strtolower($this->actionName) . '.php';//built path for dynamic view
-        $this->layout->renderStatic($dynamicView);// call static view in layout hand over dynamic view for later call  
+        $this->layout->renderStatic();// call static view in layout hand over dynamic view for later call  
         }
     }
 }
