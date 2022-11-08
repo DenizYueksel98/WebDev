@@ -53,7 +53,7 @@ function buildHtmlTable(selector, carModel) {
         var row$ = $('<tr/>');
         for (var colIndex = 0; colIndex < (columns.length + 1); colIndex++) {
             if (colIndex == columns.length) {
-                var cellValue = "<a href='/index.php?c=car&a=detail&i=" + carModel[i]['id'] + "'>Show Details</a>";
+                var cellValue = "<a id='showdetails' href='/index.php?c=car&a=detail&i=" + carModel[i]['id'] + "'>Show Details</a>";
             }
             else {
                 var cellValue = carModel[i][columns[colIndex]];

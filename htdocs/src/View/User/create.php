@@ -1,8 +1,8 @@
 <script src="../../../js/jQuery.min.js" type="text/javascript"></script>
 
 <section>
-    <h1>Register here for our database </h1>
-    <p>Use this handy form to register for our car database.</p>
+    <h1>Registration for the database </h1>
+    
 
     <form id="regform" method="post">
         <div class="input-container">

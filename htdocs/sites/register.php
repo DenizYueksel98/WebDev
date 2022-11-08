@@ -29,7 +29,7 @@
             <!-- breadcrumb end -->
             <!-- search -->
             <form class="search">
-                <input type="search" placeholder="Search...">
+                <input type="search" placeholder="Suche...">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
             <!-- search end -->

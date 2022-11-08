@@ -47,12 +47,14 @@
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form-->
             <form class="search" action="/index.php?c=search&a=query" method="POST">
-                <input type="search" name="q" placeholder="Search..." onkeyup="showHint(this.value)">
+                <input type="search" name="q" placeholder="Suche..." onkeyup="showHint(this.value)">
                 <button type="submit"><span class="typcn typcn-arrow-right"></button>
             </form>
+
             <div class="suggestion">
-                 Suggestions:
+                 Vorschläge:
             </div>
+            
             <div id="txtHint"></div>
             <!-- search end -->
         </nav>
@@ -77,10 +79,10 @@
                 </ul>
             </li>
             <li>
-                <a href="/index.php?c=user">Benutzerverwaltung</a>
+                <a href="/index.php?c=user">Registration</a>
                 <ul>
                     <li>
-                        <a href="/index.php?c=user&a=create">Registration</a>
+                        <a href="/index.php?c=user&a=create">Registration -löschen?</a>
                     </li>
                     <li>
                         <a href="/index.php?c=user&a=login">Login</a>
@@ -102,6 +104,7 @@
             </h1>
         </div>
         <?php
+        $this->renderDynamic3(); //<-- DYNAMISCHER TEIL durch echo:  <h1>Das ist eine Überschrifzt</h1>
         //print_r($this);
         ?>
     </main>
@@ -109,33 +112,32 @@
 
     <!-- footer -->
     <footer>
-        <div>
-            <img src="\img\logo.png" />
-            <p>
-                &copy; 2022 car-24 GmbH. Alle Rechte vorbehalten.
-            </p>
-        </div>
-        <div>
-            <h3>Useful Links</h3>
-            <ul>
-                <li>
-                    <a href="#">Impressum</a>
-                </li>
-                <li>
-                    <a href="#">Cookie Hinweis</a>
-                </li>
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3>Contact Us</h3>
-            <a href="#"><span class="typcn typcn-social-facebook"></span></a>
-            <a href="#"><span class="typcn typcn-social-instagram"></span></a>
+        <div class="social">
+        <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+           <a href="#"><span class="typcn typcn-social-instagram"></span></a>
             <a href="#"><span class="typcn typcn-social-twitter"></span></a>
-            <a href="google.de" class="let me google this for you"></a>
-        </div>
+           <a href="google.de" class="let me google this for you"></a>
+</div>
+           <ul class="list">
+            <li>
+            <a href="#">Impressum  </a>
+</li>
+<li>
+            <a href="#">Cookie Hinweis  </a>
+</li>
+
+<li>
+            <a href="#"> Datenschutz  </a>
+</li>
+
+<li>
+            <a href="#">FAQ</a>
+</li>
+</ul>
+<p class ="copyright">  &copy; 2022 car-24 GmbH. Alle Rechte vorbehalten.
+            </p>
+        
+        
     </footer>
     <!-- footer end -->
 

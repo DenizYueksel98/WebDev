@@ -123,18 +123,31 @@ main {
 }
 
 /* footer */
+
 footer {
     grid-area: footer;
     background: var(--gradient-start);
+    padding:10px 0;
     color: #FFF;
-    padding: 2em 2em 2em var(--left-col-width);
-    display: flex;
-    width: 100%;
+    
+}
+footer .social {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0 10px;
+    opacity: 0.8px;
 }
 
-footer div {
-    width: 33%;
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+    text-align: center;
 }
+
+
 
 footer p {
     margin: 1.5em 0 0 0;
@@ -145,17 +158,24 @@ footer ul a {
     padding: 0.25rem 0;
 }
 
-footer ul a::before {
-    content: ">";
-    margin: 0 0.5em 0 0;
-}
 
-footer a:hover {
+
+footer ul li a:hover {
     color: #FA5858;
 }
 
-footer .typcn {
-    font-size: 2rem;
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+
+.copyright{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;    
+    
 }
 
 /* left navigation */
@@ -214,6 +234,16 @@ form.search input[type="search"]:focus {
     outline: none;
 }
 
+#submit.button{
+    display: flex;
+    border: 2px solid #FA5858;
+    color: #FA5858;
+    padding: 0.5em 2em;
+          align-items: center;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+}
+
 /* sections */
 section {
     background: #FFF;
@@ -221,23 +251,11 @@ section {
     padding: 1em;
     margin: 0 0 1rem 0;
     border-radius: var(--border-radius);
+    align-items: center;
 }
 
 section.table {
     padding: 0;
-}
-
-section.cta {
-    background: var(--dark-gray);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-section.cta h1,
-section.cta h2 {
-    color: #FFF;
 }
 
 /* buttons */
@@ -245,8 +263,6 @@ section.cta h2 {
     display: flex;
     border: 2px solid #FA5858;
     color: #FA5858;
-    /*border: 2px solid var(--primary-color);
-    color: var(--primary-color);*/
     padding: 0.5em 2em;
     margin: 2em;
     align-items: center;
@@ -297,20 +313,32 @@ section.cta h2 {
 }
 
 .registerbutton {
-    position: absolute;
+    /*position: absolute;
     border: 2px solid #FA5858;
     color: #FA5858;
     padding: 0.5em 2em 0.5em 2em;
     margin: 2em;
     width: 30%;
-    /*align-items: center;*/
+    align-items: center;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;*/
+    
+    display: flex;
+    border: 2px solid #FA5858;
+    color: #FA5858;
+    padding: 0.5em 2em;
+    margin-top: 40px;
+    align-items: var(--left-col-width);
     border-radius: var(--border-radius);
     text-transform: uppercase;
+    
 }
 
-#suggestion {
+.suggestion {
     margin: 20x;
     border: 20px;
+
+    
   }
   
 
@@ -481,6 +509,8 @@ form {
     margin: 0 0 1rem 0;
     height: 3rem;
 }
+
+
 .input-container-nearly-full {
     background: var(--light-gray);
     border-radius: var(--border-radius);

@@ -2,8 +2,8 @@
 <script src="../../../js/jQuery.min.js" type="text/javascript"></script>
 
 <section class="create-form">
-    <h1>Insert a new car into the database </h1>
-    <p>Use this handy form to insert new cars into our database.</p>
+    <h1>Neuanlage eines Autos </h1>
+    
 
     <form id="create-form" method="post">
         <div class="input-container">
@@ -99,7 +99,8 @@
             <label for="co2komb" class="placeholder">WLTP CO2 Emission kombiniert</label>
         </div>
         <!--input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7" /-->
-        <input class="button" id="submit" value="Fahrzeug abspeichern" type="submit" />
+        
+        <input value="Fahrzeug in die DB schreiben" style="position: left" class="registerbutton" id="submit" type="submit"/>
     </form>
 </section>
 <!--script src="../../../js/script.js"></script-->
