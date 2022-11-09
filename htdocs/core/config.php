@@ -2,7 +2,7 @@
 //set vars for db connection
 
 use Framework\CarDatabase;
-use Framework\CarRepository;
+use Repository\CarRepository;
 use Framework\DotEnv;
 include_once(__DIR__."/../src/Framework/DotEnv.php");
 (new DotEnv(__DIR__ . '/../.env'))->load();
@@ -13,7 +13,7 @@ $password= getenv('DATABASE_PASSWORD');
 $cardatabase= getenv('DATABASE_TABLE');
 $userdatabase = "wwi2021a";
 include_once(__DIR__."/../src/Framework/CarDatabase.php");
-include_once(__DIR__.'/../src/Framework/CarRepository.php');
+include_once(__DIR__.'/../src/Repository/CarRepository.php');
 global $db; 
 $db=new CarDatabase($host, $username, $password, $cardatabase);
 global $repo;
