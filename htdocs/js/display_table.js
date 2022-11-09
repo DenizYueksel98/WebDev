@@ -1,11 +1,10 @@
 // Builds the HTML Table out of carModel
 updateCarModel = function (value) {
+    let wait = document.getElementById("wait")
+    wait.style.display = "block"; // Blende des wait, Platzhalter ein
     let filter = document.getElementById('filter').value;
-    console.log(filter)
     let theta = document.getElementById('theta').value;
-    console.log(theta)
     var url = 'http://localhost:8080/src/Api/Car/read_filter.php?filter=' + filter + '&theta=' + theta + '&value=' + value;
-    console.log(url)
     getJSON(url);
 
 }
@@ -25,20 +24,9 @@ getJSON = function (url) {
         }
     };
     xhr.send();
-    /*
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 ) {//Falls xhr eine sinnvolle Antwort bekommt
-            handleResult(this.responseText); //Verarbeite Ergebnis
-            
-        }
-    }
-    */
 }
 handleResult = function (data) 
 {
-    console.log(data)
     carModel = JSON.parse(data)//Parse die Daten in der JSON in die Variable result
     console.log(carModel);
     var resultcount= document.getElementById('resultcount');
@@ -51,6 +39,7 @@ handleResult = function (data)
     buildHtmlTable('#carDataTable', carModel);
 }
 function buildHtmlTable(selector, carModel) {
+    wait.style.display = "none";//Entferne den Platzhalter
     var Table = document.getElementById('carDataTable');
     Table.innerHTML = "";
     var columns = addAllColumnHeaders(carModel, selector);
@@ -95,4 +84,5 @@ function capitalizeFirstLetter(string) {
 }
 window.onload= function onLoad(){
     updateCarModel("");
+ 
 }

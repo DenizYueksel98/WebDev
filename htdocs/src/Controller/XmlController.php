@@ -15,6 +15,9 @@ class XmlController extends AbstractController
     protected $validate_message;
     public function defaultAction()
     {
+        
+    }
+    public function importAction(){
         //$db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
         $db->connect();
@@ -169,7 +172,7 @@ class XmlController extends AbstractController
             $sehrs = $wltp->addChild('sehrs', $car->sehrs);
             $schnell = $wltp->addChild('schnell', $car->schnell);
             $langsam = $wltp->addChild('langsam', $car->langsam);
-            $co2komW = $wltp->addChild('co2komN', $car->co2komW);
+            $co2komW = $wltp->addChild('co2komW', $car->co2komW);
             $sehrs->addAttribute('unit', $car->verb_unit);
             $schnell->addAttribute('unit', $car->verb_unit);
             $langsam->addAttribute('unit', $car->verb_unit);
