@@ -22,14 +22,16 @@ CREATE TABLE `cars` (
     `v9` VARCHAR(50) NOT NULL CHECK (Length(`vier`)<=60),
     `vierzehn` VARCHAR(50) NOT NULL CHECK (Length(`vier`)<=4),
     `p3` VARCHAR(50) NOT NULL CHECK (`p3`="BENZIN" OR `p3`="WASSERSTOFF" OR `p3`="GAS" OR`p3`="ELEKTRO" OR`p3`="DIESEL"),
-    `verbin` DECIMAL(5) NOT NULL CHECK (`verbin`between 0 and 300),
-    `verbau` DECIMAL(5) NOT NULL CHECK (`verbin`between 0 and 300),
-    `verbko` DECIMAL(5) NOT NULL CHECK (`verbko`between 0 and 300),
-    `co2kom1` DECIMAL(5) NOT NULL CHECK (`co2kom1`between 0 and 300),
-    `sehrs` DECIMAL(5) NOT NULL CHECK (`sehrs`between 0 and 300),
-    `schnell` DECIMAL(5) NOT NULL CHECK (`schnell`between 0 and 300),
-    `langsam` DECIMAL(5) NOT NULL CHECK (`langsam`between 0 and 300),
-    `co2kom2` DECIMAL(5) NOT NULL CHECK (`co2kom2`between 0 and 300),
+    `verbin` SMALLINT(5) NOT NULL CHECK (`verbin`between 0 and 300),
+    `verbau` SMALLINT(5) NOT NULL CHECK (`verbin`between 0 and 300),
+    `verbko` SMALLINT(5) NOT NULL CHECK (`verbko`between 0 and 300),
+    `co2komN` SMALLINT(5) NOT NULL CHECK (`co2komN`between 0 and 300),
+    `sehrs` SMALLINT(5) NOT NULL CHECK (`sehrs`between 0 and 300),
+    `schnell` SMALLINT(5) NOT NULL CHECK (`schnell`between 0 and 300),
+    `langsam` SMALLINT(5) NOT NULL CHECK (`langsam`between 0 and 300),
+    `co2komW` SMALLINT(5) NOT NULL CHECK (`co2komW`between 0 and 300),
+    `verb_unit` VARCHAR(50) NOT NULL CHECK (`verb_unit`="kWh/100km" OR `verb_unit`="l/100km"),
+    `co2_unit` VARCHAR(50) NOT NULL CHECK (`co2_unit`="g/km"),
     PRIMARY KEY (`id`),
     FOREIGN KEY (`d1`) REFERENCES `marke`(`brand`)
 );
@@ -54,11 +56,13 @@ INSERT INTO `cars`
 `sehrs`,
 `schnell`,
 `langsam`,
-`co2kom1`,
+`co2komW`,
 `verbin`,
 `verbau`,
 `verbko`,
-`co2kom2`) 
+`co2komN`,
+`verb_unit`,
+`co2_unit`) 
 VALUE 
 ("BMW 123", 
  8781,
@@ -82,4 +86,7 @@ VALUE
  6.53,
  3.61,
  4.3,
- 34.5);
+ 34.5,
+ "l/100km",
+ "g/km"
+ );
