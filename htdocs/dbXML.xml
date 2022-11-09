@@ -23,13 +23,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">99.55</co2kom1>
+			<co2komN unit="g/km">99.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">79.64</co2kom2>
+			<co2komW unit="g/km">79.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -55,13 +55,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">96.36</co2kom1>
+			<co2komN unit="g/km">96.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4.39</langsam>
-			<co2kom2 unit="g/km">77.09</co2kom2>
+			<co2komW unit="g/km">77.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -87,13 +87,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">48.64</co2kom1>
+			<co2komN unit="g/km">48.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">38.91</co2kom2>
+			<co2komW unit="g/km">38.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -119,13 +119,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">95</co2kom1>
+			<co2komN unit="g/km">95</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">76</co2kom2>
+			<co2komW unit="g/km">76</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -151,13 +151,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">107.27</co2kom1>
+			<co2komN unit="g/km">107.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">85.82</co2kom2>
+			<co2komW unit="g/km">85.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -183,13 +183,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">107.73</co2kom1>
+			<co2komN unit="g/km">107.73</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.14</langsam>
-			<co2kom2 unit="g/km">86.18</co2kom2>
+			<co2komW unit="g/km">86.18</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -215,13 +215,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">46.82</co2kom1>
+			<co2komN unit="g/km">46.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4.39</langsam>
-			<co2kom2 unit="g/km">37.46</co2kom2>
+			<co2komW unit="g/km">37.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -247,13 +247,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">110.91</co2kom1>
+			<co2komN unit="g/km">110.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.2</langsam>
-			<co2kom2 unit="g/km">88.73</co2kom2>
+			<co2komW unit="g/km">88.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -279,13 +279,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">115.45</co2kom1>
+			<co2komN unit="g/km">115.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4.39</langsam>
-			<co2kom2 unit="g/km">92.36</co2kom2>
+			<co2komW unit="g/km">92.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -311,13 +311,13 @@
 			<verbin unit="kWh/100km">21.43</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.14</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">14.29</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -343,13 +343,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">99.09</co2kom1>
+			<co2komN unit="g/km">99.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">79.27</co2kom2>
+			<co2komW unit="g/km">79.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -375,13 +375,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">85</co2kom1>
+			<co2komN unit="g/km">85</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">68</co2kom2>
+			<co2komW unit="g/km">68</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -407,13 +407,13 @@
 			<verbin unit="kWh/100km">18.1</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.48</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">12.77</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -439,13 +439,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">132.27</co2kom1>
+			<co2komN unit="g/km">132.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">105.82</co2kom2>
+			<co2komW unit="g/km">105.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -471,13 +471,13 @@
 			<verbin unit="kWh/100km">23.33</verbin>
 			<verbau unit="kWh/100km">16.67</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">18.66</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">14.86</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -503,13 +503,13 @@
 			<verbin unit="kWh/100km">21.9</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.52</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">13.52</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -535,13 +535,13 @@
 			<verbin unit="kWh/100km">20.48</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.38</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">13.14</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -567,13 +567,13 @@
 			<verbin unit="kWh/100km">16.67</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">13.34</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">12.39</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -599,13 +599,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">47.27</co2kom1>
+			<co2komN unit="g/km">47.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">37.82</co2kom2>
+			<co2komW unit="g/km">37.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -631,13 +631,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">116.36</co2kom1>
+			<co2komN unit="g/km">116.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.57</langsam>
-			<co2kom2 unit="g/km">93.09</co2kom2>
+			<co2komW unit="g/km">93.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -663,13 +663,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">88.64</co2kom1>
+			<co2komN unit="g/km">88.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">70.91</co2kom2>
+			<co2komW unit="g/km">70.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -695,13 +695,13 @@
 			<verbin unit="kWh/100km">17.62</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.1</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">11.81</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -727,13 +727,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">98.18</co2kom1>
+			<co2komN unit="g/km">98.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">78.54</co2kom2>
+			<co2komW unit="g/km">78.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -759,13 +759,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">98.64</co2kom1>
+			<co2komN unit="g/km">98.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">78.91</co2kom2>
+			<co2komW unit="g/km">78.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -791,13 +791,13 @@
 			<verbin unit="kWh/100km">23.81</verbin>
 			<verbau unit="kWh/100km">14.29</verbau>
 			<verbko unit="kWh/100km">12.86</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">19.05</sehrs>
 			<schnell unit="kWh/100km">10.29</schnell>
 			<langsam unit="kWh/100km">14.67</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -823,13 +823,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">117.27</co2kom1>
+			<co2komN unit="g/km">117.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">93.82</co2kom2>
+			<co2komW unit="g/km">93.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -855,13 +855,13 @@
 			<verbin unit="kWh/100km">18.57</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.86</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">12.96</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -887,13 +887,13 @@
 			<verbin unit="kWh/100km">21.9</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.52</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">14.48</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -919,13 +919,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">90.91</co2kom1>
+			<co2komN unit="g/km">90.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">72.73</co2kom2>
+			<co2komW unit="g/km">72.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -951,13 +951,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">117.27</co2kom1>
+			<co2komN unit="g/km">117.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">93.82</co2kom2>
+			<co2komW unit="g/km">93.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -983,13 +983,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">65</co2kom1>
+			<co2komN unit="g/km">65</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.57</langsam>
-			<co2kom2 unit="g/km">52</co2kom2>
+			<co2komW unit="g/km">52</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1015,13 +1015,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">77.27</co2kom1>
+			<co2komN unit="g/km">77.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">61.82</co2kom2>
+			<co2komW unit="g/km">61.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1047,13 +1047,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">58.18</co2kom1>
+			<co2komN unit="g/km">58.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">46.54</co2kom2>
+			<co2komW unit="g/km">46.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1079,13 +1079,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">60.91</co2kom1>
+			<co2komN unit="g/km">60.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">48.73</co2kom2>
+			<co2komW unit="g/km">48.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1111,13 +1111,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">121.36</co2kom1>
+			<co2komN unit="g/km">121.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">97.09</co2kom2>
+			<co2komW unit="g/km">97.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1143,13 +1143,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">79.09</co2kom1>
+			<co2komN unit="g/km">79.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">63.27</co2kom2>
+			<co2komW unit="g/km">63.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1175,13 +1175,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">75.91</co2kom1>
+			<co2komN unit="g/km">75.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.43</langsam>
-			<co2kom2 unit="g/km">60.73</co2kom2>
+			<co2komW unit="g/km">60.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1207,13 +1207,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">60.91</co2kom1>
+			<co2komN unit="g/km">60.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">48.73</co2kom2>
+			<co2komW unit="g/km">48.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1239,13 +1239,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">55</co2kom1>
+			<co2komN unit="g/km">55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.53</langsam>
-			<co2kom2 unit="g/km">44</co2kom2>
+			<co2komW unit="g/km">44</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1271,13 +1271,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">69.09</co2kom1>
+			<co2komN unit="g/km">69.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">55.27</co2kom2>
+			<co2komW unit="g/km">55.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1303,13 +1303,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">76.36</co2kom1>
+			<co2komN unit="g/km">76.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">5.53</langsam>
-			<co2kom2 unit="g/km">61.09</co2kom2>
+			<co2komW unit="g/km">61.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1335,13 +1335,13 @@
 			<verbin unit="kWh/100km">19.05</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">15.24</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">13.34</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1367,13 +1367,13 @@
 			<verbin unit="kWh/100km">17.14</verbin>
 			<verbau unit="kWh/100km">14.29</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">13.71</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">11.62</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1399,13 +1399,13 @@
 			<verbin unit="kWh/100km">18.1</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.48</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">12.19</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1431,13 +1431,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">73.18</co2kom1>
+			<co2komN unit="g/km">73.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">58.54</co2kom2>
+			<co2komW unit="g/km">58.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1463,13 +1463,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">118.18</co2kom1>
+			<co2komN unit="g/km">118.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.39</langsam>
-			<co2kom2 unit="g/km">94.54</co2kom2>
+			<co2komW unit="g/km">94.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1495,13 +1495,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">76.36</co2kom1>
+			<co2komN unit="g/km">76.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.72</langsam>
-			<co2kom2 unit="g/km">61.09</co2kom2>
+			<co2komW unit="g/km">61.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1527,13 +1527,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">53.64</co2kom1>
+			<co2komN unit="g/km">53.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">42.91</co2kom2>
+			<co2komW unit="g/km">42.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1559,13 +1559,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">131.82</co2kom1>
+			<co2komN unit="g/km">131.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">105.46</co2kom2>
+			<co2komW unit="g/km">105.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1591,13 +1591,13 @@
 			<verbin unit="kWh/100km">20.48</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.38</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">13.72</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1623,13 +1623,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">46.82</co2kom1>
+			<co2komN unit="g/km">46.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.43</langsam>
-			<co2kom2 unit="g/km">37.46</co2kom2>
+			<co2komW unit="g/km">37.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1655,13 +1655,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">132.27</co2kom1>
+			<co2komN unit="g/km">132.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.57</langsam>
-			<co2kom2 unit="g/km">105.82</co2kom2>
+			<co2komW unit="g/km">105.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1687,13 +1687,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">67.73</co2kom1>
+			<co2komN unit="g/km">67.73</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">54.18</co2kom2>
+			<co2komW unit="g/km">54.18</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1719,13 +1719,13 @@
 			<verbin unit="kWh/100km">23.81</verbin>
 			<verbau unit="kWh/100km">16.67</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">19.05</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">14.29</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1751,13 +1751,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">49.55</co2kom1>
+			<co2komN unit="g/km">49.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">39.64</co2kom2>
+			<co2komW unit="g/km">39.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1783,13 +1783,13 @@
 			<verbin unit="kWh/100km">21.43</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.14</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">13.52</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1815,13 +1815,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">51.36</co2kom1>
+			<co2komN unit="g/km">51.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">41.09</co2kom2>
+			<co2komW unit="g/km">41.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1847,13 +1847,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">110.45</co2kom1>
+			<co2komN unit="g/km">110.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.38</langsam>
-			<co2kom2 unit="g/km">88.36</co2kom2>
+			<co2komW unit="g/km">88.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1879,13 +1879,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">84.55</co2kom1>
+			<co2komN unit="g/km">84.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">67.64</co2kom2>
+			<co2komW unit="g/km">67.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1911,13 +1911,13 @@
 			<verbin unit="kWh/100km">18.1</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.48</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">12</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1943,13 +1943,13 @@
 			<verbin unit="kWh/100km">18.57</verbin>
 			<verbau unit="kWh/100km">14.29</verbau>
 			<verbko unit="kWh/100km">13.33</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.86</sehrs>
 			<schnell unit="kWh/100km">10.66</schnell>
 			<langsam unit="kWh/100km">12.76</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -1975,13 +1975,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">116.36</co2kom1>
+			<co2komN unit="g/km">116.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">93.09</co2kom2>
+			<co2komW unit="g/km">93.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2007,13 +2007,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">63.18</co2kom1>
+			<co2komN unit="g/km">63.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">50.54</co2kom2>
+			<co2komW unit="g/km">50.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2039,13 +2039,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">77.27</co2kom1>
+			<co2komN unit="g/km">77.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">61.82</co2kom2>
+			<co2komW unit="g/km">61.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2071,13 +2071,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">135</co2kom1>
+			<co2komN unit="g/km">135</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.38</langsam>
-			<co2kom2 unit="g/km">108</co2kom2>
+			<co2komW unit="g/km">108</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2103,13 +2103,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">54.55</co2kom1>
+			<co2komN unit="g/km">54.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">43.64</co2kom2>
+			<co2komW unit="g/km">43.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2135,13 +2135,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">111.82</co2kom1>
+			<co2komN unit="g/km">111.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">89.46</co2kom2>
+			<co2komW unit="g/km">89.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2167,13 +2167,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">58.64</co2kom1>
+			<co2komN unit="g/km">58.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.77</langsam>
-			<co2kom2 unit="g/km">46.91</co2kom2>
+			<co2komW unit="g/km">46.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2199,13 +2199,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">50</co2kom1>
+			<co2komN unit="g/km">50</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.38</langsam>
-			<co2kom2 unit="g/km">40</co2kom2>
+			<co2komW unit="g/km">40</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2231,13 +2231,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">80.45</co2kom1>
+			<co2komN unit="g/km">80.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.43</langsam>
-			<co2kom2 unit="g/km">64.36</co2kom2>
+			<co2komW unit="g/km">64.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2263,13 +2263,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">83.18</co2kom1>
+			<co2komN unit="g/km">83.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.72</langsam>
-			<co2kom2 unit="g/km">66.54</co2kom2>
+			<co2komW unit="g/km">66.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2295,18 +2295,18 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">128.64</co2kom1>
+			<co2komN unit="g/km">128.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">102.91</co2kom2>
+			<co2komW unit="g/km">102.91</co2komW>
 		</wltp>
 	</car>
 	<car>
 		<id>73</id>
-		<name>Volkswagen T1 Kombi</name>
+		<name>Volkswagen T1 komWi</name>
 		<schein>
 			<b21>4916</b21>
 			<b22>594</b22>
@@ -2327,13 +2327,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">105.91</co2kom1>
+			<co2komN unit="g/km">105.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">84.73</co2kom2>
+			<co2komW unit="g/km">84.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2359,13 +2359,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">73.64</co2kom1>
+			<co2komN unit="g/km">73.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">58.91</co2kom2>
+			<co2komW unit="g/km">58.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2391,13 +2391,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">87.27</co2kom1>
+			<co2komN unit="g/km">87.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.14</langsam>
-			<co2kom2 unit="g/km">69.82</co2kom2>
+			<co2komW unit="g/km">69.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2423,13 +2423,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">57.27</co2kom1>
+			<co2komN unit="g/km">57.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">45.82</co2kom2>
+			<co2komW unit="g/km">45.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2455,13 +2455,13 @@
 			<verbin unit="kWh/100km">20.95</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.76</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">13.33</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2487,13 +2487,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">85</co2kom1>
+			<co2komN unit="g/km">85</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">68</co2kom2>
+			<co2komW unit="g/km">68</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2519,13 +2519,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">90</co2kom1>
+			<co2komN unit="g/km">90</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.43</langsam>
-			<co2kom2 unit="g/km">72</co2kom2>
+			<co2komW unit="g/km">72</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2551,13 +2551,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">50</co2kom1>
+			<co2komN unit="g/km">50</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">40</co2kom2>
+			<co2komW unit="g/km">40</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2583,13 +2583,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">135.45</co2kom1>
+			<co2komN unit="g/km">135.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">108.36</co2kom2>
+			<co2komW unit="g/km">108.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2615,13 +2615,13 @@
 			<verbin unit="kWh/100km">17.62</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">12.86</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.1</sehrs>
 			<schnell unit="kWh/100km">10.29</schnell>
 			<langsam unit="kWh/100km">12.2</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2647,13 +2647,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">99.09</co2kom1>
+			<co2komN unit="g/km">99.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">79.27</co2kom2>
+			<co2komW unit="g/km">79.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2679,13 +2679,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">105</co2kom1>
+			<co2komN unit="g/km">105</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4.39</langsam>
-			<co2kom2 unit="g/km">84</co2kom2>
+			<co2komW unit="g/km">84</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2711,13 +2711,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">123.64</co2kom1>
+			<co2komN unit="g/km">123.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">98.91</co2kom2>
+			<co2komW unit="g/km">98.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2743,13 +2743,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">60.45</co2kom1>
+			<co2komN unit="g/km">60.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">48.36</co2kom2>
+			<co2komW unit="g/km">48.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2775,13 +2775,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">57.73</co2kom1>
+			<co2komN unit="g/km">57.73</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">46.18</co2kom2>
+			<co2komW unit="g/km">46.18</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2807,13 +2807,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">126.36</co2kom1>
+			<co2komN unit="g/km">126.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.72</langsam>
-			<co2kom2 unit="g/km">101.09</co2kom2>
+			<co2komW unit="g/km">101.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2839,13 +2839,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">77.27</co2kom1>
+			<co2komN unit="g/km">77.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">61.82</co2kom2>
+			<co2komW unit="g/km">61.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2871,13 +2871,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">100</co2kom1>
+			<co2komN unit="g/km">100</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">80</co2kom2>
+			<co2komW unit="g/km">80</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2903,13 +2903,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">118.18</co2kom1>
+			<co2komN unit="g/km">118.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">94.54</co2kom2>
+			<co2komW unit="g/km">94.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2935,13 +2935,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">113.18</co2kom1>
+			<co2komN unit="g/km">113.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.77</langsam>
-			<co2kom2 unit="g/km">90.54</co2kom2>
+			<co2komW unit="g/km">90.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2967,13 +2967,13 @@
 			<verbin unit="kWh/100km">23.33</verbin>
 			<verbau unit="kWh/100km">16.67</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">18.66</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">14.86</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -2999,13 +2999,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">103.18</co2kom1>
+			<co2komN unit="g/km">103.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">82.54</co2kom2>
+			<co2komW unit="g/km">82.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3031,13 +3031,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">121.36</co2kom1>
+			<co2komN unit="g/km">121.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">6.1</langsam>
-			<co2kom2 unit="g/km">97.09</co2kom2>
+			<co2komW unit="g/km">97.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3063,13 +3063,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">97.27</co2kom1>
+			<co2komN unit="g/km">97.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">77.82</co2kom2>
+			<co2komW unit="g/km">77.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3095,13 +3095,13 @@
 			<verbin unit="kWh/100km">20.48</verbin>
 			<verbau unit="kWh/100km">14.29</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.38</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">12.95</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3127,13 +3127,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">133.18</co2kom1>
+			<co2komN unit="g/km">133.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">106.54</co2kom2>
+			<co2komW unit="g/km">106.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3159,13 +3159,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">64.09</co2kom1>
+			<co2komN unit="g/km">64.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">51.27</co2kom2>
+			<co2komW unit="g/km">51.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3191,13 +3191,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">66.82</co2kom1>
+			<co2komN unit="g/km">66.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">53.46</co2kom2>
+			<co2komW unit="g/km">53.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3223,13 +3223,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">94.55</co2kom1>
+			<co2komN unit="g/km">94.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">75.64</co2kom2>
+			<co2komW unit="g/km">75.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3255,13 +3255,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">118.18</co2kom1>
+			<co2komN unit="g/km">118.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">4.95</langsam>
-			<co2kom2 unit="g/km">94.54</co2kom2>
+			<co2komW unit="g/km">94.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3287,13 +3287,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">125.91</co2kom1>
+			<co2komN unit="g/km">125.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">100.73</co2kom2>
+			<co2komW unit="g/km">100.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3319,13 +3319,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">82.27</co2kom1>
+			<co2komN unit="g/km">82.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">65.82</co2kom2>
+			<co2komW unit="g/km">65.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3351,13 +3351,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">119.09</co2kom1>
+			<co2komN unit="g/km">119.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">95.27</co2kom2>
+			<co2komW unit="g/km">95.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3383,13 +3383,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">88.64</co2kom1>
+			<co2komN unit="g/km">88.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">70.91</co2kom2>
+			<co2komW unit="g/km">70.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3415,13 +3415,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">117.73</co2kom1>
+			<co2komN unit="g/km">117.73</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.62</langsam>
-			<co2kom2 unit="g/km">94.18</co2kom2>
+			<co2komW unit="g/km">94.18</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3447,13 +3447,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">83.18</co2kom1>
+			<co2komN unit="g/km">83.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">6.1</langsam>
-			<co2kom2 unit="g/km">66.54</co2kom2>
+			<co2komW unit="g/km">66.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3479,13 +3479,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">125.45</co2kom1>
+			<co2komN unit="g/km">125.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">100.36</co2kom2>
+			<co2komW unit="g/km">100.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3511,13 +3511,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">94.55</co2kom1>
+			<co2komN unit="g/km">94.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.53</langsam>
-			<co2kom2 unit="g/km">75.64</co2kom2>
+			<co2komW unit="g/km">75.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3543,13 +3543,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">49.55</co2kom1>
+			<co2komN unit="g/km">49.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">39.64</co2kom2>
+			<co2komW unit="g/km">39.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3575,13 +3575,13 @@
 			<verbin unit="kWh/100km">19.05</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">15.24</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">12.57</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3607,13 +3607,13 @@
 			<verbin unit="kWh/100km">19.52</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">15.62</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">12.76</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3639,18 +3639,18 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">87.27</co2kom1>
+			<co2komN unit="g/km">87.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.72</langsam>
-			<co2kom2 unit="g/km">69.82</co2kom2>
+			<co2komW unit="g/km">69.82</co2komW>
 		</wltp>
 	</car>
 	<car>
 		<id>115</id>
-		<name>Volkswagen T2 Kombi</name>
+		<name>Volkswagen T2 komWi</name>
 		<schein>
 			<b21>7606</b21>
 			<b22>527</b22>
@@ -3671,13 +3671,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">58.18</co2kom1>
+			<co2komN unit="g/km">58.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.72</langsam>
-			<co2kom2 unit="g/km">46.54</co2kom2>
+			<co2komW unit="g/km">46.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3703,13 +3703,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">92.27</co2kom1>
+			<co2komN unit="g/km">92.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">73.82</co2kom2>
+			<co2komW unit="g/km">73.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3735,13 +3735,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">115.91</co2kom1>
+			<co2komN unit="g/km">115.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.53</langsam>
-			<co2kom2 unit="g/km">92.73</co2kom2>
+			<co2komW unit="g/km">92.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3767,13 +3767,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">89.09</co2kom1>
+			<co2komN unit="g/km">89.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">71.27</co2kom2>
+			<co2komW unit="g/km">71.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3799,13 +3799,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">48.64</co2kom1>
+			<co2komN unit="g/km">48.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">38.91</co2kom2>
+			<co2komW unit="g/km">38.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3831,13 +3831,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">66.82</co2kom1>
+			<co2komN unit="g/km">66.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.77</langsam>
-			<co2kom2 unit="g/km">53.46</co2kom2>
+			<co2komW unit="g/km">53.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3863,13 +3863,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">71.82</co2kom1>
+			<co2komN unit="g/km">71.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">57.46</co2kom2>
+			<co2komW unit="g/km">57.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3895,13 +3895,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">126.36</co2kom1>
+			<co2komN unit="g/km">126.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">101.09</co2kom2>
+			<co2komW unit="g/km">101.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3927,13 +3927,13 @@
 			<verbin unit="kWh/100km">21.43</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">13.33</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.14</sehrs>
 			<schnell unit="kWh/100km">10.66</schnell>
 			<langsam unit="kWh/100km">13.9</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -3959,18 +3959,18 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">121.82</co2kom1>
+			<co2komN unit="g/km">121.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">97.46</co2kom2>
+			<co2komW unit="g/km">97.46</co2komW>
 		</wltp>
 	</car>
 	<car>
 		<id>125</id>
-		<name>Volkswagen T1 Kombi</name>
+		<name>Volkswagen T1 komWi</name>
 		<schein>
 			<b21>6528</b21>
 			<b22>230</b22>
@@ -3991,13 +3991,13 @@
 			<verbin unit="kWh/100km">20.48</verbin>
 			<verbau unit="kWh/100km">14.29</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.38</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">13.91</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4023,13 +4023,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">94.55</co2kom1>
+			<co2komN unit="g/km">94.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.2</langsam>
-			<co2kom2 unit="g/km">75.64</co2kom2>
+			<co2komW unit="g/km">75.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4055,18 +4055,18 @@
 			<verbin unit="kWh/100km">19.05</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">15.24</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">13.34</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
 		<id>128</id>
-		<name>Kia Cee'd</name>
+		<name>Kia Ceed</name>
 		<schein>
 			<b21>4555</b21>
 			<b22>867</b22>
@@ -4087,13 +4087,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">71.36</co2kom1>
+			<co2komN unit="g/km">71.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">57.09</co2kom2>
+			<co2komW unit="g/km">57.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4119,13 +4119,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">125.45</co2kom1>
+			<co2komN unit="g/km">125.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">100.36</co2kom2>
+			<co2komW unit="g/km">100.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4151,13 +4151,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">110.45</co2kom1>
+			<co2komN unit="g/km">110.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.2</langsam>
-			<co2kom2 unit="g/km">88.36</co2kom2>
+			<co2komW unit="g/km">88.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4183,13 +4183,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">86.36</co2kom1>
+			<co2komN unit="g/km">86.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">69.09</co2kom2>
+			<co2komW unit="g/km">69.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4215,13 +4215,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">109.09</co2kom1>
+			<co2komN unit="g/km">109.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.57</langsam>
-			<co2kom2 unit="g/km">87.27</co2kom2>
+			<co2komW unit="g/km">87.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4247,13 +4247,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">73.64</co2kom1>
+			<co2komN unit="g/km">73.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.57</langsam>
-			<co2kom2 unit="g/km">58.91</co2kom2>
+			<co2komW unit="g/km">58.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4279,13 +4279,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">119.09</co2kom1>
+			<co2komN unit="g/km">119.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">95.27</co2kom2>
+			<co2komW unit="g/km">95.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4311,13 +4311,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">82.73</co2kom1>
+			<co2komN unit="g/km">82.73</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">66.18</co2kom2>
+			<co2komW unit="g/km">66.18</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4343,13 +4343,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">98.18</co2kom1>
+			<co2komN unit="g/km">98.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">78.54</co2kom2>
+			<co2komW unit="g/km">78.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4375,13 +4375,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">89.09</co2kom1>
+			<co2komN unit="g/km">89.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">71.27</co2kom2>
+			<co2komW unit="g/km">71.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4407,13 +4407,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">107.27</co2kom1>
+			<co2komN unit="g/km">107.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.38</langsam>
-			<co2kom2 unit="g/km">85.82</co2kom2>
+			<co2komW unit="g/km">85.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4439,13 +4439,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">128.64</co2kom1>
+			<co2komN unit="g/km">128.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">102.91</co2kom2>
+			<co2komW unit="g/km">102.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4471,13 +4471,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">68.18</co2kom1>
+			<co2komN unit="g/km">68.18</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">54.54</co2kom2>
+			<co2komW unit="g/km">54.54</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4503,13 +4503,13 @@
 			<verbin unit="kWh/100km">20.95</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">13.33</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.76</sehrs>
 			<schnell unit="kWh/100km">10.66</schnell>
 			<langsam unit="kWh/100km">13.71</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4535,13 +4535,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">101.82</co2kom1>
+			<co2komN unit="g/km">101.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">81.46</co2kom2>
+			<co2komW unit="g/km">81.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4567,13 +4567,13 @@
 			<verbin unit="kWh/100km">22.38</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.9</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">13.9</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4599,13 +4599,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">113.64</co2kom1>
+			<co2komN unit="g/km">113.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">90.91</co2kom2>
+			<co2komW unit="g/km">90.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4631,13 +4631,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">118.64</co2kom1>
+			<co2komN unit="g/km">118.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.91</langsam>
-			<co2kom2 unit="g/km">94.91</co2kom2>
+			<co2komW unit="g/km">94.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4663,13 +4663,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">7.14</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">50</co2kom1>
+			<co2komN unit="g/km">50</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.14</langsam>
-			<co2kom2 unit="g/km">40</co2kom2>
+			<co2komW unit="g/km">40</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4695,13 +4695,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">134.09</co2kom1>
+			<co2komN unit="g/km">134.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">107.27</co2kom2>
+			<co2komW unit="g/km">107.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4727,13 +4727,13 @@
 			<verbin unit="kWh/100km">23.81</verbin>
 			<verbau unit="kWh/100km">15.24</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">19.05</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">15.05</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4759,13 +4759,13 @@
 			<verbin unit="kWh/100km">18.57</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.86</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">12.96</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4791,13 +4791,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">58.64</co2kom1>
+			<co2komN unit="g/km">58.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">5.53</langsam>
-			<co2kom2 unit="g/km">46.91</co2kom2>
+			<co2komW unit="g/km">46.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4823,13 +4823,13 @@
 			<verbin unit="kWh/100km">18.57</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">14.86</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">13.15</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4855,13 +4855,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">50.45</co2kom1>
+			<co2komN unit="g/km">50.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">40.36</co2kom2>
+			<co2komW unit="g/km">40.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4887,13 +4887,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">132.27</co2kom1>
+			<co2komN unit="g/km">132.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.14</langsam>
-			<co2kom2 unit="g/km">105.82</co2kom2>
+			<co2komW unit="g/km">105.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4919,13 +4919,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">120.91</co2kom1>
+			<co2komN unit="g/km">120.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">96.73</co2kom2>
+			<co2komW unit="g/km">96.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4951,13 +4951,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">116.82</co2kom1>
+			<co2komN unit="g/km">116.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.57</langsam>
-			<co2kom2 unit="g/km">93.46</co2kom2>
+			<co2komW unit="g/km">93.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -4983,13 +4983,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">93.64</co2kom1>
+			<co2komN unit="g/km">93.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">74.91</co2kom2>
+			<co2komW unit="g/km">74.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5015,13 +5015,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">91.36</co2kom1>
+			<co2komN unit="g/km">91.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">73.09</co2kom2>
+			<co2komW unit="g/km">73.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5047,13 +5047,13 @@
 			<verbin unit="kWh/100km">19.52</verbin>
 			<verbau unit="kWh/100km">16.19</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">15.62</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">12.76</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5079,13 +5079,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">77.27</co2kom1>
+			<co2komN unit="g/km">77.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">61.82</co2kom2>
+			<co2komW unit="g/km">61.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5111,13 +5111,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">64.09</co2kom1>
+			<co2komN unit="g/km">64.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">51.27</co2kom2>
+			<co2komW unit="g/km">51.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5143,18 +5143,18 @@
 			<verbin unit="kWh/100km">20</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">12.76</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
 		<id>162</id>
-		<name>Volkswagen T1 Kombi</name>
+		<name>Volkswagen T1 komWi</name>
 		<schein>
 			<b21>2320</b21>
 			<b22>199</b22>
@@ -5175,13 +5175,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">90</co2kom1>
+			<co2komN unit="g/km">90</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">4.95</langsam>
-			<co2kom2 unit="g/km">72</co2kom2>
+			<co2komW unit="g/km">72</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5207,13 +5207,13 @@
 			<verbin unit="kWh/100km">21.9</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.52</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">14.29</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5239,13 +5239,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">135</co2kom1>
+			<co2komN unit="g/km">135</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">108</co2kom2>
+			<co2komW unit="g/km">108</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5271,13 +5271,13 @@
 			<verbin unit="kWh/100km">20.48</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">11.9</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.38</sehrs>
 			<schnell unit="kWh/100km">9.52</schnell>
 			<langsam unit="kWh/100km">12.95</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5303,13 +5303,13 @@
 			<verbin unit="kWh/100km">19.52</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">12.86</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">15.62</sehrs>
 			<schnell unit="kWh/100km">10.29</schnell>
 			<langsam unit="kWh/100km">12.96</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5335,13 +5335,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">74.55</co2kom1>
+			<co2komN unit="g/km">74.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.2</langsam>
-			<co2kom2 unit="g/km">59.64</co2kom2>
+			<co2komW unit="g/km">59.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5367,13 +5367,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">95</co2kom1>
+			<co2komN unit="g/km">95</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">76</co2kom2>
+			<co2komW unit="g/km">76</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5399,13 +5399,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">135.91</co2kom1>
+			<co2komN unit="g/km">135.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">108.73</co2kom2>
+			<co2komW unit="g/km">108.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5431,13 +5431,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">115</co2kom1>
+			<co2komN unit="g/km">115</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.72</langsam>
-			<co2kom2 unit="g/km">92</co2kom2>
+			<co2komW unit="g/km">92</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5463,13 +5463,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">110</co2kom1>
+			<co2komN unit="g/km">110</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.2</langsam>
-			<co2kom2 unit="g/km">88</co2kom2>
+			<co2komW unit="g/km">88</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5495,13 +5495,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">66.36</co2kom1>
+			<co2komN unit="g/km">66.36</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">53.09</co2kom2>
+			<co2komW unit="g/km">53.09</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5527,13 +5527,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">55.91</co2kom1>
+			<co2komN unit="g/km">55.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">44.73</co2kom2>
+			<co2komW unit="g/km">44.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5559,13 +5559,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">110</co2kom1>
+			<co2komN unit="g/km">110</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.81</langsam>
-			<co2kom2 unit="g/km">88</co2kom2>
+			<co2komW unit="g/km">88</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5591,13 +5591,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">50.45</co2kom1>
+			<co2komN unit="g/km">50.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">40.36</co2kom2>
+			<co2komW unit="g/km">40.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5623,13 +5623,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">3.81</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">74.09</co2kom1>
+			<co2komN unit="g/km">74.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">59.27</co2kom2>
+			<co2komW unit="g/km">59.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5655,13 +5655,13 @@
 			<verbin unit="kWh/100km">22.38</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.9</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">14.48</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5687,13 +5687,13 @@
 			<verbin unit="l/100km">5.71</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">2.38</verbko>
-			<co2kom1 unit="g/km">60.45</co2kom1>
+			<co2komN unit="g/km">60.45</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.57</sehrs>
 			<schnell unit="l/100km">1.9</schnell>
 			<langsam unit="l/100km">3.24</langsam>
-			<co2kom2 unit="g/km">48.36</co2kom2>
+			<co2komW unit="g/km">48.36</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5719,13 +5719,13 @@
 			<verbin unit="l/100km">9.52</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">88.64</co2kom1>
+			<co2komN unit="g/km">88.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.62</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">6.1</langsam>
-			<co2kom2 unit="g/km">70.91</co2kom2>
+			<co2komW unit="g/km">70.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5751,13 +5751,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">107.73</co2kom1>
+			<co2komN unit="g/km">107.73</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">86.18</co2kom2>
+			<co2komW unit="g/km">86.18</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5783,13 +5783,13 @@
 			<verbin unit="kWh/100km">21.43</verbin>
 			<verbau unit="kWh/100km">14.29</verbau>
 			<verbko unit="kWh/100km">14.29</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.14</sehrs>
 			<schnell unit="kWh/100km">11.43</schnell>
 			<langsam unit="kWh/100km">14.29</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5815,13 +5815,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">134.09</co2kom1>
+			<co2komN unit="g/km">134.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">107.27</co2kom2>
+			<co2komW unit="g/km">107.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5847,13 +5847,13 @@
 			<verbin unit="l/100km">6.19</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">104.55</co2kom1>
+			<co2komN unit="g/km">104.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">4.95</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.19</langsam>
-			<co2kom2 unit="g/km">83.64</co2kom2>
+			<co2komW unit="g/km">83.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5879,13 +5879,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">4.76</verbau>
 			<verbko unit="l/100km">3.33</verbko>
-			<co2kom1 unit="g/km">122.27</co2kom1>
+			<co2komN unit="g/km">122.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">2.66</schnell>
 			<langsam unit="l/100km">4.76</langsam>
-			<co2kom2 unit="g/km">97.82</co2kom2>
+			<co2komW unit="g/km">97.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5911,13 +5911,13 @@
 			<verbin unit="kWh/100km">20.48</verbin>
 			<verbau unit="kWh/100km">14.76</verbau>
 			<verbko unit="kWh/100km">13.81</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">16.38</sehrs>
 			<schnell unit="kWh/100km">11.05</schnell>
 			<langsam unit="kWh/100km">13.72</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5943,13 +5943,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">5.24</verbko>
-			<co2kom1 unit="g/km">109.55</co2kom1>
+			<co2komN unit="g/km">109.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">4.19</schnell>
 			<langsam unit="l/100km">4.95</langsam>
-			<co2kom2 unit="g/km">87.64</co2kom2>
+			<co2komW unit="g/km">87.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -5975,13 +5975,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">75.91</co2kom1>
+			<co2komN unit="g/km">75.91</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">60.73</co2kom2>
+			<co2komW unit="g/km">60.73</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6007,13 +6007,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">74.55</co2kom1>
+			<co2komN unit="g/km">74.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">5.15</langsam>
-			<co2kom2 unit="g/km">59.64</co2kom2>
+			<co2komW unit="g/km">59.64</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6039,13 +6039,13 @@
 			<verbin unit="kWh/100km">22.38</verbin>
 			<verbau unit="kWh/100km">16.67</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">17.9</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">13.9</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6071,13 +6071,13 @@
 			<verbin unit="l/100km">9.05</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">67.27</co2kom1>
+			<co2komN unit="g/km">67.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">7.24</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">53.82</co2kom2>
+			<co2komW unit="g/km">53.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6103,13 +6103,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">5.71</verbko>
-			<co2kom1 unit="g/km">59.09</co2kom1>
+			<co2komN unit="g/km">59.09</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">4.57</schnell>
 			<langsam unit="l/100km">5.34</langsam>
-			<co2kom2 unit="g/km">47.27</co2kom2>
+			<co2komW unit="g/km">47.27</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6135,13 +6135,13 @@
 			<verbin unit="l/100km">8.1</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">4.29</verbko>
-			<co2kom1 unit="g/km">51.82</co2kom1>
+			<co2komN unit="g/km">51.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.48</sehrs>
 			<schnell unit="l/100km">3.43</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">41.46</co2kom2>
+			<co2komW unit="g/km">41.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6167,13 +6167,13 @@
 			<verbin unit="kWh/100km">22.86</verbin>
 			<verbau unit="kWh/100km">15.71</verbau>
 			<verbko unit="kWh/100km">12.38</verbko>
-			<co2kom1 unit="g/km">0</co2kom1>
+			<co2komN unit="g/km">0</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="kWh/100km">18.29</sehrs>
 			<schnell unit="kWh/100km">9.9</schnell>
 			<langsam unit="kWh/100km">14.1</langsam>
-			<co2kom2 unit="g/km">0</co2kom2>
+			<co2komW unit="g/km">0</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6199,13 +6199,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">4.29</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">112.27</co2kom1>
+			<co2komN unit="g/km">112.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4</langsam>
-			<co2kom2 unit="g/km">89.82</co2kom2>
+			<co2komW unit="g/km">89.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6231,13 +6231,13 @@
 			<verbin unit="l/100km">8.57</verbin>
 			<verbau unit="l/100km">6.19</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">66.82</co2kom1>
+			<co2komN unit="g/km">66.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.86</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">53.46</co2kom2>
+			<co2komW unit="g/km">53.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6263,13 +6263,13 @@
 			<verbin unit="l/100km">6.67</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">2.86</verbko>
-			<co2kom1 unit="g/km">131.82</co2kom1>
+			<co2komN unit="g/km">131.82</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.34</sehrs>
 			<schnell unit="l/100km">2.29</schnell>
 			<langsam unit="l/100km">3.82</langsam>
-			<co2kom2 unit="g/km">105.46</co2kom2>
+			<co2komW unit="g/km">105.46</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6295,13 +6295,13 @@
 			<verbin unit="l/100km">7.14</verbin>
 			<verbau unit="l/100km">5.24</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">92.27</co2kom1>
+			<co2komN unit="g/km">92.27</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">5.71</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.38</langsam>
-			<co2kom2 unit="g/km">73.82</co2kom2>
+			<co2komW unit="g/km">73.82</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6327,13 +6327,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">5.71</verbau>
 			<verbko unit="l/100km">3.81</verbko>
-			<co2kom1 unit="g/km">133.64</co2kom1>
+			<co2komN unit="g/km">133.64</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.05</schnell>
 			<langsam unit="l/100km">4.58</langsam>
-			<co2kom2 unit="g/km">106.91</co2kom2>
+			<co2komW unit="g/km">106.91</co2komW>
 		</wltp>
 	</car>
 	<car>
@@ -6359,13 +6359,13 @@
 			<verbin unit="l/100km">7.62</verbin>
 			<verbau unit="l/100km">6.67</verbau>
 			<verbko unit="l/100km">4.76</verbko>
-			<co2kom1 unit="g/km">129.55</co2kom1>
+			<co2komN unit="g/km">129.55</co2komN>
 		</nefz>
 		<wltp>
 			<sehrs unit="l/100km">6.1</sehrs>
 			<schnell unit="l/100km">3.81</schnell>
 			<langsam unit="l/100km">4.96</langsam>
-			<co2kom2 unit="g/km">103.64</co2kom2>
+			<co2komW unit="g/km">103.64</co2komW>
 		</wltp>
 	</car>
 </db>

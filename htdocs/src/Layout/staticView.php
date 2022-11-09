@@ -56,6 +56,9 @@
             <li>
                 <a href="/index.php?c=contact">Kontakt</a>
             </li>
+            <li>
+                <a href="/index.php?c=xml">XML Import</a>
+            </li>
         </ol>
     </nav>
     <!-- navigation end -->

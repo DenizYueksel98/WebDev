@@ -22,11 +22,11 @@
                     <option value="verbin">Verbrauch innerorts lt. NEFZ</option>
                     <option value="verbau">Verbrauch außerorts lt. NEFZ</option>
                     <option value="verbko">Verbrauch kombiniert lt. NEFZ</option>
-                    <option value="co2kom">CO2-Emission kombiniert lt. NEFZ</option>
+                    <option value="co2komN">CO2-Emission kombiniert lt. NEFZ</option>
                     <option value="sehrs">Sehr schnell lt. WLTP</option>
                     <option value="schnell">Schnell lt. WLTP</option>
                     <option value="langsam">Langsam lt. WLTP</option>
-                    <option value="co2komb">CO2-Emission kombiniert lt. WLTP</option>
+                    <option value="co2komW">CO2-Emission kombiniert lt. WLTP</option>
                 </select>
                 <label for="theta">Vergleichsoperator:</label>
                 <select class="input-filter" name="theta" id="theta">

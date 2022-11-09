@@ -2,22 +2,23 @@
 
 namespace Controller;
 
-use Controller\CarController;
+use Framework\AbstractController;
 use Directory;
 use Framework\CarDatabase;
 use Framework\CarRepository;
+use Repository\CarRepository as RepositoryCarRepository;
 use SimpleXMLElement;
-
-class XmlController extends CarController
+class XmlController extends AbstractController
 {
     protected $error_message;
     protected $export_message;
     protected $validate_message;
     public function defaultAction()
     {
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        //$db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        $db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
         $db->connect();
-        $db->truncateTable("`xml`");
+        $db->truncateTable("`cars`");
         $affectedRow = 0;
 
         $file = file_get_contents("./dbXML.xml");
@@ -46,18 +47,18 @@ class XmlController extends CarController
             $verbin = $nefz->verbin[0];
             $verbau = $nefz->verbau[0];
             $verbko = $nefz->verbko[0];
-            $co2kom = $nefz->co2kom[0];
+            $co2komN = $nefz->co2komN[0];
             $sehrs = $wltp->sehrs[0];
             $schnell = $wltp->schnell[0];
             $langsam = $wltp->langsam[0];
-            $co2komb = $wltp->co2kom[0];
+            $co2komW = $wltp->co2komW[0];
             $verb_unit = $nefz->verbin['unit'];
-            $co2_unit = $wltp->co2kom['unit'];
+            $co2_unit = $wltp->co2komW['unit'];
 
             //print_r($verbin['unit']);
 
             // SQL query to insert data into xml table
-            $sql = "INSERT INTO `xml`(
+            $sql = "INSERT INTO `cars`(
                 `id`,
                 `name`,
                 `b21`,
@@ -77,11 +78,11 @@ class XmlController extends CarController
                 `verbin`,
                 `verbau`,
                 `verbko`,
-                `co2kom`,
+                `co2komN`,
                 `sehrs`,
                 `schnell`,
                 `langsam`,
-                `co2komb`,
+                `co2komW`,
                 `verb_unit`,
                 `co2_unit`) VALUES ('" .
                 $id . "','" .
@@ -99,21 +100,22 @@ class XmlController extends CarController
                 $fuenf2 . "','" .
                 $v9 . "','" .
                 $vierzehn . "','" .
-                $p3 . "','" .
+                strtoupper($p3) . "','" .
                 $verbin . "','" .
                 $verbau . "','" .
                 $verbko . "','" .
-                $co2kom . "','" .
+                $co2komN . "','" .
                 $sehrs . "','" .
                 $schnell . "','" .
                 $langsam . "','" .
-                $co2komb .  "','" .
+                $co2komW .  "','" .
                 $verb_unit . "','" .
-                $co2_unit ."')";
+                $co2_unit . "')";
             $result = $db->query2($sql);
             if (empty($result) == false) {
                 $affectedRow++;
             } else {
+                print_r($affectedRow);
                 $this->error_message = mysqli_error($db->getdbhandle()) . "\n";
             }
         }
@@ -121,16 +123,19 @@ class XmlController extends CarController
     }
     public function exportAction()
     {
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        //$db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        $db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
         $db->connect();
-        $file = file_get_contents("./input.xml");
-        $xml = simplexml_load_string($file)
-            or die("Error: Cannot create object");
-        $carModel = parent::getCarModel(); //tätige Abfrage und packe Ergebnis in carModel
+        $repo = new RepositoryCarRepository($db);
+        $carModel=$repo->readAll();
+        //$file = file_get_contents("./input.xml");
+        //$xml = simplexml_load_string($file)
+        //   or die("Error: Cannot create object");
         //print_r($carModel);
         $xml = new SimpleXMLElement('<db></db>');
-        $caritem = $xml->addChild('car');
+
         foreach ($carModel as $car) {
+            $caritem = $xml->addChild('car');
             $caritem->addChild('id', $car->id);
             $caritem->addChild('name', $car->name);
 
@@ -152,27 +157,26 @@ class XmlController extends CarController
 
             $nefz = $caritem->addChild('nefz');
             $verbin = $nefz->addChild('verbin', $car->verbin);
-            $verbau=$nefz->addChild('verbau', $car->verbau);
-            $verbko=$nefz->addChild('verbko', $car->verbko);
-            $co2kom=$nefz->addChild('co2kom', $car->co2kom);
+            $verbau = $nefz->addChild('verbau', $car->verbau);
+            $verbko = $nefz->addChild('verbko', $car->verbko);
+            $co2komN = $nefz->addChild('co2komN', $car->co2komN);
             $verbin->addAttribute('unit', $car->verb_unit);
             $verbau->addAttribute('unit', $car->verb_unit);
             $verbko->addAttribute('unit', $car->verb_unit);
-            $co2kom->addAttribute('unit', $car->co2_unit);
+            $co2komN->addAttribute('unit', $car->co2_unit);
 
-            $wltp = $schein->addChild('wltp');
-            $sehrs=$wltp->addChild('sehrs', $car->sehrs);
-            $schnell=$wltp->addChild('schnell', $car->schnell);
-            $langsam=$wltp->addChild('langsam', $car->langsam);
-            $co2komb=$wltp->addChild('co2kom', $car->co2komb);
+            $wltp = $caritem->addChild('wltp');
+            $sehrs = $wltp->addChild('sehrs', $car->sehrs);
+            $schnell = $wltp->addChild('schnell', $car->schnell);
+            $langsam = $wltp->addChild('langsam', $car->langsam);
+            $co2komW = $wltp->addChild('co2komN', $car->co2komW);
             $sehrs->addAttribute('unit', $car->verb_unit);
             $schnell->addAttribute('unit', $car->verb_unit);
             $langsam->addAttribute('unit', $car->verb_unit);
-            $co2komb->addAttribute('unit', $car->co2_unit);
-
+            $co2komW->addAttribute('unit', $car->co2_unit);
         }
 
-        $xml->asXML('export.xml');
+        $xml->asXML('dbXML.xml');
         $this->export_message = "XML-File erfolgreich exportiert.";
     }
 
@@ -189,7 +193,7 @@ class XmlController extends CarController
             print '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
             $this->libxml_display_errors();
         }
-        $this->validate_message="XML erfolgreich mit Schema abgeglichen.";
+        $this->validate_message = "XML erfolgreich mit Schema abgeglichen.";
     }
     function libxml_display_error($error)
     {

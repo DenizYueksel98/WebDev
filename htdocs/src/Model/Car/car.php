@@ -14,22 +14,23 @@ class Car extends AbstractModel
     public $j;
     public $vier;
     public $d1;
-    public $d2;
+    public $d21;
+    public $d22;
+    public $d23;
     public $zwei;
-    public $fuenf;
+    public $fuenf1;
+    public $fuenf2;
     public $v9;
     public $vierzehn;
     public $p3;
-    public $nid;
     public $verbin;
     public $verbau;
     public $verbko;
-    public $co2kom;
-    public $wid;
+    public $co2komN;
     public $sehrs;
     public $schnell;
     public $langsam;
-    public $co2komb;
+    public $co2komW;
     public $verb_unit;
     public $co2_unit;
 
@@ -40,9 +41,12 @@ class Car extends AbstractModel
     public function setj($j){$this->j=$j;}
     public function setvier($vier){$this->vier=$vier;}
     public function setd1($d1){$this->d1=$d1;}
-    public function setd2($d2){$this->d2=$d2;}
+    public function setd21($d21){$this->d21=$d21;}
+    public function setd22($d22){$this->d22=$d22;}
+    public function setd23($d23){$this->d23=$d23;}
     public function setzwei($zwei){$this->zwei=$zwei;}
-    public function setfuenf($fuenf){$this->fuenf=$fuenf;}
+    public function setfuenf1($fuenf1){$this->fuenf1=$fuenf1;}
+    public function setfuenf2($fuenf2){$this->fuenf2=$fuenf2;}
     public function setv9($v9){$this->v9=$v9;}
     public function setvierzehn($vierzehn){$this->vierzehn=$vierzehn;}
     public function setp3($p3){$this->p3=$p3;}
@@ -50,12 +54,12 @@ class Car extends AbstractModel
     public function setverbin($verbin){$this->verbin=$verbin;}
     public function setverbau($verbau){$this->verbau=$verbau;}
     public function setverbko($verbko){$this->verbko=$verbko;}
-    public function setco2kom($co2kom){$this->co2kom=$co2kom;}
+    public function setco2komN($co2komN){$this->co2kom=$co2komN;}
     public function setwid($wid){$this->wid=$wid;}
     public function setsehrs($sehrs){$this->sehrs=$sehrs;}
     public function setschnell($schnell){$this->schnell=$schnell;}
     public function setlangsam($langsam){$this->langsam=$langsam;}
-    public function setco2komb($co2komb){$this->co2komb=$co2komb;}
+    public function setco2komW($co2komW){$this->co2komW=$co2komW;}
     public function setverb_unit($verb_unit){$this->verb_unit=$verb_unit;}
     public function setco2_unit($co2_unit){$this->co2_unit=$co2_unit;}
 
@@ -66,9 +70,12 @@ class Car extends AbstractModel
     public function getj(){return $this->j;}
     public function getvier(){return $this->vier;}
     public function getd1(){return $this->d1;}
-    public function getd2(){return $this->d2;}
+    public function getd21(){return $this->d21;}
+    public function getd22(){return $this->d22;}
+    public function getd23(){return $this->d23;}
     public function getzwei(){return $this->zwei;}
-    public function getfuenf(){return $this->fuenf;}
+    public function getfuenf1(){return $this->fuenf1;}
+    public function getfuenf2(){return $this->fuenf2;}
     public function getv9(){return $this->v9;}
     public function getvierzehn(){return $this->vierzehn;}
     public function getp3(){return $this->p3;}
@@ -76,12 +83,12 @@ class Car extends AbstractModel
     public function getverbin(){return $this->verbin;}
     public function getverbau(){return $this->verbau;}
     public function getverbko(){return $this->verbko;}
-    public function getco2kom(){return $this->co2kom;}
+    public function getco2komN(){return $this->co2komN;}
     public function getwid(){return $this->wid;}
     public function getsehrs(){return $this->sehrs;}
     public function getschnell(){return $this->schnell;}
     public function getlangsam(){return $this->langsam;}
-    public function getco2komb(){return $this->co2komb;}
+    public function getco2komW(){return $this->co2komW;}
     public function getverb_unit(){return $this->verb_unit;}
     public function getco2_unit(){return $this->co2_unit;}
     /*
@@ -106,7 +113,7 @@ class Car extends AbstractModel
         $sehrs,
         $schnell,
         $langsam,
-        $co2komb
+        $co2komW
     ) {
         $this->id = $id;
         $this->name = $name;
@@ -125,12 +132,12 @@ class Car extends AbstractModel
         $this->verbin = $verbin;
         $this->verbau = $verbau;
         $this->verbko = $verbko;
-        $this->co2kom = $co2kom;
+        $this->co2kom = $co2komN;
         $this->wid = $id;
         $this->sehrs = $sehrs;
         $this->schnell = $schnell;
         $this->langsam = $langsam;
-        $this->co2komb = $co2komb;
+        $this->co2komW = $co2komW;
     }*/
     /*
     public function readAll()
@@ -161,7 +168,7 @@ class Car extends AbstractModel
         w.sehrs,
         w.schnell,
         w.langsam,
-        w.co2komb
+        w.co2komW
         FROM ' . $this->table . ' s 
         LEFT JOIN '
             . $this->nefz . ' n ON s.id=n.id
@@ -195,7 +202,7 @@ class Car extends AbstractModel
         w.sehrs,
         w.schnell,
         w.langsam,
-        w.co2komb
+        w.co2komW
         FROM ' . $this->table . ' s 
         LEFT JOIN 
             nefz n ON s.id=n.id
@@ -266,7 +273,7 @@ class Car extends AbstractModel
             str_contains(strtolower($this->filter), 'verbko')
         )        $this->fil = 'n.' . $this->filter;
         elseif (
-            str_contains(strtolower($this->filter), 'co2kom')
+            str_contains(strtolower($this->filter), 'co2komN')
         )        $this->fil = 'n.' . $this->filter;
         elseif (
             str_contains(strtolower($this->filter), 'sehrs')
@@ -278,7 +285,7 @@ class Car extends AbstractModel
             str_contains(strtolower($this->filter), 'langsam')
         )       $this->fil = 'w.' . $this->filter;
         elseif (
-            str_contains(strtolower($this->filter), 'co2komb')
+            str_contains(strtolower($this->filter), 'co2komW')
         )       $this->fil = 'w.' . $this->filter;
         $this->fil = $this->filter;
     }
@@ -307,7 +314,7 @@ class Car extends AbstractModel
         w.sehrs,
         w.schnell,
         w.langsam,
-        w.co2komb
+        w.co2komW
         FROM ' . $this->table . ' s 
         LEFT JOIN '
             . $this->nefz . ' n ON s.id=n.id
@@ -330,14 +337,14 @@ class Car extends AbstractModel
             verbin,
             verbau,
             verbko,
-            co2kom)
+            co2komN)
             VALUES(?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query); //prepare query
         $this->nid       = htmlspecialchars(strip_tags($this->nid)); //get rid of html special chars and set vars
         $this->verbin    = htmlspecialchars(strip_tags($this->verbin));
         $this->verbau    = htmlspecialchars(strip_tags($this->verbau));
         $this->verbko    = htmlspecialchars(strip_tags($this->verbko));
-        $this->co2kom    = htmlspecialchars(strip_tags($this->co2kom));
+        $this->co2kom    = htmlspecialchars(strip_tags($this->co2komN));
         $stmt->bind_param(
             'idddd',
             $this->nid,
@@ -354,21 +361,21 @@ class Car extends AbstractModel
             sehrs,
             schnell,
             langsam,
-            co2komb)
+            co2komW)
             VALUES(?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query); //prepare query
         $this->wid        = htmlspecialchars(strip_tags($this->wid)); //get rid of html special chars and set vars
         $this->sehrs      = htmlspecialchars(strip_tags($this->sehrs));
         $this->schnell    = htmlspecialchars(strip_tags($this->schnell));
         $this->langsam    = htmlspecialchars(strip_tags($this->langsam));
-        $this->co2komb    = htmlspecialchars(strip_tags($this->co2komb));
+        $this->co2komW    = htmlspecialchars(strip_tags($this->co2komW));
         $stmt->bind_param(
             'idddd',
             $this->wid,
             $this->sehrs,
             $this->schnell,
             $this->langsam,
-            $this->co2komb
+            $this->co2komW
         );
         if (!$stmt->execute()) { //exec
             printf("Error while inserting in %s %s. \n", $this->wltp, $stmt->error); //error

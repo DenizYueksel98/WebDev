@@ -16,9 +16,8 @@ class CarDatabase implements Database
     private $password; //insert wwi2021a for docker
     private $userdatabase;
     private $dbhandle;
-    private $table = 'schein'; //define table schein
-    private $wltp = 'wltp'; // define wltp
-    private $nefz = 'nefz'; //define nefz
+    private $table = 'cars'; //define table cars
+    private $table2 = 'marke'; // define marken-table
 
     public function __construct(
         $host,
@@ -91,7 +90,7 @@ class CarDatabase implements Database
 
             $carArray[] = $car;
         }
-        //print_r($cars[0]);
+        //print_r($carArray[0]);
         //$stmt->store_result(); //recieve information into mysqli_stmt-object
         //$result = $stmt->fetch_all(MYSQLI_ASSOC);
         //$result = $this->db->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
@@ -153,7 +152,7 @@ class CarDatabase implements Database
             $car->sehrs,
             $car->schnell,
             $car->langsam,
-            $car->co2komb
+            $car->co2komW
         );
         if ($stmt->execute() == false) { //exec
             printf("Error while inserting in %s %s. \n", $this->wltp, $stmt->error); //error
@@ -231,11 +230,11 @@ class CarDatabase implements Database
                     'verbin' => $verbin,
                     'verbau' => $verbau,
                     'verbko' => $verbko,
-                    'co2kom' => $co2kom,
+                    'co2komN' => $co2komN,
                     'sehrs' => $sehrs,
                     'schnell' => $schnell,
                     'langsam' => $langsam,
-                    'co2komb' => $co2komb,
+                    'co2komW' => $co2komW,
                     'verb_unit' => $verb_unit,
                     'co2_unit' => $co2_unit
                 );
@@ -253,7 +252,7 @@ class CarDatabase implements Database
             verbin,
             verbau,
             verbko,
-            co2kom)
+            co2komN)
             VALUES(?, ?, ?, ?, ?)";
         return $query;
     }
@@ -264,7 +263,7 @@ class CarDatabase implements Database
             sehrs,
             schnell,
             langsam,
-            co2komb)
+            co2komW)
             VALUES(?, ?, ?, ?, ?)";
         return $query;
     }
@@ -293,19 +292,19 @@ class CarDatabase implements Database
         //$this->filterCheck(); //check if table is not supplied and add if missing
         //$this->likeCheck(); //if theta is LIKE then surround value with %
         $query = 'SELECT 
-        * FROM `xml` WHERE ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
+        * FROM `cars` WHERE ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
         return $query;
     }
     public function readAllSql() //read all lines and return stmt
     {
         $query = 'SELECT 
-        * FROM `xml`;';
+        * FROM `cars`;';
         return $query;
     }
     public function readSingleSql() //read single line and return stmt
     {
         $query = 'SELECT 
-        * FROM `xml`
+        * FROM `cars`
         WHERE id = ? LIMIT 1'; //prepare syntax from query
         return $query;
     }

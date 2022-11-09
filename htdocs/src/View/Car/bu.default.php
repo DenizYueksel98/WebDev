@@ -46,11 +46,11 @@
                     <td><?php echo $car['verbin']; ?></td>
                     <td><?php echo $car['verbau']; ?></td>
                     <td><?php echo $car['verbko']; ?></td>
-                    <td><?php echo $car['co2kom']; ?></td>
+                    <td><?php echo $car['co2komN']; ?></td>
                     <td><?php echo $car['sehrs']; ?></td>
                     <td><?php echo $car['schnell']; ?></td>
                     <td><?php echo $car['langsam']; ?></td>
-                    <td><?php echo $car['co2komb']; ?></td>
+                    <td><?php echo $car['co2komW']; ?></td>
                 </tr>
         <?php }
             } else

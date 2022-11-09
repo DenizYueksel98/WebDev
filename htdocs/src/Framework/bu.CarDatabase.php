@@ -145,7 +145,7 @@ class CarDatabase implements Database
             $car->sehrs,
             $car->schnell,
             $car->langsam,
-            $car->co2komb
+            $car->co2komW
         );
         if ($stmt->execute() == false) { //exec
             printf("Error while inserting in %s %s. \n", $this->wltp, $stmt->error); //error
@@ -220,11 +220,11 @@ class CarDatabase implements Database
                     'verbin' => $verbin,
                     'verbau' => $verbau,
                     'verbko' => $verbko,
-                    'co2kom' => $co2kom,
+                    'co2komN' => $co2kom,
                     'sehrs' => $sehrs,
                     'schnell' => $schnell,
                     'langsam' => $langsam,
-                    'co2komb' => $co2komb
+                    'co2komW' => $co2komW
                 );
                 array_push($car_arr, $car_item);
             }
@@ -240,7 +240,7 @@ class CarDatabase implements Database
             verbin,
             verbau,
             verbko,
-            co2kom)
+            co2komN)
             VALUES(?, ?, ?, ?, ?)";
         return $query;
     }
@@ -251,7 +251,7 @@ class CarDatabase implements Database
             sehrs,
             schnell,
             langsam,
-            co2komb)
+            co2komW)
             VALUES(?, ?, ?, ?, ?)";
         return $query;
     }
@@ -300,7 +300,7 @@ class CarDatabase implements Database
         w.sehrs,
         w.schnell,
         w.langsam,
-        w.co2komb
+        w.co2komW
         FROM `schein` s, `nefz` n, `wltp` w WHERE s.id=n.id AND s.id=w.id 
         AND ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
         return $query;
@@ -328,7 +328,7 @@ class CarDatabase implements Database
         w.sehrs,
         w.schnell,
         w.langsam,
-        w.co2komb
+        w.co2komW
         FROM ' . $this->table . ' s 
         LEFT JOIN '
             . $this->nefz . ' n ON s.id=n.id
@@ -360,7 +360,7 @@ class CarDatabase implements Database
         w.sehrs,
         w.schnell,
         w.langsam,
-        w.co2komb
+        w.co2komW
         FROM ' . $this->table . ' s 
         LEFT JOIN 
             nefz n ON s.id=n.id

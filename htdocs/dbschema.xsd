@@ -44,7 +44,7 @@
 			<xs:element name="verbin" type="consumption" maxOccurs="1" />
 			<xs:element name="verbau" type="consumption" maxOccurs="1" />
 			<xs:element name="verbko" type="consumption" maxOccurs="1" />
-			<xs:element name="co2kom1" type="co2" maxOccurs="1" />
+			<xs:element name="co2komN" type="co2" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -53,7 +53,7 @@
 			<xs:element name="sehrs" type="consumption" maxOccurs="1" />
 			<xs:element name="schnell" type="consumption" maxOccurs="1" />
 			<xs:element name="langsam" type="consumption" maxOccurs="1" />
-			<xs:element name="co2kom2" type="co2" maxOccurs="1" />
+			<xs:element name="co2komW" type="co2" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 

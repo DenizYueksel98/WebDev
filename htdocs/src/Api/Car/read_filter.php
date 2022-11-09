@@ -33,11 +33,11 @@ if (isset($filter) && isset($value) && isset($theta)) {
     elseif(str_contains(strtolower($filter),'verbin'))  $filter='n.'.$filter;
     elseif(str_contains(strtolower($filter),'verbau'))  $filter='n.'.$filter;
     elseif(str_contains(strtolower($filter),'verbko'))  $filter='n.'.$filter;
-    elseif(str_contains(strtolower($filter),'co2kom'))  $filter='n.'.$filter;
+    elseif(str_contains(strtolower($filter),'co2komN'))  $filter='n.'.$filter;
     elseif(str_contains(strtolower($filter),'sehrs'))   $filter='w.'.$filter;
     elseif(str_contains(strtolower($filter),'schnell')) $filter='w.'.$filter;
     elseif(str_contains(strtolower($filter),'langsam')) $filter='w.'.$filter;
-    elseif(str_contains(strtolower($filter),'co2komb')) $filter='w.'.$filter;
+    elseif(str_contains(strtolower($filter),'co2komW')) $filter='w.'.$filter;
     */
 }
 

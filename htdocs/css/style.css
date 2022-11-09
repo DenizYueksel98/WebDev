@@ -57,7 +57,7 @@ header {
 
 #logopng {
     width: var(--left-col-width);
-    height: 60px;
+    margin-top:0.5rem;
     background: var(--dark-gray);
 
 }
@@ -80,12 +80,23 @@ header {
     padding: 20px;
 
 }
-
-#txtHint a {
-    margin: 0 5px;
+.btn {
+    margin: 3em 8%;
     border: 1px solid var(--medium-gray);
     border-radius: var(--border-radius);
-    padding: 5px;
+    padding: 0.5em;
+    color: #333;
+}
+.btn:hover{
+    color:#FA5858;
+    background-color: #ffffff;
+}
+
+#txtHint a {
+    margin: 0.2rem 0.5rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    padding: 0.2rem;
     color: #333;
 }
 #txtHint a:hover{
@@ -199,7 +210,48 @@ footer ul li {
     color: #FA5858;
     /*color: var(--primary-color);*/
 }
+form.upload{
+    display: flex;
+    padding: 2rem;
+    color: #333;
+}
+form.upload input[type="file"],[type="submit"]{
+    padding: 0.5rem 0.5rem;
+    width: auto;
+    height:auto;
+    margin: 0 4rem;
+    cursor: pointer;
+    border-radius: inherit;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    color: #666;
+}
 
+form.upload input[type="file"]:hover,[type="submit"]:hover{
+    color: #FFF;
+    background-color: #FA5858;
+}
+form.inline{
+    display: inline;
+    padding: 4px;
+    color: #333;
+}
+
+
+form.inline button[type="submit"] {
+    padding: 0.5rem 4rem;
+    margin: 0 4rem;
+    cursor: pointer;
+    border-radius: inherit;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    color: #666;
+}
+
+form.inline button[type="submit"]:hover {
+    color: #FFF;
+    background-color: #FA5858;
+}
 /* search */
 form.search {
     display: flex;
@@ -525,7 +577,9 @@ form {
         width: 90%;
     }
 }
-
+img {
+    padding: 1em;
+}
 .input-container {
     background: var(--light-gray);
     border-radius: var(--border-radius);

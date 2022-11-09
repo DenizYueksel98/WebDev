@@ -31,11 +31,11 @@ class SearchController extends CarController
         'getverbin',
         'getverbau',
         'getverbko',
-        'getco2kom',
+        'getco2komN',
         'getsehrs',
         'getschnell',
         'getlangsam',
-        'getco2komb'
+        'getco2komW'
     );
     public function suggestAction()//VorschlagsMethode
     {

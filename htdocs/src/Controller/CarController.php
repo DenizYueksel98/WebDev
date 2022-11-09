@@ -82,7 +82,8 @@ class CarController extends AbstractController
 
         //Alles okay, verschiebe Datei an neuen Pfad
         move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $new_path);
-        echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';
+        $this->message= 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>
+        <a href="index.php?c=car&a=detail&i=' . $this->id . '">Zum Auto</a>';
     }
     public function testAction()
     {
@@ -145,20 +146,23 @@ class CarController extends AbstractController
                 $car['j'],
                 $car['vier'],
                 $car['d1'],
-                $car['d2'],
+                $car['d21'],
+                $car['d22'],
+                $car['d23'],
                 $car['zwei'],
-                $car['fuenf'],
+                $car['fuenf1'],
+                $car['fuenf2'],
                 $car['v9'],
                 $car['vierzehn'],
                 $car['p3'],
                 $car['verbin'],
                 $car['verbau'],
                 $car['verbko'],
-                $car['co2kom'],
+                $car['co2komN'],
                 $car['sehrs'],
                 $car['schnell'],
                 $car['langsam'],
-                $car['co2komb']
+                $car['co2komW']
             );
             array_push($carArray,$car);
         }
