@@ -14,11 +14,10 @@ class CarDatabase implements Database
 {
     private $host;
     private $username;
-    private $password; //insert wwi2021a for docker
+    private $password; 
     private $userdatabase;
     private $dbhandle;
-    private $table = 'cars'; //define table cars
-    private $table2 = 'marke'; // define marken-table
+    private $table = 'cars'; //define table cars for inserting into query-strings
 
     public function __construct(
         $host,
@@ -35,6 +34,7 @@ class CarDatabase implements Database
     {
         return $this->dbhandle;
     }
+    //set dbhandle
     public function connect()
     {
         $this->dbhandle = mysqli_connect(
@@ -44,6 +44,7 @@ class CarDatabase implements Database
             $this->userdatabase
         ) or die("error");
     }
+    //prepare sql string and return stmt-object
     public function prepare($sql)
     {
         $stmt = mysqli_prepare(
@@ -52,19 +53,14 @@ class CarDatabase implements Database
         );
         return $stmt;
     }
+    //hand over real esc, sql injection prevention
     public function real_escape_string($str)
     {
         return $this->dbhandle->real_escape_string($str);
     }
+    
+    //return result for sql-string without fetch_all
     public function query($str)
-    {
-        $result = mysqli_query(
-            $this->dbhandle,
-            $str
-        ); //fetch_all(MYSQLI_ASSOC)
-        return $result->fetch_all(MYSQLI_ASSOC);
-    }
-    public function query2($str)
     {
         $result = mysqli_query(
             $this->dbhandle,
@@ -91,7 +87,6 @@ class CarDatabase implements Database
         $stmt->execute(); //do query
         $result = mysqli_stmt_get_result($stmt);
         $result->fetch_all(MYSQLI_ASSOC);
-        
         return $result; //Array with car objects
     }
     public function readSingleCar($id)
@@ -101,10 +96,9 @@ class CarDatabase implements Database
         $stmt->execute(); //do query
         $result = mysqli_stmt_get_result($stmt);
         $result->fetch_all(MYSQLI_ASSOC);
-
-
         return $result;
     }
+    
     public function create(Car $car)
     {
         //getting the sql query for writing into nefz table
@@ -210,7 +204,7 @@ class CarDatabase implements Database
     }
     public function createSql()
     {
-        $query = 'INSERT INTO `cars` (
+        $query = 'INSERT INTO `'.$this->table.'` (
             id,
             name,
             b21,
@@ -245,19 +239,19 @@ class CarDatabase implements Database
         //$this->filterCheck(); //check if table is not supplied and add if missing
         //$this->likeCheck(); //if theta is LIKE then surround value with %
         $query = 'SELECT 
-        * FROM `cars` WHERE ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
+        * FROM `'.$this->table.'` WHERE ' . $filter . ' ' . $theta . " '" . $value . "'" . ' ;'; //prepare syntax from query
         return $query;
     }
     public function readAllSql() //read all lines and return stmt
     {
         $query = 'SELECT 
-        * FROM `cars`;';
+        * FROM `'.$this->table.'`;';
         return $query;
     }
     public function readSingleSql() //read single line and return stmt
     {
         $query = 'SELECT 
-        * FROM `cars`
+        * FROM `'.$this->table.'`
         WHERE id = ? LIMIT 1'; //prepare syntax from query
         return $query;
     }

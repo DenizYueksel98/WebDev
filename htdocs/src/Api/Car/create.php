@@ -10,32 +10,32 @@ include_once(__DIR__.'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIREC
 //include_once(MODEL_PATH.DS.'Car/car.php');
 $data = json_decode(file_get_contents("php://input"));//decode data from recieved json
 $car = new Car();
-$car->setid($repo->real_escape_string($data->id));//define fields from json in car constructor
-$car->setname($repo->real_escape_string($data->name));
-$car->setb21($repo->real_escape_string($data->b21));
-$car->setb22($repo->real_escape_string($data->b22));
-$car->setj($repo->real_escape_string($data->j));
-$car->setvier($repo->real_escape_string($data->vier));
-$car->setd1($repo->real_escape_string($data->d1));
-$car->setd21($repo->real_escape_string($data->d21));
-$car->setd22($repo->real_escape_string($data->d22));
-$car->setd23($repo->real_escape_string($data->d23));
-$car->setzwei($repo->real_escape_string($data->zwei));
-$car->setfuenf1($repo->real_escape_string($data->fuenf1));
-$car->setfuenf2($repo->real_escape_string($data->fuenf2));
-$car->setv9($repo->real_escape_string($data->v9));
-$car->setvierzehn($repo->real_escape_string($data->vierzehn));
-$car->setp3($repo->real_escape_string($data->p3));
-$car->setverbin($repo->real_escape_string($data->verbin));
-$car->setverbau($repo->real_escape_string($data->verbau));
-$car->setverbko($repo->real_escape_string($data->verbko));
-$car->setco2komN($repo->real_escape_string($data->co2komN));
-$car->setsehrs($repo->real_escape_string($data->sehrs));
-$car->setschnell($repo->real_escape_string($data->schnell));
-$car->setlangsam($repo->real_escape_string($data->langsam));
-$car->setco2komW($repo->real_escape_string($data->co2komW));
-$car->setverb_unit('l/100km');
-$car->setco2_unit('g/km');
+$car->__set('id',$repo->real_escape_string($data->id));//define fields from json in car constructor
+$car->__set('name',$repo->real_escape_string($data->name));
+$car->__set('b21',$repo->real_escape_string($data->b21));
+$car->__set('b22',$repo->real_escape_string($data->b22));
+$car->__set('j',$repo->real_escape_string($data->j));
+$car->__set('vier',$repo->real_escape_string($data->vier));
+$car->__set('d1',$repo->real_escape_string($data->d1));
+$car->__set('d21',$repo->real_escape_string($data->d21));
+$car->__set('d22',$repo->real_escape_string($data->d22));
+$car->__set('d23',$repo->real_escape_string($data->d23));
+$car->__set('zwei',$repo->real_escape_string($data->zwei));
+$car->__set('fuenf1',$repo->real_escape_string($data->fuenf1));
+$car->__set('fuenf2',$repo->real_escape_string($data->fuenf2));
+$car->__set('v9',$repo->real_escape_string($data->v9));
+$car->__set('vierzehn',$repo->real_escape_string($data->vierzehn));
+$car->__set('p3',$repo->real_escape_string($data->p3));
+$car->__set('verbin',$repo->real_escape_string($data->verbin));
+$car->__set('verbau',$repo->real_escape_string($data->verbau));
+$car->__set('verbko',$repo->real_escape_string($data->verbko));
+$car->__set('co2komN',$repo->real_escape_string($data->co2komN));
+$car->__set('sehrs',$repo->real_escape_string($data->sehrs));
+$car->__set('schnell',$repo->real_escape_string($data->schnell));
+$car->__set('langsam',$repo->real_escape_string($data->langsam));
+$car->__set('co2komW',$repo->real_escape_string($data->co2komW));
+$car->__set('verb_unit','l/100km');
+$car->__set('co2_unit','g/km');
 
 if ($repo->create($car)) {
     echo json_encode(

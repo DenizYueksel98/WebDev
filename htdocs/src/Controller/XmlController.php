@@ -3,10 +3,7 @@
 namespace Controller;
 
 use Framework\AbstractController;
-use Directory;
-use Framework\CarDatabase;
-use Framework\CarRepository;
-use Repository\CarRepository as RepositoryCarRepository;
+
 use SimpleXMLElement;
 class XmlController extends AbstractController
 {
@@ -18,9 +15,8 @@ class XmlController extends AbstractController
         
     }
     public function importAction(){
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        //$db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
-        $db->connect();
+        include(__DIR__.'/../../core/config.php');
+        //$db = new CarDatabase("127.0.0.1", "root", "", "cars");
         $db->truncateTable("`cars`");
         $affectedRow = 0;
 
@@ -114,7 +110,7 @@ class XmlController extends AbstractController
                 $co2komW .  "','" .
                 $verb_unit . "','" .
                 $co2_unit . "')";
-            $result = $db->query2($sql);
+            $result = $db->query($sql);
             if (empty($result) == false) {
                 $affectedRow++;
             } else {
@@ -126,59 +122,51 @@ class XmlController extends AbstractController
     }
     public function exportAction()
     {
-        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        //$db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
-        $db->connect();
-        $repo = new RepositoryCarRepository($db);
+        include(__DIR__.'/../../core/config.php');
         $carModel=$repo->readAll();
-        //$file = file_get_contents("./input.xml");
-        //$xml = simplexml_load_string($file)
-        //   or die("Error: Cannot create object");
-        //print_r($carModel);
         $xml = new SimpleXMLElement('<db></db>');
         //carModel sind viele Auto Objekte, die heißen car
         foreach ($carModel as $car) {
             $caritem = $xml->addChild('car');
-            $caritem->addChild('id', $car->id);
-            $caritem->addChild('name', $car->name);
+                $caritem->addChild('id', $car->id);
+                $caritem->addChild('name', $car->name);
 
-            $schein = $caritem->addChild('schein');
-            $schein->addChild('b21', $car->b21);
-            $schein->addChild('b22', $car->b22);
-            $schein->addChild('j', $car->j);
-            $schein->addChild('vier', $car->vier);
-            $schein->addChild('d1', $car->d1);
-            $schein->addChild('d21', $car->d21);
-            $schein->addChild('d22', $car->d22);
-            $schein->addChild('d23', $car->d23);
-            $schein->addChild('zwei', $car->zwei);
-            $schein->addChild('fuenf1', $car->fuenf1);
-            $schein->addChild('fuenf2', $car->fuenf2);
-            $schein->addChild('v9', $car->v9);
-            $schein->addChild('vierzehn', $car->vierzehn);
-            $schein->addChild('p3', $car->p3);
+                $schein = $caritem->addChild('schein');
+                    $schein->addChild('b21', $car->b21);
+                    $schein->addChild('b22', $car->b22);
+                    $schein->addChild('j', $car->j);
+                    $schein->addChild('vier', $car->vier);
+                    $schein->addChild('d1', $car->d1);
+                    $schein->addChild('d21', $car->d21);
+                    $schein->addChild('d22', $car->d22);
+                    $schein->addChild('d23', $car->d23);
+                    $schein->addChild('zwei', $car->zwei);
+                    $schein->addChild('fuenf1', $car->fuenf1);
+                    $schein->addChild('fuenf2', $car->fuenf2);
+                    $schein->addChild('v9', $car->v9);
+                    $schein->addChild('vierzehn', $car->vierzehn);
+                    $schein->addChild('p3', $car->p3);
 
-            $nefz = $caritem->addChild('nefz');
-            $verbin = $nefz->addChild('verbin', $car->verbin);
-            $verbau = $nefz->addChild('verbau', $car->verbau);
-            $verbko = $nefz->addChild('verbko', $car->verbko);
-            $co2komN = $nefz->addChild('co2komN', $car->co2komN);
-            $verbin->addAttribute('unit', $car->verb_unit);
-            $verbau->addAttribute('unit', $car->verb_unit);
-            $verbko->addAttribute('unit', $car->verb_unit);
-            $co2komN->addAttribute('unit', $car->co2_unit);
+                $nefz = $caritem->addChild('nefz');
+                    $verbin = $nefz->addChild('verbin', $car->verbin);
+                    $verbau = $nefz->addChild('verbau', $car->verbau);
+                    $verbko = $nefz->addChild('verbko', $car->verbko);
+                    $co2komN = $nefz->addChild('co2komN', $car->co2komN);
+                        $verbin->addAttribute('unit', $car->verb_unit);
+                        $verbau->addAttribute('unit', $car->verb_unit);
+                        $verbko->addAttribute('unit', $car->verb_unit);
+                        $co2komN->addAttribute('unit', $car->co2_unit);
 
-            $wltp = $caritem->addChild('wltp');
-            $sehrs = $wltp->addChild('sehrs', $car->sehrs);
-            $schnell = $wltp->addChild('schnell', $car->schnell);
-            $langsam = $wltp->addChild('langsam', $car->langsam);
-            $co2komW = $wltp->addChild('co2komW', $car->co2komW);
-            $sehrs->addAttribute('unit', $car->verb_unit);
-            $schnell->addAttribute('unit', $car->verb_unit);
-            $langsam->addAttribute('unit', $car->verb_unit);
-            $co2komW->addAttribute('unit', $car->co2_unit);
+                $wltp = $caritem->addChild('wltp');
+                    $sehrs = $wltp->addChild('sehrs', $car->sehrs);
+                    $schnell = $wltp->addChild('schnell', $car->schnell);
+                    $langsam = $wltp->addChild('langsam', $car->langsam);
+                    $co2komW = $wltp->addChild('co2komW', $car->co2komW);
+                        $sehrs->addAttribute('unit', $car->verb_unit);
+                        $schnell->addAttribute('unit', $car->verb_unit);
+                        $langsam->addAttribute('unit', $car->verb_unit);
+                        $co2komW->addAttribute('unit', $car->co2_unit);
         }
-
         $xml->asXML('dbXML.xml');
         $this->export_message = "XML-File erfolgreich exportiert.";
     }

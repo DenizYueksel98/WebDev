@@ -28,26 +28,25 @@ getJSON = function (url) {
 handleResult = function (data) 
 {
     carModel = JSON.parse(data)//Parse die Daten in der JSON in die Variable result
-    console.log(carModel);
-    var resultcount= document.getElementById('resultcount');
-    if(carModel.length>0){
+    var resultcount= document.getElementById('resultcount');//result Counter
+    if(carModel.length>0){ //error handling für keine Suchtreffer
     resultcount.innerHTML = carModel.length+" cars fit with your filter.";
     }
     else {
         resultcount.innerHTML = "Poorly we found no cars matching your filters.";
     }
-    buildHtmlTable('#carDataTable', carModel);
+    buildHtmlTable('#carDataTable', carModel);//führe buildTable aus, übergib carModel
 }
 function buildHtmlTable(selector, carModel) {
     wait.style.display = "none";//Entferne den Platzhalter
-    var Table = document.getElementById('carDataTable');
-    Table.innerHTML = "";
-    var columns = addAllColumnHeaders(carModel, selector);
-    console.log(carModel)
+    var Table = document.getElementById('carDataTable');//definiere Table aus ID
+    Table.innerHTML = ""; //Leere den aktuellen Inhalt, sonst fügt es einfach unten an
+    var columns = addAllColumnHeaders(carModel, selector);//columns werden in ausgelagerter Funktion erzeugt
     for (var i = 0; i < carModel.length; i++) {
         var row$ = $('<tr/>');
         for (var colIndex = 0; colIndex < (columns.length + 1); colIndex++) {
             if (colIndex == columns.length) {
+                //letzte Spalte erreicht, füge Button (<a>-Tag, Rest passiert durch CSS) auf Detail Seite an 
                 var cellValue = "<a id='showDetails' href='/index.php?c=car&a=detail&i=" + carModel[i]['id'] + "'>Show Details</a>";
             }
             else {

@@ -85,28 +85,11 @@ class CarController extends AbstractController
         $this->message= 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>
         <a href="index.php?c=car&a=detail&i=' . $this->id . '">Zum Auto</a>';
     }
-    public function testAction()
-    {
-    }
-    public function getSingleId($id)
-    {
-        foreach ($GLOBALS as $name => $var) {
-            print_r($GLOBALS[$name]);
-        }
-    }
     public function defaultAction()
     {
         //$this->curlQuery();
         $this->readAll();
         //print_r($result);
-    }
-    public function cleanupCars()
-    {
-        foreach ($GLOBALS as $name => $var) {
-            if ($var instanceof Car) {
-                unset($GLOBALS[$name]);
-            }
-        }
     }
     public function readFromDB()
     {
@@ -134,7 +117,7 @@ class CarController extends AbstractController
         return $this->carModel;
     }
     
-    public function detailAction()
+        public function detailAction()
     {
         include(__DIR__.'/../../core/config.php');
         $car = $repo->readSingleCar($this->id);
@@ -151,6 +134,6 @@ class CarController extends AbstractController
     }
     public function createAction()
     {
-        //lege Fahrzeug an
+        //lege Fahrzeug an, passiert über Form an JS, schickt an Api/Car/create.php
     }
 }

@@ -7,34 +7,43 @@ use Directory;
 include_once(__DIR__.DS.'..'.DS.'..'.DS.'Framework/AbstractModel.php');
 class Car extends AbstractModel
 {
-    protected $id;
-    protected $name;
-    protected $b21;
-    protected $b22;
-    protected $j;
-    protected $vier;
-    protected $d1;
-    protected $d21;
-    protected $d22;
-    protected $d23;
-    protected $zwei;
-    protected $fuenf1;
-    protected $fuenf2;
-    protected $v9;
-    protected $vierzehn;
-    protected $p3;
-    protected $verbin;
-    protected $verbau;
-    protected $verbko;
-    protected $co2komN;
-    protected $sehrs;
-    protected $schnell;
-    protected $langsam;
-    protected $co2komW;
-    protected $verb_unit;
-    protected $co2_unit;
+    public $id;
+    public $name;
+    public $b21;
+    public $b22;
+    public $j;
+    public $vier;
+    public $d1;
+    public $d21;
+    public $d22;
+    public $d23;
+    public $zwei;
+    public $fuenf1;
+    public $fuenf2;
+    public $v9;
+    public $vierzehn;
+    public $p3;
+    public $verbin;
+    public $verbau;
+    public $verbko;
+    public $co2komN;
+    public $sehrs;
+    public $schnell;
+    public $langsam;
+    public $co2komW;
+    public $verb_unit;
+    public $co2_unit;
 
 /*
+    Nachfolgend für die nächsten 400 Zeilen Code gilt:
+    Initial wurde das Projekt über ActiveRecord umgesetzt
+    (eine Car Klasse bündelt sämtliche Funktionen) 
+    Mittlerweile haben wir PoPo versucht vollständig umzusetzen und 
+    daher Funktionen aus der car.php in CarReposity bzw. CarDatabase
+    aufgeteilt. Diese können nun von den API Endpunkten oder Controllern 
+    eingebunden und direkt verwendet werden. Getter&Setter&fromArray() Car extends AbstractModel
+
+
     public function setid($id){$this->id=$id;}
     public function setname($name){$this->name=$name;}
     public function setb21($b21){$this->b21=$b21;}
