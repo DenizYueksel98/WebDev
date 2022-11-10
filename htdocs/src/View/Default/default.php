@@ -5,20 +5,9 @@
 
 
 <section>
-    <h1> Registriere dich hier</h1>
-      <form action="#URL endpunkt wo die daten hingeschickt werden sollen">
-        <div class="input-container">
-            <input type="password" name="firstname" placeholder=" " />
-            <label for="firstname" class="placeholder">First name</label>
-        </div>
-
-        <div class="input-container">
-            <input type="text" name="lastname" placeholder=" " />
-            <label for="lastname" class="placeholder">Last name</label>
-        </div>
-
-        <button class="button" type="submit">
-        Jetzt Registrieren
-        </button>
-    </form>
+    <h1>Car-24 Deine KFZ-Datenbank</h1>
+    <h2>DB-Anbindung, XML-Imports/Exports, dynamische SQL-Queries</h2>
+    <h2>Suche, Filtere und behalte den Überblick bei deinen Autos</h2>
+    <p>Neue Funktion: Lade nun ein Fahrzeugbild auf der Detail-Seite direkt hoch</p>
+    
 </section>

@@ -2,6 +2,7 @@
 
 namespace Framework;
 
+//use Framework\Database;
 use Model\Car\Car;
 use Directory;
 
@@ -77,90 +78,39 @@ class CarDatabase implements Database
         $result = mysqli_query($this->dbhandle, $sql);
         return $result;
     }
-    //give it a prepared stmt and it answers the result  
-    public function doMagic($stmt)
-    {
-        $stmt->execute(); //do query
-        $result = mysqli_stmt_get_result($stmt);
-        $result->fetch_all(MYSQLI_ASSOC);
-
-        foreach ($result as $row) {
-            $car = new Car();
-            $car->fromArray((array)$row);
-
-            $carArray[] = $car;
-        }
-        //print_r($carArray[0]);
-        //$stmt->store_result(); //recieve information into mysqli_stmt-object
-        //$result = $stmt->fetch_all(MYSQLI_ASSOC);
-        //$result = $this->db->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
-        return $carArray;
-    }
-    public function doOldMagic($stmt)
-    {
-        //$stmt->get_result(); //recieve information into mysqli_stmt-object
-        //$stmt->fetch_all(MYSQLI_ASSOC);
-        $result = $this->handleResult($stmt); //Stmt parse into Array & parse into JSON-String
-        return $result;
-    }
     public function readFilter($filter, $theta, $value)
     {
         $stmt = $this->prepare($this->readFilterSql($filter, $theta, $value));
         $stmt->execute();
         $stmt->store_result();
-        return $this->doOldMagic($stmt);
-    }
-    public function readSingle($id)
-    {
-        $stmt = $this->prepare($this->readSingleSql()); //prepare query
-        $stmt->bind_param('i', $id); //bind param for id
-        return $this->doMagic($stmt);
+        return $this->handleResult($stmt);
     }
     public function readAll()
     {
         $stmt = $this->prepare($this->readAllSql()); //define mysqli_stmt-object
-        return $this->doMagic($stmt); //Array with car objects
+        $stmt->execute(); //do query
+        $result = mysqli_stmt_get_result($stmt);
+        $result->fetch_all(MYSQLI_ASSOC);
+        
+        return $result; //Array with car objects
     }
     public function readSingleCar($id)
     {
         $stmt = $this->prepare($this->readSingleSql()); //prepare query
         $stmt->bind_param('i', $id); //bind param for id
-        $carArray = $this->doMagic($stmt);
-        $car = $carArray[0];
-        return $car;
+        $stmt->execute(); //do query
+        $result = mysqli_stmt_get_result($stmt);
+        $result->fetch_all(MYSQLI_ASSOC);
+
+
+        return $result;
     }
     public function create(Car $car)
     {
         //getting the sql query for writing into nefz table
-        $stmt = $this->prepare($this->createNefzSql()); //prepare query, store in stmt obj.        
+        $stmt = $this->prepare($this->createSql()); //prepare query, store in stmt obj.        
         $stmt->bind_param(              //binding the supplied values from Car object
-            'idddd',
-            $car->nid,
-            $car->verbin,
-            $car->verbau,
-            $car->verbko,
-            $car->co2kom
-        );
-        if ($stmt->execute() == false) { //exec
-            printf("Error while inserting in %s %s. \n", $this->nefz, $stmt->error); //error
-        }
-        //get SQL-String for INSERT INTO wltp
-        $stmt = $this->prepare($this->createWltpSql()); //prepare query, store in stmt
-        $stmt->bind_param(              //binding the supplied values from Car object
-            'idddd',
-            $car->id,
-            $car->sehrs,
-            $car->schnell,
-            $car->langsam,
-            $car->co2komW
-        );
-        if ($stmt->execute() == false) { //exec
-            printf("Error while inserting in %s %s. \n", $this->wltp, $stmt->error); //error
-        }
-        //get SQL-String for INSER INTO schein
-        $stmt = $this->prepare($this->createScheinSql()); //prepare query, store in stmt
-        $stmt->bind_param(              //binding the supplied values from Car object
-            'issssssssssss',
+            'isiissssssssssssddddddddss',
             $car->id,
             $car->name,
             $car->b21,
@@ -168,12 +118,25 @@ class CarDatabase implements Database
             $car->j,
             $car->vier,
             $car->d1,
-            $car->d2,
+            $car->d21,
+            $car->d22,
+            $car->d23,
             $car->zwei,
-            $car->fuenf,
+            $car->fuenf1,
+            $car->fuenf2,
             $car->v9,
             $car->vierzehn,
-            $car->p3
+            $car->p3,
+            $car->verbin,
+            $car->verbau,
+            $car->verbko,
+            $car->co2komN,
+            $car->sehrs,
+            $car->schnell,
+            $car->langsam,
+            $car->co2komW,
+            $car->verb_unit,
+            $car->co2_unit
         ); //bind params for query
         if ($stmt->execute() == false) { //exec
             printf("Error while inserting in %s %s. \n", $this->table, $stmt->error); //error
@@ -240,37 +203,14 @@ class CarDatabase implements Database
                 );
                 array_push($car_arr, $car_item);
             }
-            return json_encode($car_arr);
+            return $car_arr;
         } else {
-            return json_encode(array('message' => 'No cars found.'));
+            return false;
         }
     }
-    public function createNefzSql()
+    public function createSql()
     {
-        $query = 'INSERT INTO ' . $this->nefz . " (
-            id,
-            verbin,
-            verbau,
-            verbko,
-            co2komN)
-            VALUES(?, ?, ?, ?, ?)";
-        return $query;
-    }
-    public function createWltpSql()
-    {
-        $query = 'INSERT INTO ' . $this->wltp . " (
-            id,
-            sehrs,
-            schnell,
-            langsam,
-            co2komW)
-            VALUES(?, ?, ?, ?, ?)";
-        return $query;
-    }
-    public function createScheinSql()
-    {
-
-        $query = 'INSERT INTO ' . $this->table . " (
+        $query = 'INSERT INTO `cars` (
             id,
             name,
             b21,
@@ -278,13 +218,26 @@ class CarDatabase implements Database
             j,
             vier,
             d1,
-            d2,
+            d21,
+            d22,
+            d23,
             zwei,
-            fuenf,
+            fuenf1,
+            fuenf2,
             v9,
             vierzehn,
-            p3) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; //prepare syntax from query
+            p3,
+            verbin,
+            verbau,
+            verbko,
+            co2komN,
+            sehrs,
+            schnell,
+            langsam,
+            co2komW,
+            verb_unit,
+            co2_unit)
+            VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
         return $query;
     }
     public function readFilterSql($filter, $theta, $value) //read lines with filter

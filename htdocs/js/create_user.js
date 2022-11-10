@@ -37,7 +37,7 @@ function func1() {//RegisterRun
     function run() {
         if (!pwcorrect) {//Falls pw nicht korrekt
             if (!btn.style.left) { //Falls btn.style.left noch nicht vom script gesetzt wurde
-                btn.style.left = "325px"; //Setze Linken Abstand auf 300px
+                btn.style.left = "825px"; //Setze Linken Abstand auf 300px
             } else {
                 var posLeft = parseInt(btn.style.left); // Ziehe aktuellen Abstand von Linksd
                 if (posLeft <= 325) { //Falls der Abstand 300

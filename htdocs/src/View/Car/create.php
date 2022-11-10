@@ -33,16 +33,28 @@
             <label for="d1" class="placeholder">D1 lt. Zulassungsbescheinigung Teil 1</label>
         </div>
         <div class="input-container">
-            <input id="d2" name="d2" type="text" placeholder=" " />
-            <label for="d2" class="placeholder">D2 lt. Zulassungsbescheinigung Teil 1</label>
+            <input id="d21" name="d21" type="text" placeholder=" " />
+            <label for="d21" class="placeholder">D2.1 lt. Zulassungsbescheinigung Teil 1</label>
+        </div>
+        <div class="input-container">
+            <input id="d22" name="d22" type="text" placeholder=" " />
+            <label for="d22" class="placeholder">D2.2 lt. Zulassungsbescheinigung Teil 1</label>
+        </div>
+        <div class="input-container">
+            <input id="d23" name="d23" type="text" placeholder=" " />
+            <label for="d23" class="placeholder">D2.3 lt. Zulassungsbescheinigung Teil 1</label>
         </div>
         <div class="input-container">
             <input id="zwei" name="zwei" type="text" placeholder=" " />
             <label for="zwei" class="placeholder">2 lt. Zulassungsbescheinigung Teil 1</label>
         </div>
         <div class="input-container">
-            <input id="fuenf" name="fuenf" type="text" placeholder=" " />
-            <label for="fuenf" class="placeholder">5 lt. Zulassungsbescheinigung Teil 1</label>
+            <input id="fuenf1" name="fuenf1" type="text" placeholder=" " />
+            <label for="fuenf1" class="placeholder">5.1 lt. Zulassungsbescheinigung Teil 1</label>
+        </div>
+        <div class="input-container">
+            <input id="fuenf2" name="fuenf2" type="text" placeholder=" " />
+            <label for="fuenf2" class="placeholder">5.2 lt. Zulassungsbescheinigung Teil 1</label>
         </div>
         <div class="input-container">
             <input id="v9" name="v9" type="text" placeholder=" " />
@@ -63,8 +75,8 @@
             <label class="inline" for="ethanol">Ethanol</label>
             <input class="inline" id="gas" name="p3" type="radio" value="Gas" />
             <label class="inline" for="gas">Gas</label>
-            <input class="inline" id="gas" name="p3" type="radio" value="Gas" />
-            <label class="inline" for="gas">Wasserstoff</label>
+            <input class="inline" id="wasserstoff" name="p3" type="radio" value="Gas" />
+            <label class="inline" for="wasserstoff">Wasserstoff</label>
         </div>
         <div class="input-container">
             <input id="verbin" name="verbin" type="text" placeholder=" " />
@@ -79,8 +91,8 @@
             <label for="verbko" class="placeholder">NEFZ Verbrauch kombiniert</label>
         </div>
         <div class="input-container">
-            <input id="co2kom" name="co2kom" type="text" placeholder=" " />
-            <label for="co2kom" class="placeholder">NEFZ CO2 Emission kombiniert</label>
+            <input id="co2komN" name="co2komN" type="text" placeholder=" " />
+            <label for="co2komN" class="placeholder">NEFZ CO2 Emission kombiniert</label>
         </div>
         <div class="input-container">
             <input id="sehrs" name="sehrs" type="text" placeholder=" " />

@@ -18,8 +18,8 @@ class XmlController extends AbstractController
         
     }
     public function importAction(){
-        //$db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        $db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
+        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        //$db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
         $db->connect();
         $db->truncateTable("`cars`");
         $affectedRow = 0;
@@ -126,8 +126,8 @@ class XmlController extends AbstractController
     }
     public function exportAction()
     {
-        //$db = new CarDatabase("127.0.0.1", "root", "", "cars");
-        $db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
+        $db = new CarDatabase("127.0.0.1", "root", "", "cars");
+        //$db = new CarDatabase("mariadb", "root", "wwi2021a", "cars");
         $db->connect();
         $repo = new RepositoryCarRepository($db);
         $carModel=$repo->readAll();
@@ -136,7 +136,7 @@ class XmlController extends AbstractController
         //   or die("Error: Cannot create object");
         //print_r($carModel);
         $xml = new SimpleXMLElement('<db></db>');
-
+        //carModel sind viele Auto Objekte, die heißen car
         foreach ($carModel as $car) {
             $caritem = $xml->addChild('car');
             $caritem->addChild('id', $car->id);

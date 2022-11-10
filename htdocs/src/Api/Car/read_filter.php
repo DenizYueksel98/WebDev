@@ -16,29 +16,7 @@ $value = isset($_GET['value']) ? $_GET['value'] : "";
 if (isset($filter) && isset($value) && isset($theta)) {
     if (str_contains(strtoupper($theta), 'LIKE')) {
         $value = '%' . $value . '%';
-    }/*
-    if    (str_contains(strtolower($filter),'id'))      $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'name'))    $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'b21'))     $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'b22'))     $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'j'))       $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'vier'))    $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'d1'))      $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'d2'))      $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'zwei'))    $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'fuenf'))   $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'v9'))      $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'vierzehn'))$filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'p3'))      $filter='s.'.$filter;
-    elseif(str_contains(strtolower($filter),'verbin'))  $filter='n.'.$filter;
-    elseif(str_contains(strtolower($filter),'verbau'))  $filter='n.'.$filter;
-    elseif(str_contains(strtolower($filter),'verbko'))  $filter='n.'.$filter;
-    elseif(str_contains(strtolower($filter),'co2komN'))  $filter='n.'.$filter;
-    elseif(str_contains(strtolower($filter),'sehrs'))   $filter='w.'.$filter;
-    elseif(str_contains(strtolower($filter),'schnell')) $filter='w.'.$filter;
-    elseif(str_contains(strtolower($filter),'langsam')) $filter='w.'.$filter;
-    elseif(str_contains(strtolower($filter),'co2komW')) $filter='w.'.$filter;
-    */
+    }
 }
 
 $result = $repo->readFilter($filter, $theta, $value);

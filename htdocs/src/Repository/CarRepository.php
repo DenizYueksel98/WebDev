@@ -29,20 +29,35 @@ class CarRepository extends AbstractRepository
     
     public function readFilter($filter, $theta, $value)
     {
-        return $this->db->readFilter($filter,$theta,$value);
+        if($carArray=$this->db->readFilter($filter,$theta,$value)){
+            return json_encode($carArray); 
+        }
+        else{
+            return json_encode(array('message' => 'No cars found.'));
+        }
     }
-    public function readSingle($id)
-    {
-        return $this->db->readSingle($id);
-        
-    }
+
     public function readSingleCar($id)
     {
-        return $this->db->readSingleCar($id);
+        $result= $this->db->readSingleCar($id);        
+        foreach ($result as $row) {
+            $car = new Car();
+            $car->fromArray((array)$row);
+            $carArray[] = $car;
+        }
+        $car = $carArray[0];
+        return $car;
     }
     public function readAll()
     {
-        return $this->db->readAll();
+        $result = $this->db->readAll();
+        foreach ($result as $row) {
+            $car = new Car();
+            $car->fromArray((array)$row);
+            $carArray[] = $car;
+        }
+        $this->carArray=$carArray;
+        return $carArray;
    }
     
     public function create(Car $car) //create new tupel in db

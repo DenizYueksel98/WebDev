@@ -3,18 +3,13 @@ namespace Framework;
 
 class AbstractModel
 {
-    /**
-     * Magic getter
-     */
     public function __get($property) {
         if (property_exists($this, $property)) {
             return $this->$property;
         }
     }
 
-    /**
-     * Magic setter
-     */
+     
     public function __set($property, $value) {
         if (property_exists($this, $property)) {
             $this->$property = $value;
@@ -24,9 +19,9 @@ class AbstractModel
     /**
      * Set model data from an array
      */
-    public function fromArray($data)
+    public function fromArray($rowAsArray)
     {
-        foreach($data as $key => $value) {
+        foreach($rowAsArray as $key => $value) {
             $this->$key = $value;
         }
     }

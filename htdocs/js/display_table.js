@@ -79,9 +79,6 @@ function addAllColumnHeaders(carModel, selector) {
     $(selector).append(headerTr$);
     return columnSet;
 }
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
 window.onload= function onLoad(){
     updateCarModel("");
  

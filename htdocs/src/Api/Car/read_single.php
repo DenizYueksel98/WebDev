@@ -9,6 +9,6 @@ header('Content-Type: application/json');//header for json
 include_once(dirname(__FILE__).'.'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'/core/initialize.php');//init
 
 $id = isset($_GET['id']) ? $_GET['id'] : die();
-$result = $repo->readSingle($id);
+$result = $repo->readSingleCar($id);
 $db->close();
-echo $result;
+echo json_encode($result);

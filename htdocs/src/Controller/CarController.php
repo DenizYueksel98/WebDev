@@ -111,9 +111,9 @@ class CarController extends AbstractController
     public function readFromDB()
     {
         include(__DIR__.'/../../core/config.php');
-        
+        //$result ist unser carArray mit den einzelnen Car-Objekten
         if ($result = $repo->readAll()) { //Recieve JSON and save into $result var
-            $this->message = "<h3>JSON file data</h3>";
+            $this->message = "<h3>JSON data</h3>";
             $json=json_encode($result);
             $this->json=$json;//Set plain result(json-string) so class variable json and make it available for CarView
             //$decoded = json_decode($result, true); //Parse JSON into 2D Array (Arrays in Array)
@@ -131,44 +131,9 @@ class CarController extends AbstractController
     {
         //$this->cleanupCars();
         $this->carModel = $this->readFromDB();
-        $this->createCars();
         return $this->carModel;
     }
-    public function createCars()
-    {
-        $carArray=array();
-        foreach (json_decode($this->json, true) as $car) {
-            $car = new Car(
-                $car['id'],
-                $car['name'],
-                $car['b21'],
-                $car['b22'],
-                $car['j'],
-                $car['vier'],
-                $car['d1'],
-                $car['d21'],
-                $car['d22'],
-                $car['d23'],
-                $car['zwei'],
-                $car['fuenf1'],
-                $car['fuenf2'],
-                $car['v9'],
-                $car['vierzehn'],
-                $car['p3'],
-                $car['verbin'],
-                $car['verbau'],
-                $car['verbko'],
-                $car['co2komN'],
-                $car['sehrs'],
-                $car['schnell'],
-                $car['langsam'],
-                $car['co2komW']
-            );
-            array_push($carArray,$car);
-        }
-        //var_dump($carArray);
-        //var_dump($this->carModel);
-    }
+    
     public function detailAction()
     {
         include(__DIR__.'/../../core/config.php');
@@ -178,8 +143,8 @@ class CarController extends AbstractController
     }
     public function getCarModel()
     { //returned einfach das CarModel, so kann es von anderen Klassen angefragt werden
-        $this->readAll();
-        return $this->carModel;
+        return $this->readAll();
+
     }
     public function readAction()
     {

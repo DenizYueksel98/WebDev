@@ -26,16 +26,16 @@ $car->setfuenf2($repo->real_escape_string($data->fuenf2));
 $car->setv9($repo->real_escape_string($data->v9));
 $car->setvierzehn($repo->real_escape_string($data->vierzehn));
 $car->setp3($repo->real_escape_string($data->p3));
-$car->setnid($repo->real_escape_string($data->id));
 $car->setverbin($repo->real_escape_string($data->verbin));
 $car->setverbau($repo->real_escape_string($data->verbau));
 $car->setverbko($repo->real_escape_string($data->verbko));
 $car->setco2komN($repo->real_escape_string($data->co2komN));
-$car->setwid($repo->real_escape_string($data->id));
 $car->setsehrs($repo->real_escape_string($data->sehrs));
 $car->setschnell($repo->real_escape_string($data->schnell));
 $car->setlangsam($repo->real_escape_string($data->langsam));
 $car->setco2komW($repo->real_escape_string($data->co2komW));
+$car->setverb_unit('l/100km');
+$car->setco2_unit('g/km');
 
 if ($repo->create($car)) {
     echo json_encode(

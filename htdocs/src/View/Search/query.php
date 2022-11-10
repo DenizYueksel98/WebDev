@@ -8,7 +8,8 @@ We found <?php if (isset($this->searchResultContains)) {
     </table>
 
     <script type="text/javascript">
-        var carModel =<?php echo json_encode($this->searchResultContains)?>;
+        var carModel = <?php echo json_encode($this->searchResultContains) ?>;
+
         function buildHtmlTable(selector) {
             var columns = addAllColumnHeaders(carModel, selector);
             for (var i = 0; i < carModel.length; i++) {
@@ -39,6 +40,10 @@ We found <?php if (isset($this->searchResultContains)) {
             }
             $(selector).append(headerTr$);
             return columnSet;
+        }
+        window.onload = function onLoad() {
+            buildHtmlTable("#carDataTable");
+
         }
     </script>
     <!--script type="text/javascript" src="../../../js/display_table.js"></script-->
