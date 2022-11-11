@@ -7,6 +7,15 @@ use Directory;
 include_once(__DIR__.DS.'..'.DS.'..'.DS.'Framework/AbstractModel.php');
 class Car extends AbstractModel
 {
+    /*
+    Nachfolgend für die nächsten 400 Zeilen Code gilt:
+    Initial wurde das Projekt über ActiveRecord umgesetzt
+    (eine Car Klasse bündelt sämtliche Funktionen) 
+    Mittlerweile haben wir PoPo versucht vollständig umzusetzen und 
+    daher Funktionen aus der car.php in CarReposity bzw. CarDatabase
+    aufgeteilt. Diese können nun von den API Endpunkten oder Controllern 
+    eingebunden und direkt verwendet werden. Getter&Setter&fromArray() Car extends AbstractModel
+    */
     public $id;
     public $name;
     public $b21;
@@ -35,14 +44,6 @@ class Car extends AbstractModel
     public $co2_unit;
 
 /*
-    Nachfolgend für die nächsten 400 Zeilen Code gilt:
-    Initial wurde das Projekt über ActiveRecord umgesetzt
-    (eine Car Klasse bündelt sämtliche Funktionen) 
-    Mittlerweile haben wir PoPo versucht vollständig umzusetzen und 
-    daher Funktionen aus der car.php in CarReposity bzw. CarDatabase
-    aufgeteilt. Diese können nun von den API Endpunkten oder Controllern 
-    eingebunden und direkt verwendet werden. Getter&Setter&fromArray() Car extends AbstractModel
-
 
     public function setid($id){$this->id=$id;}
     public function setname($name){$this->name=$name;}

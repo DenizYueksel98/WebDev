@@ -27,7 +27,6 @@ handleHintResult = function (data) {
   let container = document.getElementById('txtHint')//definiere den Container in dem das ERgebnis anzuzeigen ist, (ID = result)
   container.innerHTML = "";
   for (let i = 0; i < result.length; i++) {//für alle i von 0 bis zur länge des Ergebnisses
-    console.log(result[i]) //Ausgabe in Konsole
     let node = document.createElement('a'); //Erstelle neue node mit a (für einen Link)
     node.href = result[i].url //setze den Link von der node auf die angegebene url
     node.text = result[i].label //setze den Text der node auf den String der im label steckt
