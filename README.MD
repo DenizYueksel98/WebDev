@@ -1,5 +1,6 @@
 Du willst also unsere Fahrzeug-Datenbank aufsetzen?
 Dann hast du heute wirklich Glück gehabt, denn die Einrichtung ist denkbar einfach.
+
                                  _________
                           _.--""'-----,   `"--.._
                        .-''   _/_      ; .'"----,`-,
@@ -18,7 +19,8 @@ Dann hast du heute wirklich Glück gehabt, denn die Einrichtung ist denkbar einf
    `|WWI2021a |__;_...--'": :  \    //  |---"""      \__\_/
      """""""""'            \ \  \_.//  /
        `---'                \ \_     _'
-                             `--`---'  dp
+                             `--`---'  
+
 Solltest du docker-compose bereits installiert haben, Glückwunsch. Falls nicht, bitte zuerst dafür Sorgen, dass Docker (incl. Compose) läuft.
 Weitergehts...
 Du findest 2 Dateien im Ordner:
